@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ruang Belajar MSSI &bull; MTI UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <style>
+    :root {
+      --bg: #f0f9ff;
+      --surface: #ffffff;
+      --surface-alt: #e0f2fe;
+      --ink: #0c4a6e;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #bae6fd;
+      --accent: #0284c7;
+      --accent-hover: #0369a1;
+      --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+      --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+      --radius: 16px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #082f49;
+        --surface: #0c4a6e;
+        --surface-alt: #075985;
+        --ink: #f0f9ff;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --line: #0369a1;
+        --accent: #38bdf8;
+        --accent-hover: #7dd3fc;
+        color-scheme: dark;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      max-width: 540px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      background: var(--surface-alt);
+      color: var(--accent);
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .opt-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: var(--surface-alt);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+
+    .opt-btn:hover {
+      background: var(--accent);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+
+    .opt-btn span.title {
+      font-size: 1.05rem;
+      display: block;
+    }
+    .opt-btn span.sub {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <a href="../" class="back-link">&larr; Kembali ke Portal Utama</a>
+    <br>
+    <span class="tag">MTI UI &bull; MSSI</span>
+    <h1>Ruang Belajar MSSI</h1>
+    <p>Pilih modul belajar Manajemen Sistem &amp; Sistem Informasi di bawah ini:</p>
+
+    <div class="options">
+      <a href="catatan-mssi.html" class="opt-btn">
+        <div>
+          <span class="title">📖 Catatan Kuliah MSSI</span>
+          <span class="sub">Rangkuman komprehensif Sesi 1–6</span>
+        </div>
+        <span>&rarr;</span>
+      </a>
+
+      <a href="Kuis UTS MSSI.html" class="opt-btn">
+        <div>
+          <span class="title">✍️ Kuis &amp; Simulasi UTS</span>
+          <span class="sub">Latihan soal interaktif persiapan UTS</span>
+        </div>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
