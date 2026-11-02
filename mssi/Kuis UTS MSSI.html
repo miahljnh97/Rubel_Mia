@@ -83,19 +83,110 @@ textarea{width:100%;min-height:90px;font:inherit;font-size:14px;color:var(--ink)
 button:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 @media (max-width:480px){.q{padding:14px}.levels button{padding:7px 11px}}
+
+/* Nav Back Bar */
+.nav-back-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.btn-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);transition:all .15s}
+.btn-back:hover{color:var(--accent);border-color:var(--accent)}
+.link-catatan{font-size:12.5px;color:var(--accent);text-decoration:none;font-weight:600}
+.link-catatan:hover{text-decoration:underline}
+
+/* Mode Switcher */
+.mode-switch-wrapper{margin-top:18px}
+.mode-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;background:var(--accent-soft);padding:6px;border-radius:12px;border:1px solid var(--line)}
+.mode-tab{display:flex;flex-direction:column;gap:3px;align-items:flex-start;text-align:left;padding:10px 14px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer;transition:all .15s ease}
+.mode-tab:hover{color:var(--ink);background:rgba(255,255,255,.6)}
+.mode-tab[aria-selected="true"]{background:var(--paper);color:var(--ink);border-color:var(--line);box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.mode-tab[aria-selected="true"] .mode-tab-title{color:var(--accent)}
+.mode-tab-title{font-family:var(--display);font-size:16px;font-weight:700;display:flex;align-items:center;gap:6px}
+.mode-tab-desc{font-size:12px;color:var(--muted);line-height:1.3}
+
+.mode-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border-radius:8px;background:var(--paper);border:1px solid var(--line);margin-top:12px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.mode-banner strong{color:var(--ink)}
+
+.btn-submit-exam{background:var(--accent);color:var(--paper);border:1px solid var(--accent);font:600 13px var(--body);padding:6px 14px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.btn-submit-exam:hover{opacity:.9}
+.btn-exam-secondary{background:var(--paper);color:var(--ink);border:1px solid var(--line);font:600 13px var(--body);padding:6px 14px;border-radius:8px;cursor:pointer;transition:all .15s}
+.btn-exam-secondary:hover{border-color:var(--accent)}
+
+.opt.selected{border-color:var(--accent);background:var(--accent-soft);font-weight:600;box-shadow:0 0 0 1.5px var(--accent)}
+.opt.selected .k{color:var(--accent);font-weight:700}
+
+.exam-result-card{background:var(--paper);border:2px solid var(--accent);border-radius:12px;padding:20px;margin-top:16px;box-shadow:0 4px 16px rgba(29,78,107,0.12)}
+.exam-result-header{display:flex;gap:20px;align-items:center;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.exam-score-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:110px;padding:12px;background:var(--accent-soft);border-radius:10px;text-align:center}
+.exam-score-badge .score-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
+.exam-score-badge .score-val{font-family:var(--display);font-size:36px;font-weight:800;color:var(--accent);line-height:1;margin:4px 0}
+.exam-score-badge .score-val small{font-size:18px;color:var(--muted);font-weight:600}
+.exam-score-badge .score-grade{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink)}
+.exam-metrics{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:8px;flex:1}
+.metric-box{display:flex;flex-direction:column;align-items:center;padding:10px;border-radius:8px;background:var(--bg);border:1px solid var(--line);text-align:center}
+.metric-box b{font-family:var(--display);font-size:20px;font-weight:800;line-height:1}
+.metric-box span{font-size:11.5px;color:var(--muted);margin-top:2px}
+.metric-box.ok b{color:var(--ok)}
+.metric-box.bad b{color:var(--bad)}
+.metric-box.acc b{color:var(--accent)}
+.exam-result-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}
+.exam-result-btns{display:flex;gap:8px;flex-wrap:wrap}
 </style>
 
 <div class="wrap">
+<div class="nav-back-bar">
+  <a href="../" class="btn-back">&larr; Portal Ruang Belajar Mia</a>
+  <a href="catatan-mssi.html" class="link-catatan">📖 Buka Catatan MSSI (Sesi 1–6) &rarr;</a>
+</div>
+
 <header>
   <div class="eyebrow">MTI · Strategic Information Systems Management · Sesi 1–5</div>
   <h1>Kuis UTS <mark>MSSI</mark></h1>
-  <p>Soal mengikuti kisi-kisi dosen: Porter & ocean, Ward–Peppard, EA, BPM/BPR, strategic alignment, tiga level strategi, BCG, McFarlan, dan value chain & SCM. Pilih jawaban untuk langsung melihat pembahasan.</p>
+  <p>Soal mengikuti kisi-kisi dosen: Porter &amp; ocean, Ward–Peppard, EA, BPM/BPR, strategic alignment, tiga level strategi, BCG, McFarlan, dan value chain &amp; SCM.</p>
 </header>
+
+<div class="mode-switch-wrapper">
+  <div class="mode-switch" role="tablist" aria-label="Pilih Mode Belajar">
+    <button type="button" class="mode-tab" id="btn-mode-learn" role="tab" aria-selected="true">
+      <span class="mode-tab-title">💡 Mode Latihan</span>
+      <span class="mode-tab-desc">Sekali klik langsung lihat kunci &amp; pembahasan detail</span>
+    </button>
+    <button type="button" class="mode-tab" id="btn-mode-exam" role="tab" aria-selected="false">
+      <span class="mode-tab-title">📝 Mode Kuis / Simulasi Ujian</span>
+      <span class="mode-tab-desc">Simulasi ujian UTS · Skor &amp; review keluar setelah dikumpulkan</span>
+    </button>
+  </div>
+</div>
+
+<div class="mode-banner" id="mode-banner">
+  <span id="mode-banner-text">💡 <strong>Mode Latihan:</strong> Klik opsi jawaban untuk langsung melihat kunci dan penjelasan detail.</span>
+  <div id="mode-banner-actions"></div>
+</div>
+
+<div class="exam-result-card" id="exam-result-card" style="display:none">
+  <div class="exam-result-header">
+    <div class="exam-score-badge">
+      <span class="score-label">Skor Ujian</span>
+      <span class="score-val" id="res-score">0<small>/100</small></span>
+      <span class="score-grade" id="res-grade">Selesai</span>
+    </div>
+    <div class="exam-metrics">
+      <div class="metric-box ok"><b id="res-ok">0</b><span>Benar</span></div>
+      <div class="metric-box bad"><b id="res-no">0</b><span>Salah</span></div>
+      <div class="metric-box blank"><b id="res-blank">0</b><span>Kosong</span></div>
+      <div class="metric-box acc"><b id="res-pct">0%</b><span>Akurasi</span></div>
+    </div>
+  </div>
+  <div class="exam-result-footer">
+    <p class="exam-result-msg" id="res-msg" style="margin:0;font-size:13.5px;color:var(--muted);"></p>
+    <div class="exam-result-btns">
+      <button type="button" class="btn-submit-exam" id="b-retake-exam">🔄 Ulangi Ujian</button>
+      <button type="button" class="btn-exam-secondary" id="b-switch-to-learn">💡 Buka Mode Latihan</button>
+    </div>
+  </div>
+</div>
 
 <div class="bar">
   <div class="levels" role="tablist" aria-label="Level soal" id="levels"></div>
   <div class="status">
-    <span>Benar <strong id="sc">0</strong> dari <strong id="ans">0</strong> dijawab · total <strong id="tot">0</strong></span>
+    <span id="stat-text">Benar <strong id="sc">0</strong> dari <strong id="ans">0</strong> dijawab · total <strong id="tot">0</strong></span>
     <div class="meter" aria-hidden="true"><i id="mt"></i></div>
     <label for="topic" class="sr">Topik</label>
     <select id="topic"></select>
@@ -238,9 +329,33 @@ const KASUS=[
 ];
 (()=>{const c={};KASUS.forEach(q=>{c[q.k]=(c[q.k]||0)+1;q.n=c[q.k]})})();
 Q.kasus=KASUS;
-const KEY="kuis-mssi-v1";
-let state={level:"easy",topic:"all",answers:{},essay:{},order:{}};
-try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s) state=Object.assign(state,s);}catch(e){}
+const KEY="kuis-mssi-v2";
+let state={
+  level:"easy",
+  topic:"all",
+  mode:"learn",
+  examSubmitted:{},
+  answers:{},
+  examAnswers:{},
+  essay:{},
+  order:{}
+};
+try{
+  const s=JSON.parse(localStorage.getItem(KEY)||"null");
+  if(s) state=Object.assign(state,s);
+  if(!s){
+    const v1=JSON.parse(localStorage.getItem("kuis-mssi-v1")||"null");
+    if(v1){
+      state.answers = v1.answers||{};
+      state.essay = v1.essay||{};
+      state.order = v1.order||{};
+      if(v1.level) state.level = v1.level;
+    }
+  }
+}catch(e){}
+if(!state.examSubmitted) state.examSubmitted = {};
+if(!state.examAnswers) state.examAnswers = {};
+
 const h=location.hash.replace("#",""); if(LEVELS.some(l=>l.id===h)) state.level=h;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
 function shuffled(n){const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -260,14 +375,29 @@ function renderTopic(){
   $("#topic").onchange=e=>{state.topic=e.target.value;save();render()};
 }
 function mcq(q,i,lv){
-  const id=lv+"-"+i, ord=orderFor(id,q.o.length), picked=state.answers[id];
-  const done=picked!==undefined, ok=picked===0;
+  const id=lv+"-"+i, ord=orderFor(id,q.o.length);
+  const isExam = state.mode === "exam";
+  const isSub = isExam && !!state.examSubmitted[lv];
+  const picked = isExam ? state.examAnswers[id] : state.answers[id];
+  const done = picked !== undefined;
+  const ok = picked === 0;
+
   const opts=ord.map((oi,k)=>{
-    let cls="opt"; if(done){if(oi===0)cls+=" right"; else if(oi===picked)cls+=" wrong"}
-    return `<button type="button" class="${cls}" data-id="${id}" data-o="${oi}" ${done?"disabled":""}><span class="k">${"ABCD"[k]}</span><span>${esc(q.o[oi])}</span></button>`}).join("");
-  return `<article class="q"><div class="qhead"><span class="num">${q.k?CASES[q.k].title+" · Soal "+(q.n):"Soal "+(i+1)}</span><span class="chip">${TOPICS[q.t]}</span></div>
+    let cls="opt";
+    if(isExam && !isSub){
+      if(picked===oi) cls+=" selected";
+    } else if(done || isSub){
+      if(oi===0) cls+=" right";
+      else if(oi===picked) cls+=" wrong";
+    }
+    const disabled = (!isExam && done) || isSub ? "disabled" : "";
+    return `<button type="button" class="${cls}" data-id="${id}" data-o="${oi}" ${disabled}><span class="k">${"ABCD"[k]}</span><span>${esc(q.o[oi])}</span></button>`;
+  }).join("");
+
+  const showFb = (!isExam && done) || (isExam && isSub);
+  return `<article class="q" id="q-${id}"><div class="qhead"><span class="num">${q.k?CASES[q.k].title+" · Soal "+(q.n):"Soal "+(i+1)}</span><span class="chip">${TOPICS[q.t]}</span></div>
   ${q.c?`<p class="case">${esc(q.c)}</p>`:""}<p class="qtext">${esc(q.q)}</p><div class="opts">${opts}</div>
-  ${done?`<div class="fb ${ok?"ok":"no"}"><b>${ok?"Benar.":"Belum tepat. Jawaban: "+esc(q.o[0])}</b>${esc(q.e)}</div>`:""}</article>`;
+  ${showFb?`<div class="fb ${ok?"ok":"no"}"><b>${ok?"Benar.":"Belum tepat. Jawaban: "+esc(q.o[0])}</b>${esc(q.e)}</div>`:""}</article>`;
 }
 function caseCard(q,ci){
   return `<section class="casecard"><div class="eyebrow">Kasus ${ci}</div><h2>${esc(CASES[q.k].title)}</h2><p>${esc(CASES[q.k].text)}</p></section>`;
@@ -282,11 +412,58 @@ function essay(e,i){
   <div class="selfmark">Nilai dirimu:${[...Array(max+1).keys()].map(n=>`<button type="button" data-self="${id}" data-v="${n}" aria-pressed="${st.score===n}">${n}</button>`).join("")}</div>`
   :`<button type="button" class="reveal" data-open="${id}">Tampilkan poin penilaian</button>`}</article>`;
 }
-function stats(lv){const qs=Q[lv];let a=0,c=0;qs.forEach((q,i)=>{const p=state.answers[lv+"-"+i];if(p!==undefined){a++;if(p===0)c++}});return{a,c,n:qs.length}}
+function stats(lv, isExam){
+  const qs=Q[lv]; let a=0, c=0;
+  const store = isExam ? state.examAnswers : state.answers;
+  qs.forEach((q,i)=>{
+    const p=store[lv+"-"+i];
+    if(p!==undefined){ a++; if(p===0) c++; }
+  });
+  return {a, c, n:qs.length, blank: qs.length - a};
+}
 function render(){
   renderLevels(); renderTopic();
   const lv=state.level, L=LEVELS.find(l=>l.id===lv);
   $("#desc").textContent=L.desc;
+
+  const isExam = state.mode === "exam";
+  const isSub = isExam && !!state.examSubmitted[lv];
+  const s = stats(lv, isExam);
+
+  $("#btn-mode-learn").setAttribute("aria-selected", !isExam);
+  $("#btn-mode-exam").setAttribute("aria-selected", isExam);
+
+  const resultCard = $("#exam-result-card");
+  if(isExam && isSub){
+    resultCard.style.display = "block";
+    const pct = s.a > 0 ? Math.round((s.c / s.a) * 100) : 0;
+    const scoreVal = Math.round((s.c / s.n) * 100);
+    $("#res-score").innerHTML = `${scoreVal}<small>/100</small>`;
+    $("#res-grade").textContent = scoreVal >= 85 ? "Sangat Memuaskan (A)" : scoreVal >= 75 ? "Memuaskan (A-)" : scoreVal >= 60 ? "Cukup (B)" : "Perlu Belajar Lagi";
+    $("#res-ok").textContent = s.c;
+    $("#res-no").textContent = s.a - s.c;
+    $("#res-blank").textContent = s.blank;
+    $("#res-pct").textContent = pct + "%";
+    $("#res-msg").textContent = `Hasil simulasi ujian level ${L.name}. Kunci jawaban dan pembahasan di bawah ini sekarang terbuka untuk bahan evaluasi.`;
+
+    $("#mode-banner-text").innerHTML = `📋 <strong>Ujian Selesai:</strong> Skor kamu <strong>${scoreVal}/100</strong> (${s.c} benar dari ${s.n} soal). Review pembahasan di bawah.`;
+    $("#mode-banner-actions").innerHTML = `<button type="button" class="btn-submit-exam" id="b-banner-retake">🔄 Ulangi Ujian</button>`;
+    $("#stat-text").innerHTML = `Skor Ujian: <strong>${scoreVal}</strong> · Benar <strong>${s.c}</strong> / <strong>${s.n}</strong>`;
+  } else if(isExam) {
+    resultCard.style.display = "none";
+    $("#mode-banner-text").innerHTML = `📝 <strong>Mode Simulasi Ujian:</strong> Jawaban tidak dibocorkan saat dikerjakan. Selesaikan dan klik tombol kumpulkan.`;
+    $("#mode-banner-actions").innerHTML = `<button type="button" class="btn-submit-exam" id="b-banner-submit">📋 Kumpulkan Ujian (${s.a}/${s.n})</button>`;
+    $("#stat-text").innerHTML = `Terjawab <strong>${s.a}</strong> dari <strong>${s.n}</strong> soal`;
+  } else {
+    resultCard.style.display = "none";
+    $("#mode-banner-text").innerHTML = `💡 <strong>Mode Latihan:</strong> Klik opsi jawaban untuk langsung melihat kunci dan penjelasan detail.`;
+    $("#mode-banner-actions").innerHTML = ``;
+    $("#stat-text").innerHTML = `Benar <strong id="sc">${s.c}</strong> dari <strong id="ans">${s.a}</strong> dijawab · total <strong id="tot">${s.n}</strong>`;
+  }
+
+  $("#mt").style.width=(s.a/s.n*100)+"%";
+  $("#reset").textContent = isExam ? "Ulangi ujian level ini" : "Ulangi latihan level ini";
+
   let prev=null,ci=0; const shown=new Set();
   let html=Q[lv].map((q,i)=>{
     if(q.k&&q.k!==prev){ci++;prev=q.k}
@@ -296,19 +473,76 @@ function render(){
   }).join("");
   if(lv==="hots"){const es=ESSAY.map((e,i)=>state.topic==="all"||e.t===state.topic?essay(e,i):"").join(""); if(es) html+=`<h2 class="section-title">Essay HOTS</h2>`+es}
   $("#list").innerHTML=html||`<p class="desc">Tidak ada soal untuk topik ini di level ${L.name}.</p>`;
-  const s=stats(lv); $("#sc").textContent=s.c; $("#ans").textContent=s.a; $("#tot").textContent=s.n;
-  $("#mt").style.width=(s.a/s.n*100)+"%";
-  $("#sumbody").innerHTML=LEVELS.map(l=>{const x=stats(l.id);return `<tr><td>${l.name}</td><td>${x.a}/${x.n}</td><td>${x.c}</td><td>${x.a?Math.round(x.c/x.a*100)+"%":"–"}</td></tr>`}).join("")+
+
+  $("#sumbody").innerHTML=LEVELS.map(l=>{
+    const x=stats(l.id, isExam);
+    return `<tr><td>${l.name}</td><td>${x.a}/${x.n}</td><td>${x.c}</td><td>${x.a?Math.round(x.c/x.a*100)+"%":"–"}</td></tr>`
+  }).join("")+
    (()=>{let got=0,max=0,cnt=0;ESSAY.forEach((e,i)=>{const st=state.essay["essay-"+i];if(st&&st.score!==undefined){cnt++;got+=st.score;max+=e.r.reduce((a,b)=>a+b[1],0)}});return `<tr><td>Essay HOTS</td><td>${cnt}/${ESSAY.length}</td><td>${got}${max?" / "+max:""}</td><td>${max?Math.round(got/max*100)+"%":"–"}</td></tr>`})();
   bind();
 }
 function bind(){
-  document.querySelectorAll(".opt:not(:disabled)").forEach(b=>b.onclick=()=>{state.answers[b.dataset.id]=+b.dataset.o;save();const y=window.scrollY;render();window.scrollTo(0,y)});
+  const isExam = state.mode === "exam";
+  const lv = state.level;
+
+  document.querySelectorAll(".opt:not(:disabled)").forEach(b=>{
+    b.onclick=()=>{
+      const id=b.dataset.id, oi=+b.dataset.o;
+      if(isExam){
+        state.examAnswers[id] = oi;
+      } else {
+        state.answers[id] = oi;
+      }
+      save();
+      const y=window.scrollY; render(); window.scrollTo(0,y);
+    };
+  });
+
+  $("#btn-mode-learn").onclick=()=>{ state.mode="learn"; save(); render(); };
+  $("#btn-mode-exam").onclick=()=>{ state.mode="exam"; save(); render(); };
+
+  const submitExam = ()=>{
+    const s = stats(lv, true);
+    if(s.blank > 0){
+      if(!confirm(`Masih ada ${s.blank} soal belum dijawab. Kumpulkan ujian sekarang?`)) return;
+    }
+    state.examSubmitted[lv] = true;
+    save();
+    render();
+    window.scrollTo({top: 0, behavior: "smooth"});
+  };
+  const bSub = $("#b-banner-submit"); if(bSub) bSub.onclick = submitExam;
+
+  const retakeExam = ()=>{
+    if(!confirm("Ulangi simulasi ujian untuk level ini? Jawaban ujian sebelumnya akan dihapus.")) return;
+    Object.keys(state.examAnswers).forEach(k=>{ if(k.startsWith(lv+"-")) delete state.examAnswers[k]; });
+    state.examSubmitted[lv] = false;
+    save();
+    render();
+    window.scrollTo({top: 0, behavior: "smooth"});
+  };
+  const bRetake1 = $("#b-retake-exam"); if(bRetake1) bRetake1.onclick = retakeExam;
+  const bRetake2 = $("#b-banner-retake"); if(bRetake2) bRetake2.onclick = retakeExam;
+  const bSwitchLearn = $("#b-switch-to-learn"); if(bSwitchLearn) bSwitchLearn.onclick = ()=>{ state.mode="learn"; save(); render(); };
+
   document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{const id=b.dataset.open;state.essay[id]=Object.assign(state.essay[id]||{},{open:true});save();const y=window.scrollY;render();window.scrollTo(0,y)});
   document.querySelectorAll("[data-self]").forEach(b=>b.onclick=()=>{const id=b.dataset.self;state.essay[id].score=+b.dataset.v;save();const y=window.scrollY;render();window.scrollTo(0,y)});
   document.querySelectorAll("textarea[data-id]").forEach(t=>t.oninput=()=>{const id=t.dataset.id;state.essay[id]=Object.assign(state.essay[id]||{},{txt:t.value});save()});
 }
-$("#reset").onclick=()=>{const lv=state.level;Object.keys(state.answers).forEach(k=>{if(k.startsWith(lv+"-"))delete state.answers[k]});Object.keys(state.order).forEach(k=>{if(k.startsWith(lv+"-"))delete state.order[k]});if(lv==="hots")state.essay={};save();render();window.scrollTo(0,0)};
+$("#reset").onclick=()=>{
+  const lv=state.level;
+  if(state.mode==="exam"){
+    if(!confirm("Hapus semua jawaban ujian level ini?")) return;
+    Object.keys(state.examAnswers).forEach(k=>{if(k.startsWith(lv+"-"))delete state.examAnswers[k]});
+    state.examSubmitted[lv]=false;
+  } else {
+    if(!confirm("Hapus semua jawaban latihan level ini?")) return;
+    Object.keys(state.answers).forEach(k=>{if(k.startsWith(lv+"-"))delete state.answers[k]});
+  }
+  Object.keys(state.order).forEach(k=>{if(k.startsWith(lv+"-"))delete state.order[k]});
+  if(lv==="hots")state.essay={};
+  save();render();window.scrollTo(0,0);
+};
 render();
 </script>
 
