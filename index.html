@@ -22,6 +22,8 @@
       --dtpl-weak: #fff7ed;
       --mssi-accent: #0284c7;
       --mssi-weak: #f0f9ff;
+      --mppti-accent: #4f46e5;
+      --mppti-weak: #eef2ff;
       --font-display: "Bricolage Grotesque", system-ui, sans-serif;
       --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
       --font-mono: "JetBrains Mono", monospace;
@@ -46,6 +48,8 @@
         --dtpl-weak: #431407;
         --mssi-accent: #38bdf8;
         --mssi-weak: #082f49;
+        --mppti-accent: #818cf8;
+        --mppti-weak: #1e1b4b;
         color-scheme: dark;
       }
     }
@@ -122,8 +126,8 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
       margin-top: 16px;
     }
 
@@ -167,6 +171,12 @@
       --card-accent: var(--mssi-accent);
       --card-weak: var(--mssi-weak);
       --card-border-hover: rgba(2, 132, 199, 0.4);
+    }
+
+    .card-mppti {
+      --card-accent: var(--mppti-accent);
+      --card-weak: var(--mppti-weak);
+      --card-border-hover: rgba(79, 70, 229, 0.4);
     }
 
     .card-header {
@@ -390,6 +400,45 @@
             </a>
             <a href="mssi/Peta-Matriks-MSSI.png" target="_blank" class="btn btn-secondary">
               🗺️ Buka Peta Matriks MSSI ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- MPPTI CARD -->
+        <div class="card card-mppti">
+          <div>
+            <div class="card-header">
+              <span class="card-tag">MPPTI</span>
+              <div class="card-icon">📊</div>
+            </div>
+            <h2 class="card-title">Manajemen Perubahan &amp; Proyek TI</h2>
+            <p class="card-desc">
+              Study guide lengkap MPPTI: Marchewka Bab 1–8 &amp; 11, PMBOK, Agile, Business Case, EVM (CPI/SPI), serta bank soal Quiz, UTS, dan UAS.
+            </p>
+            <ul class="card-modules">
+              <li>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Marchewka Bab 1–8 &amp; 11, PMBOK &amp; Agile</span>
+              </li>
+              <li>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Business Case, WBS, CPM &amp; Earned Value</span>
+              </li>
+              <li>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Bank Soal Latihan Quiz, UTS &amp; UAS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="action-group">
+            <a href="mppti/" class="btn btn-primary">
+              Masuk ke Ruang MPPTI &rarr;
             </a>
           </div>
         </div>
