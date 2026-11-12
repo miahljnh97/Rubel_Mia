@@ -9,49 +9,106 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
   <style>
     :root {
-      --bg: #f8fafc;
+      --bg: #f6f5f1;
       --surface: #ffffff;
-      --surface-alt: #f1f5f9;
-      --ink: #0f172a;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --accent-weak: #eff6ff;
-      --dtpl-accent: #ea580c;
-      --dtpl-weak: #fff7ed;
-      --mssi-accent: #0284c7;
-      --mssi-weak: #f0f9ff;
-      --mppti-accent: #4f46e5;
-      --mppti-weak: #eef2ff;
+      --surface-alt: #f0eee8;
+      --ink: #1a1d26;
+      --muted: #5a6070;
+      --line: #e2dfd7;
+      --accent: #24398a;
+      --accent-hover: #1b2c6b;
+      --accent-weak: #e7ebf8;
+      --dtpl-accent: #24398a;
+      --dtpl-weak: #e7ebf8;
+      --mssi-accent: #24398a;
+      --mssi-weak: #e7ebf8;
+      --mppti-accent: #24398a;
+      --mppti-weak: #e7ebf8;
+      --ok: #1d7448;
       --font-display: "Bricolage Grotesque", system-ui, sans-serif;
       --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
       --font-mono: "JetBrains Mono", monospace;
       --radius: 16px;
-      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
-      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-      --shadow-hover: 0 20px 30px -10px rgba(15, 23, 42, 0.12);
+      --shadow-sm: 0 1px 2px rgba(20, 24, 40, 0.06), 0 4px 14px rgba(20, 24, 40, 0.05);
+      --shadow-md: 0 10px 25px -5px rgba(20, 24, 40, 0.08), 0 8px 10px -6px rgba(20, 24, 40, 0.04);
+      --shadow-hover: 0 20px 30px -10px rgba(20, 24, 40, 0.12);
+      color-scheme: light;
     }
 
     @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0f19;
-        --surface: #131b2e;
-        --surface-alt: #1c2742;
-        --ink: #f8fafc;
-        --muted: #94a3b8;
-        --line: #22304d;
-        --accent: #3b82f6;
-        --accent-hover: #60a5fa;
-        --accent-weak: #172554;
-        --dtpl-accent: #f97316;
-        --dtpl-weak: #431407;
-        --mssi-accent: #38bdf8;
-        --mssi-weak: #082f49;
-        --mppti-accent: #818cf8;
-        --mppti-weak: #1e1b4b;
+      :root:not([data-theme="light"]) {
+        --bg: #111318;
+        --surface: #191c23;
+        --surface-alt: #20242d;
+        --ink: #e9e7e2;
+        --muted: #a3a9b6;
+        --line: #2c303a;
+        --accent: #9db0ff;
+        --accent-hover: #b4c3ff;
+        --accent-weak: #1f2747;
+        --dtpl-accent: #9db0ff;
+        --dtpl-weak: #1f2747;
+        --mssi-accent: #9db0ff;
+        --mssi-weak: #1f2747;
+        --mppti-accent: #9db0ff;
+        --mppti-weak: #1f2747;
+        --ok: #63d39b;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.25);
+        --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.45);
         color-scheme: dark;
       }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #111318;
+      --surface: #191c23;
+      --surface-alt: #20242d;
+      --ink: #e9e7e2;
+      --muted: #a3a9b6;
+      --line: #2c303a;
+      --accent: #9db0ff;
+      --accent-hover: #b4c3ff;
+      --accent-weak: #1f2747;
+      --dtpl-accent: #9db0ff;
+      --dtpl-weak: #1f2747;
+      --mssi-accent: #9db0ff;
+      --mssi-weak: #1f2747;
+      --mppti-accent: #9db0ff;
+      --mppti-weak: #1f2747;
+      --ok: #63d39b;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.25);
+      --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.45);
+      color-scheme: dark;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 9999px;
+      padding: 7px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    :root[data-theme="dark"] .btn-primary {
+      color: #111318;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -308,7 +365,8 @@
 </head>
 <body>
 
-  <header>
+  <header style="position:relative;">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema">☀️ Terang</button>
     <div class="container">
       <div class="badge-pill">
         <span class="badge-dot"></span>
@@ -453,5 +511,25 @@
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var root = document.documentElement;
+      var btn = document.getElementById("themeToggle");
+      var saved = null;
+      try { saved = localStorage.getItem("rubel_theme"); } catch(e) {}
+      var theme = (saved === "dark" || saved === "light") ? saved : "light";
+      function apply() {
+        root.setAttribute("data-theme", theme);
+        btn.textContent = theme === "dark" ? "🌙 Gelap" : "☀️ Terang";
+        btn.title = "Tema: " + (theme === "dark" ? "Gelap" : "Terang");
+      }
+      apply();
+      btn.addEventListener("click", function() {
+        theme = theme === "light" ? "dark" : "light";
+        try { localStorage.setItem("rubel_theme", theme); } catch(e) {}
+        apply();
+      });
+    })();
+  </script>
 </body>
 </html>

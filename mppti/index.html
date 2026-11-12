@@ -2436,11 +2436,19 @@ QB.push(
 
   /* ---------- theme ---------- */
   var root = document.documentElement;
-  var theme = LS.get("mppti_theme", "auto");
-  function applyTheme(){ if(theme==="auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", theme);
-    $("#themeBtn").textContent = theme==="auto" ? "Auto" : (theme==="dark" ? "Gelap" : "Terang"); $("#themeBtn").title = "Tema: " + theme; }
+  var savedTheme = null; try { savedTheme = localStorage.getItem("rubel_theme"); } catch(e){}
+  var theme = (savedTheme === "dark" || savedTheme === "light") ? savedTheme : "light";
+  function applyTheme(){
+    root.setAttribute("data-theme", theme);
+    $("#themeBtn").textContent = theme === "dark" ? "🌙 Gelap" : "☀️ Terang";
+    $("#themeBtn").title = "Tema: " + (theme === "dark" ? "Gelap" : "Terang");
+  }
   applyTheme();
-  $("#themeBtn").addEventListener("click", function(){ theme = theme==="auto" ? "light" : theme==="light" ? "dark" : "auto"; LS.set("mppti_theme", theme); applyTheme(); });
+  $("#themeBtn").addEventListener("click", function(){
+    theme = theme === "light" ? "dark" : "light";
+    try { localStorage.setItem("rubel_theme", theme); } catch(e){}
+    applyTheme();
+  });
 
   /* ---------- mobile menu ---------- */
   $("#menuBtn").addEventListener("click", function(){ document.body.classList.toggle("nav-open"); });

@@ -11,25 +11,25 @@
 <style>
 /* Layout: sticky header with sprint-board tabs; reading tabs = TOC rail + 70ch column; practice tabs = centered work card */
 :root{
-  --bg:#faf5ee; --surface:#ffffff; --surface-alt:#f4ece0; --ink:#2c1d11; --muted:#7c6655; --line:#e5dacd;
-  --accent:#d95c14; --accent-hover:#be4b09; --accent-weak:#faebd7; --accent-glow:rgba(217,92,20,0.18);
-  --note:#f2ba5c; --note-ink:#402404;
-  --ok:#247d4e; --ok-weak:#e5f5eb; --bad:#c7382b; --bad-weak:#fdeeed;
+  --bg:#f6f5f1; --surface:#ffffff; --surface-alt:#f0eee8; --ink:#1a1d26; --muted:#5a6070; --line:#e2dfd7;
+  --accent:#24398a; --accent-hover:#1b2c6b; --accent-weak:#e7ebf8; --accent-glow:rgba(36,57,138,0.18);
+  --note:#fbf1dc; --note-ink:#7a4e06;
+  --ok:#1d7448; --ok-weak:#e1f2e8; --bad:#bf3329; --bad-weak:#fbe7e4;
   --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   --r:10px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1a1410; --surface:#241d18; --surface-alt:#2f251e; --ink:#f7eee4; --muted:#ab9787; --line:#3d3027;
-  --accent:#f07c35; --accent-hover:#ff8e47; --accent-weak:#3a2416; --accent-glow:rgba(240,124,53,0.22);
-  --note:#dca54a; --note-ink:#241604;
-  --ok:#4cb074; --ok-weak:#173223; --bad:#eb6254; --bad-weak:#3e1b17; color-scheme:dark}}
+  --bg:#111318; --surface:#191c23; --surface-alt:#20242d; --ink:#e9e7e2; --muted:#a3a9b6; --line:#2c303a;
+  --accent:#9db0ff; --accent-hover:#b4c3ff; --accent-weak:#1f2747; --accent-glow:rgba(157,176,255,0.22);
+  --note:#2e2615; --note-ink:#e6b65c;
+  --ok:#63d39b; --ok-weak:#15301f; --bad:#ff8578; --bad-weak:#3a1d1a; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#1a1410; --surface:#241d18; --surface-alt:#2f251e; --ink:#f7eee4; --muted:#ab9787; --line:#3d3027;
-  --accent:#f07c35; --accent-hover:#ff8e47; --accent-weak:#3a2416; --accent-glow:rgba(240,124,53,0.22);
-  --note:#dca54a; --note-ink:#241604;
-  --ok:#4cb074; --ok-weak:#173223; --bad:#eb6254; --bad-weak:#3e1b17; color-scheme:dark}
+  --bg:#111318; --surface:#191c23; --surface-alt:#20242d; --ink:#e9e7e2; --muted:#a3a9b6; --line:#2c303a;
+  --accent:#9db0ff; --accent-hover:#b4c3ff; --accent-weak:#1f2747; --accent-glow:rgba(157,176,255,0.22);
+  --note:#2e2615; --note-ink:#e6b65c;
+  --ok:#63d39b; --ok-weak:#15301f; --bad:#ff8578; --bad-weak:#3a1d1a; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
 a{color:var(--accent)}
@@ -217,6 +217,7 @@ select,.btn{font:600 .92rem var(--f-body);border-radius:8px;border:1px solid var
     <div class="brand">
       <a href="../" style="text-decoration:none;font-size:0.82rem;font-weight:700;color:var(--accent);display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);margin-right:8px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">&larr; Portal Utama</a>
       <h1>Ruang Belajar UTS DTPL</h1><span class="tag">Agile · Scrum · Dinamika Tim</span>
+      <button type="button" id="themeToggle" style="margin-left:auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;font-family:var(--f-mono);font-size:0.78rem;font-weight:600;cursor:pointer;">☀️ Terang</button>
     </div>
     <nav class="tabs" role="tablist" aria-label="Bagian">
       <button role="tab" data-tab="kisi" id="t-kisi">Kisi-kisi</button>
@@ -1346,6 +1347,21 @@ $('#f-es').addEventListener('change',renderE);
 $('#b-open').addEventListener('click',()=>{const any=$$('.eans').some(a=>a.hidden);$$('.eans').forEach(a=>a.hidden=!any);$$('#elist [data-t]').forEach(b=>b.textContent=any?'Sembunyikan poin jawaban':'Tampilkan poin jawaban');$('#b-open').textContent=any?'Tutup semua jawaban':'Buka semua jawaban'});
 renderE();
 const h0=(location.hash||'').slice(1);show(TABS.includes(h0)?h0:S.get('tab','kisi'));
+(function(){
+  const root=document.documentElement, btn=$('#themeToggle');
+  let saved=null; try{saved=localStorage.getItem('rubel_theme');}catch(e){}
+  let theme=(saved==='dark'||saved==='light')?saved:'light';
+  function apply(){
+    root.setAttribute('data-theme',theme);
+    btn.textContent=theme==='dark'?'🌙 Gelap':'☀️ Terang';
+  }
+  apply();
+  btn.addEventListener('click',()=>{
+    theme=theme==='light'?'dark':'light';
+    try{localStorage.setItem('rubel_theme',theme);}catch(e){}
+    apply();
+  });
+})();
 </script>
 
 </body>

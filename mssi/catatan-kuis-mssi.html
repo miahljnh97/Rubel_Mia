@@ -5,9 +5,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
 :root{
-  --bg:#F3F5F9; --surface:#FFFFFF; --soft:#E9EEF6; --ink:#15202E; --muted:#56637A; --line:#D8DEE8;
-  --navy:#1E4E79; --navy-ink:#FFFFFF; --hl:#FFE27A; --red:#B3261E; --green:#2E6B3A; --amber:#8A5A00;
-  --q1:#DCEBFA; --q2:#E4F3E2; --q3:#FCEBD6; --q4:#F6DEDC;
+  --bg:#f6f5f1; --surface:#ffffff; --soft:#f0eee8; --ink:#1a1d26; --muted:#5a6070; --line:#e2dfd7;
+  --navy:#24398a; --navy-ink:#ffffff; --hl:#fbf1dc; --red:#bf3329; --green:#1d7448; --amber:#b9790f;
+  --q1:#e7ebf8; --q2:#e1f2e8; --q3:#fbf1dc; --q4:#fbe7e4;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -15,16 +15,16 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --bg:#0E141E; --surface:#151D2A; --soft:#1B2638; --ink:#E5EAF2; --muted:#9AA6B8; --line:#2A3548;
-    --navy:#8DB8E8; --navy-ink:#0E141E; --hl:rgba(255,212,80,.30); --red:#FF8A80; --green:#8FD19A; --amber:#F2C46B;
-    --q1:#1C3050; --q2:#1D3524; --q3:#3A2B17; --q4:#3B1F1E;
+    --bg:#111318; --surface:#191c23; --soft:#20242d; --ink:#e9e7e2; --muted:#a3a9b6; --line:#2c303a;
+    --navy:#9db0ff; --navy-ink:#111318; --hl:#2e2615; --red:#ff8578; --green:#63d39b; --amber:#e6b65c;
+    --q1:#1f2747; --q2:#15301f; --q3:#2e2615; --q4:#3a1d1a;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0E141E; --surface:#151D2A; --soft:#1B2638; --ink:#E5EAF2; --muted:#9AA6B8; --line:#2A3548;
-  --navy:#8DB8E8; --navy-ink:#0E141E; --hl:rgba(255,212,80,.30); --red:#FF8A80; --green:#8FD19A; --amber:#F2C46B;
-  --q1:#1C3050; --q2:#1D3524; --q3:#3A2B17; --q4:#3B1F1E;
+  --bg:#111318; --surface:#191c23; --soft:#20242d; --ink:#e9e7e2; --muted:#a3a9b6; --line:#2c303a;
+  --navy:#9db0ff; --navy-ink:#111318; --hl:#2e2615; --red:#ff8578; --green:#63d39b; --amber:#e6b65c;
+  --q1:#1f2747; --q2:#15301f; --q3:#2e2615; --q4:#3a1d1a;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
@@ -262,6 +262,7 @@ footer{margin-top:40px;color:var(--muted);font-size:13px}
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
     <a href="#peta" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--navy);text-decoration:none;padding:6px 14px;border-radius:999px;background:var(--hl);border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,0.06);">🗺️ Tab Peta Matriks</a>
     <a href="Peta-Matriks-MSSI.png" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);">Buka Gambar HD ↗</a>
+    <button type="button" id="themeToggle" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink);padding:6px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);cursor:pointer;">☀️ Terang</button>
   </div>
 </div>
 <header class="top">
@@ -3580,6 +3581,23 @@ function bind(){
 $("kz-reset").onclick=()=>{const lv=state.level;Object.keys(state.answers).forEach(k=>{if(k.startsWith(lv+"-"))delete state.answers[k]});Object.keys(state.order).forEach(k=>{if(k.startsWith(lv+"-"))delete state.order[k]});if(lv==="hots")state.essay={};save();render();$("kuis").scrollIntoView()};
 render();
 
+})();
+</script>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById("themeToggle");
+  var saved=null; try{saved=localStorage.getItem("rubel_theme");}catch(e){}
+  var theme=(saved==="dark"||saved==="light")?saved:"light";
+  function apply(){
+    root.setAttribute("data-theme",theme);
+    btn.textContent=theme==="dark"?"🌙 Gelap":"☀️ Terang";
+  }
+  apply();
+  btn.addEventListener("click",function(){
+    theme=theme==="light"?"dark":"light";
+    try{localStorage.setItem("rubel_theme",theme);}catch(e){}
+    apply();
+  });
 })();
 </script>
 
