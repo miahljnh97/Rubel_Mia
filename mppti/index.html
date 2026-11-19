@@ -232,7 +232,7 @@ details.more[open] > summary::before{content:"－ "}
   .grid3,.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
-  .grid2,.grid3,.grid4{grid-template-columns:1fr}
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
   .brand span,.prog{display:none}
   .brand b{font-size:.95rem}
   dl.defs{grid-template-columns:1fr}
@@ -282,6 +282,7 @@ details.more[open] > summary::before{content:"－ "}
     <a href="#b7"><span class="no">B7</span>Manajemen risiko</a>
     <a href="#b8"><span class="no">B8</span>Stakeholder, komunikasi &amp; EVM</a>
     <a href="#b11"><span class="no">B11</span>Perubahan, resistensi &amp; konflik</a>
+    <a href="#b12"><span class="no">B12</span>Penyelesaian proyek</a>
     <div class="nav-group">Alat bantu</div>
     <a href="#rumus"><span class="no">Σ</span>Lembar rumus &amp; kalkulator</a>
     <a href="#glosarium"><span class="no">Aa</span>Glosarium</a>
@@ -292,7 +293,7 @@ details.more[open] > summary::before{content:"－ "}
 <section class="hero" id="top">
   <div class="eyebrow">MPPTI 2026 · Dosen: Panca Hadi Putra</div>
   <h1>Satu halaman untuk Quiz, UTS, dan UAS.</h1>
-  <p>Ringkasan detail seluruh materi yang diberikan: slide Marchewka Bab 1–6, slide minggu 9 (Risiko), minggu 10 (Stakeholder &amp; Komunikasi), minggu 11 (Perubahan, Resistensi &amp; Konflik), presentasi Kelompok 1 (PMBOK) dan Kelompok 4 (Business Case), diperdalam dengan buku Marchewka 5e, PMBOK Guide 6th, dan Agile Practice Guide. Di bagian akhir ada bank soal PG &amp; esai (Easy · Medium · Hard · HOTS) lengkap dengan kunci dan pembahasan.</p>
+  <p>Ringkasan detail seluruh materi yang diberikan: slide Marchewka Bab 1–6, slide minggu 9 (Risiko), minggu 10 (Stakeholder &amp; Komunikasi), minggu 11 (Perubahan, Resistensi &amp; Konflik), minggu 12 (Project Completion), presentasi Kelompok 1 (PMBOK) dan Kelompok 4 (Business Case), diperdalam dengan buku Marchewka 5e, PMBOK Guide 6th, dan Agile Practice Guide. Di bagian akhir ada bank soal PG &amp; esai (Easy · Medium · Hard · HOTS) lengkap dengan kunci dan pembahasan.</p>
 </section>
 
 <section class="module" id="mulai" data-mod>
@@ -317,7 +318,7 @@ details.more[open] > summary::before{content:"－ "}
     <tbody>
       <tr><td><span class="pill quiz">Quiz</span></td><td>Per topik yang baru dibahas</td><td>Definisi, ciri-ciri, urutan langkah, satu perhitungan sederhana (payback/ROI, slack, CV/CPI, P×I).</td></tr>
       <tr><td><span class="pill uts">UTS</span></td><td>Bab 1–6 Marchewka, PMBOK (Kel. 1), Business Case (Kel. 4), Agile/Scrum</td><td>MOV &amp; enam langkahnya, business case &amp; model finansial (NPV!), scoring model, governance &amp; struktur organisasi, jenis kontrak, charter, scope (creep/leap/grope), WBS, deliverable vs milestone, estimasi, CPM (ES/EF/LS/LF/slack), PERT, PDM, CCPM, anggaran &amp; baseline.</td></tr>
-      <tr><td><span class="pill uas">UAS</span></td><td>Bab 7 (Risiko), Bab 8 (Stakeholder, Komunikasi, EVM), Bab 11 (Perubahan, Resistensi, Konflik) + integrasi dengan materi UTS</td><td>Enam langkah risiko, kerangka identifikasi, P×I &amp; Tusler, expected value &amp; decision tree, strategi respons, risk register; analisis stakeholder, model komunikasi, push/pull/interaktif, <b>EVM (CV, SV, CPI, SPI, EAC, VAC, TCPI)</b>; Leavitt, Lewin, force-field, Kübler-Ross, rencana perubahan, 4 strategi, ADKAR, Kotter, resistensi, 3 pandangan &amp; 5 respons konflik, evaluasi pilot.</td></tr>
+      <tr><td><span class="pill uas">UAS</span></td><td>Bab 7 (Risiko), Bab 8 (Stakeholder, Komunikasi, EVM), Bab 11 (Perubahan, Resistensi, Konflik), Bab 12 (Project Completion) + integrasi dengan materi UTS</td><td>Enam langkah risiko, kerangka identifikasi, P×I &amp; Tusler, expected value &amp; decision tree, strategi respons, risk register; analisis stakeholder, model komunikasi, push/pull/interaktif, <b>EVM (CV, SV, CPI, SPI, EAC, VAC, TCPI)</b>; Leavitt, Lewin, force-field, Kübler-Ross, rencana perubahan, 4 strategi, ADKAR, Kotter, resistensi, 3 pandangan &amp; 5 respons konflik, evaluasi pilot; direct cutover/parallel/phased, readiness gate &amp; rollback, handover, 5 keadaan berakhirnya proyek, acceptance &amp; residual item, laporan akhir, administrative closure, 4 evaluasi, benefits review.</td></tr>
     </tbody>
   </table></div>
 
@@ -330,7 +331,8 @@ details.more[open] > summary::before{content:"－ "}
     <div><b>Jadwal &amp; anggaran</b>Kapan, berapa (B6) → baseline</div><div class="arr">→</div>
     <div><b>Risiko</b>Apa yang bisa meleset (B7)</div><div class="arr">→</div>
     <div><b>Komunikasi &amp; EVM</b>Apakah sesuai baseline (B8)</div><div class="arr">→</div>
-    <div><b>Perubahan</b>Apakah orang benar-benar memakai hasilnya (B11)</div>
+    <div><b>Perubahan</b>Apakah orang benar-benar memakai hasilnya (B11)</div><div class="arr">→</div>
+    <div><b>Completion</b>Rilis, terima, tutup, tinjau nilai (B12)</div>
   </div>
   <div class="callout exam"><b>Kunci menjawab esai HOTS</b>Hampir semua soal analisis bisa dijawab dengan menarik kembali ke <b>MOV</b>: apakah keputusan (scope, jadwal, kontrak, respons risiko, strategi perubahan) membantu atau menghambat tercapainya MOV? Sebut konsepnya, terapkan ke kasus, beri angka bila ada, lalu tutup dengan rekomendasi + risiko/asumsinya.</div>
 </section>
@@ -1989,6 +1991,273 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
   <p class="small">ADKAR untuk satu dosen yang cemas; Kotter untuk perubahan LMS satu fakultas. <b>Takeaway</b>: (1) teknologi mengubah tugas, peran, otoritas; (2) keberatan user bisa memperbaiki desain perubahan; (3) pilot menguji manfaat, mutu, beban dalam konteks; (4) keputusan ekspansi mengikuti bukti &amp; evaluasi berkelanjutan. Mulai project plan berikutnya dengan bertanya <b>siapa yang akan bekerja secara berbeda</b>, bukan hanya apa yang akan dibangun.</p>
   <div class="mod-foot"><span class="small">Worksheet: change issue log — isu &amp; bukti · kelompok/kepentingan · aksi &amp; owner · evaluasi. Tutup isu dengan bukti, bukan dengan “sudah dibahas”.</span><button class="btn" data-practice="b11">Latihan Bab 11 →</button></div>
 </section>
+<!-- ===================== BAB 12 ===================== -->
+<section class="module" id="b12" data-mod>
+  <div class="mod-head">
+    <div><div class="eyebrow">Minggu 12 · Bab 12 Marchewka</div><h2>Project Completion: Implementation, Closure &amp; Evaluation</h2>
+      <div class="tags"><span class="pill uas">UAS</span><span class="pill quiz">Quiz</span><span class="pill src">Slide minggu 12 · Marchewka Bab 12 (hlm. 306–324) · Google SRE, AWS, NIST, CISA, DTA</span></div></div>
+    <label class="done-toggle"><input type="checkbox" data-done="b12">Tandai selesai</label>
+  </div>
+  <p class="lead">Learning outcome: <b>menjustifikasi kapan melepas (release), menerima (accept), menutup (close), dan meninjau nilai (review value)</b>. Alur sesi: <b>Implementation</b> (masuk ke penggunaan yang andal) → <b>Handover</b> (kapabilitas operasi berpindah) → <b>Closure</b> (penerimaan &amp; kewajiban) → <b>Evaluation</b> (nilai ditinjau oleh pemiliknya).</p>
+
+  <h3>Sambungan dari minggu 11</h3>
+  <div class="flow">
+    <div><b>1 · Work</b>Pahami perubahan kerja &amp; otoritas</div><div class="arr">→</div>
+    <div><b>2 · Resistance</b>Tangani resistensi &amp; kepentingan</div><div class="arr">→</div>
+    <div><b>3 · Adoption</b>Dukung adopsi &amp; pembelajaran</div><div class="arr">→</div>
+    <div><b>4 · Dependable use</b>Masukkan sistem ke penggunaan andal</div><div class="arr">→</div>
+    <div><b>5 · Transfer</b>Alihkan tanggung jawab, tutup kewajiban</div><div class="arr">→</div>
+    <div><b>6 · Value</b>Evaluasi apakah nilai muncul</div>
+  </div>
+  <p class="small">Langkah 1–3 = minggu 11 (menyiapkan orang); 4–6 = minggu 12 (menyelesaikan proyek). Adopsi user <b>dan</b> kapabilitas operasional sama-sama menentukan apakah delivery menghasilkan nilai. Contoh: e-procurement go-live, tetapi pembeli tetap mengirim form lewat email karena tidak ada yang memiliki handover ke operasi.</p>
+
+  <div class="callout case"><b>Kasus pembuka — apakah proyek portal siap ditutup? (fiktif)</b>
+    Sponsor ingin launch dan final sign-off hari Jumat.
+    <div class="grid2" style="margin:8px 0 4px">
+      <div><b>Sudah selesai</b><ul><li>Portal menangani permintaan layanan rutin</li><li>Staf sudah mencoba AI FAQ assistant</li><li>Supplier sudah menyerahkan laporan uji</li></ul></div>
+      <div><b>Masih belum pasti</b><ul><li>Sebagian saldo biaya (fee) tidak rekonsiliasi</li><li>Tim penerima belum berlatih recovery</li><li>Tidak ada yang memiliki benefits review berikutnya</li></ul></div>
+    </div>
+    Poll: sebagai sponsor, (A) tanda tangani semua, (B) <b>tanda tangani untuk scope terbatas dengan syarat</b>, atau (C) belum. Supplier yang mendesak sign-off sebelum invoice final bukan alasan: <b>penerimaan mengikuti bukti, bukan tanggal invoice.</b></div>
+
+  <h3>Empat arti “selesai” — keputusan berbeda, tanggal &amp; pemilik berbeda</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Keputusan</th><th>Artinya</th><th>Siapa memutuskan</th></tr></thead>
+    <tbody>
+      <tr><td><b>Release / go-live</b></td><td>Operasi aman untuk scope yang dimaksud</td><td>Release authority atau service owner yang berwenang</td></tr>
+      <tr><td><b>Acceptance</b></td><td>Deliverable yang disepakati memenuhi kriteria</td><td>Sponsor atau customer yang berwenang</td></tr>
+      <tr><td><b>Project closure</b></td><td>Kewajiban diselesaikan atau dialihkan secara eksplisit</td><td>Otoritas governance proyek</td></tr>
+      <tr><td><b>Benefits review</b></td><td>Outcome dibandingkan dengan MOV yang disepakati</td><td>Business benefit owner (setelah nilai teramati)</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Contoh: upgrade payroll go-live Maret, diterima April, ditutup Mei, dan penghematannya baru terlihat tahun berikutnya.</p>
+
+  <h3>Tiga pendekatan implementasi (Gambar 12.1–12.3)</h3>
+  <div class="grid3">
+    <div class="card red"><div class="k">1 titik transisi</div><h4>Direct cutover</h4><p>Sistem lama berhenti di tanggal target; sistem baru langsung mengambil alih. Contoh: mengganti situs FAQ publik di akhir pekan (risiko rendah, halaman lama mudah dipulihkan). Switch yang gagal bisa <b>menghentikan layanan</b>.</p></div>
+    <div class="card amb"><div class="k">2 sistem tumpang tindih</div><h4>Parallel</h4><p>Lama &amp; baru berjalan <b>bersamaan</b>; bandingkan output sebelum bergantung penuh. Contoh: payroll dijalankan di kedua sistem satu siklus, gaji dibayar <b>hanya dari sistem lama</b> sampai total cocok (satu jalur pembayaran resmi). Menambah biaya &amp; kerja rekonsiliasi.</p></div>
+    <div class="card grn"><div class="k">3+ titik transisi</div><h4>Phased</h4><p>Rilis per modul, unit, atau lokasi; tiap fase punya tanggal target. Contoh: portal kampus fakultas demi fakultas; jadwal rumah sakit bangsal demi bangsal. Pelajaran awal memperbaiki fase berikutnya; keterlambatan awal bisa merembet.</p></div>
+  </div>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Tabel 12.1 (asli)</th><th>Direct cutover</th><th>Parallel</th><th>Phased</th></tr></thead>
+    <tbody>
+      <tr><td>Kelebihan</td><td>Implementasi bisa cepat</td><td>Safety net/backup bila ada masalah; meningkatkan kepercayaan karena output lama &amp; baru dibandingkan</td><td>Pendekatan terorganisasi per departemen/lokasi; pengalaman awal memperlancar implementasi berikutnya</td></tr>
+      <tr><td>Kekurangan</td><td>Berisiko bila sistem belum teruji penuh; tekanan besar pada <b>tim proyek</b> (harus benar sejak pertama, terutama sistem mission-critical)</td><td>Lebih lama &amp; bisa lebih mahal; tekanan pada <b>customer/user</b> (kerja ganda)</td><td>Lebih lama &amp; bisa lebih mahal; masalah di fase awal bisa memengaruhi jadwal &amp; anggaran keseluruhan</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Setiap kolom adalah daftar trade-off independen, bukan skor baris per baris. Komponen berbeda dari satu sistem boleh memakai pendekatan berbeda: FAQ portal cutover langsung, pembayaran fee bertahap per fakultas dengan rekonsiliasi harian.</p>
+
+  <h4>Memilih rollout — lima risiko transisi</h4>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Faktor</th><th>Pertanyaan</th><th>Yang diperiksa</th></tr></thead>
+    <tbody>
+      <tr><td><b>Outage tolerance</b></td><td>Gangguan seperti apa yang dapat diterima?</td><td>Komitmen layanan; periode puncak</td></tr>
+      <tr><td><b>Recoverability</b></td><td>Bisakah layanan yang usable dipulihkan?</td><td>Recovery rehearsal; data yang kompatibel</td></tr>
+      <tr><td><b>Reconciliation</b></td><td>Apakah catatan tetap konsisten?</td><td>Total, pengecualian, kepemilikan</td></tr>
+      <tr><td><b>Dependencies</b></td><td>Apa yang harus berubah bersamaan?</td><td>Interface; shared services</td></tr>
+      <tr><td><b>Staff capacity</b></td><td>Mampukah tim mendukung transisi?</td><td>Pelatihan; cakupan dukungan; beban kerja</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Readiness gates — bukti yang bisa diperiksa</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Gate</th><th>Bukti</th><th>Pemilik</th></tr></thead>
+    <tbody>
+      <tr><td>Service quality</td><td>Critical journeys &amp; pengecualian sudah diuji</td><td>Business owner</td></tr>
+      <tr><td>Data integrity</td><td>Total migrasi sudah direkonsiliasi</td><td>Data owner</td></tr>
+      <tr><td>Recovery</td><td>Fallback atau restore sudah <b>didemonstrasikan</b></td><td>Operations owner</td></tr>
+      <tr><td>People &amp; support</td><td>Tim terlatih; eskalasi sudah dipraktikkan</td><td>Service owner</td></tr>
+      <tr><td>Residual risk</td><td>Isu terbuka sudah ditugaskan &amp; diterima</td><td>Pengambil keputusan berwenang → <b>GO</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout trap"><b>Jebakan</b>Checklist berbunyi “backup done”, tetapi belum ada yang pernah <b>me-restore</b> backup itu. Gate terlihat lulus, padahal belum. Gate bersifat ilustratif: sesuaikan bukti &amp; ambang penerimaan dengan risiko.</div>
+
+  <h4>Release runbook — membuat keputusan bisa dieksekusi</h4>
+  <div class="flow">
+    <div><b>Sebelum</b>Tunjuk pemilik keputusan go/no-go · konfirmasi bukti, orang &amp; akses · siapkan fallback &amp; komunikasi</div><div class="arr">→</div>
+    <div><b>GO / NO-GO</b></div><div class="arr">→</div>
+    <div><b>Selama &amp; sesudah</b>Urutkan perubahan &amp; checkpoint · amati hasil layanan &amp; data · catat versi, tindakan, waktu · pause/recover pada trigger yang disepakati · beri tahu user &amp; konfirmasi kepemilikan</div>
+  </div>
+  <p class="small">Setiap langkah: <b>owner, evidence, stop condition, next action</b>. Contoh: sebelum migrasi akhir pekan, tim menuliskan jam pasti rollback dilakukan bila pengecekan gagal.</p>
+
+  <h4>Mekanisme deployment (praktik modern)</h4>
+  <div class="grid3">
+    <div class="card"><h4>Blue/green</h4><p>Mengendalikan <b>trafik antara dua environment</b> (v1 &amp; v2). Mendukung cutover atau pergeseran bertahap.</p></div>
+    <div class="card"><h4>Canary</h4><p>Paparan <b>terbatas</b> lalu dievaluasi. Mendukung rollout bertahap.</p></div>
+    <div class="card"><h4>Feature flag</h4><p>Mengaktifkan <b>perilaku tertentu</b>. Mendukung adopsi selektif (mis. checkout baru untuk 5% user, diperluas setelah error rate dicek).</p></div>
+  </div>
+  <p class="small">Mekanisme ini bisa dikombinasikan; mereka <b>bukan padanan</b> dari tiga pendekatan di buku.</p>
+  <div class="grid2">
+    <div class="card red"><h4>Rollback &amp; persistent state</h4><p><b>Code goes back. Effects stay.</b> Yang tertinggal: record berformat baru (cek kompatibilitas baca-tulis lama/baru), skema database bersama yang berubah (uji jalur upgrade &amp; downgrade), pembayaran/notifikasi yang sudah terjadi (rencanakan restorasi &amp; rekonsiliasi). Contoh: versi baru menyimpan tanggal dalam format baru; setelah rollback, versi lama tidak bisa membacanya.</p></div>
+    <div class="card amb"><h4>Kasus CrowdStrike, 19 Juli 2024</h4><p>Update <b>konten/konfigurasi</b> (Channel File 291) menyebabkan crash: kondisi pencocokan baru mengharapkan <b>21</b> input tetapi hanya <b>20</b> yang diberikan → out-of-bounds read. Akar masalah: cacat validasi, testing, dan runtime yang saling berinteraksi. Pelajaran: <b>perlakukan update konfigurasi &amp; konten sebagai rilis</b> — bertahap, diuji, dapat dipulihkan.</p></div>
+  </div>
+
+  <h3>Handover = kapabilitas operasi yang didemonstrasikan</h3>
+  <div class="grid2">
+    <div class="card acc"><h4>Tim proyek → tim penerima</h4><ul><li>Runbook, akses, pengetahuan layanan</li><li>Known issues &amp; kewajiban yang diterima</li><li>Kepemilikan, pendanaan, cakupan dukungan</li></ul></div>
+    <div class="card grn"><h4>Tim penerima mendemonstrasikan</h4><ul><li>Membaca dashboard &amp; mendiagnosis alert</li><li>Memulihkan layanan &amp; merekonsiliasi record</li><li>Mengeskalasi insiden &amp; memperoleh dukungan</li></ul></div>
+  </div>
+  <p class="small">Sepakati dukungan transisi dan bukti yang diperlukan untuk mengakhirinya. Contoh: engineer vendor pergi Jumat; Senin tim internal harus memulihkan layanan sendiri — latih itu dulu.</p>
+  <div class="grid2">
+    <div class="card vio"><h4>Sistem AI — kepemilikan manusia berlanjut (NIST AI 600-1)</h4><p><b>Keputusan berkelanjutan</b>: siapa memantau kinerja &amp; dampak buruk? siapa menyetujui perubahan &amp; evaluasi ulang? siapa bisa <b>menangguhkan/mempensiunkan</b> layanan? <b>Serahkan sistem AI yang bisa ditinjau</b>: versi model, prompt &amp; data; hasil evaluasi &amp; batasan; jalur feedback, insiden, dan human fallback. Proyek boleh ditutup sementara pemantauan yang akuntabel <b>terus berjalan</b> (chatbot tetap butuh orang bernama yang bisa mematikannya).</p></div>
+    <div class="card"><h4>Security handover</h4><p><b>SBOM</b> (software bill of materials) per rilis: komponen, data yang usable, konteks (provenance &amp; cara dibuat) — update panduan CISA 29 Juli 2026. SBOM <b>menggambarkan komposisi, bukan sertifikat keamanan</b>; saat kerentanan library diumumkan, SBOM membantu cepat mengetahui sistem mana yang terdampak. NIST SSDF v1.1 = panduan baseline final; v1.2 = draf publik awal. Tetapkan <b>pemilik kerentanan &amp; patch</b>.</p></div>
+  </div>
+
+  <h3>Mengakhiri proyek — lima keadaan (Marchewka hlm. 310–311)</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Keadaan</th><th>Arti</th><th>Contoh / catatan buku</th></tr></thead>
+    <tbody>
+      <tr><td><b>Normal</b></td><td>Objektif yang disetujui tercapai (scope dalam biaya, mutu, jadwal)</td><td>Scope portal disepakati &amp; diterima; ditutup dengan perayaan &amp; penghargaan — situasi ideal</td></tr>
+      <tr><td><b>Premature</b></td><td>Berakhir lebih awal dengan fungsionalitas berkurang</td><td>Sponsor menerima rilis terbatas (respons pesaing, pasar baru, regulasi); risikonya harus dipikirkan semua stakeholder</td></tr>
+      <tr><td><b>Perpetual</b></td><td>Scope/keputusan menghalangi penutupan (runaway project)</td><td>Fitur baru terus menunda penutupan; MOV/scope tak pernah jelas; enggan “pull the plug” karena ego/karier/budaya. Cegah dengan MOV &amp; scope yang disepakati + review tepat waktu</td></tr>
+      <tr><td><b>Failed</b></td><td>Tidak mampu memberi nilai yang dimaksud</td><td>Kurang perhatian pada people, process, technology; sisa biaya melebihi manfaat</td></tr>
+      <tr><td><b>Changed priorities</b></td><td>Sumber daya atau kebutuhan strategis berubah</td><td>Platform bersama menggantikan rencana; <b>“terminated by starvation”</b> — anggaran dipotong bertahap sampai proyek mati tanpa pernah resmi ditutup</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout exam"><b>Sering keluar</b><ul><li><b>Perpetual</b> menggambarkan <i>kegagalan mencapai penutupan</i>. Product backlog yang terus berjalan <b>tidak otomatis</b> membuat proyek perpetual: proyek portal ditutup, product owner memegang backlog peningkatan yang didanai anggaran operasi.</li><li>Pembatalan tetap butuh <b>closeout yang tertib</b>: pilot yang dibatalkan tetap ditutup formal — kontrak diakhiri, data diarsip, lessons learned dicatat.</li></ul></div>
+  <details class="more"><summary>Realitas menjelang akhir proyek (Marchewka hlm. 311)</summary>
+    <ul>
+      <li><b>Anggota tim cemas soal pekerjaan berikutnya</b> → fokus menutup proyek menurun.</li>
+      <li><b>Bug masih ada</b> → harus cepat diperbaiki agar kepuasan sponsor terjaga.</li>
+      <li><b>Sumber daya menipis</b> → waktu &amp; dana habis saat masalah tak terduga muncul.</li>
+      <li><b>Dokumentasi menjadi sangat penting</b> → sering ditunda ke akhir sehingga butuh waktu ekstra atau diambil jalan pintas.</li>
+      <li><b>Tanggal yang dijanjikan tidak tercapai</b> → schedule slippage.</li>
+      <li><b>Para pemain panik</b> → peluang penutupan yang tertib mengecil.</li>
+    </ul>
+    <p>Penutupan yang baik: dari sisi administratif semua “loose ends” terikat; dari sisi psikologis semua stakeholder merasa proyek terkendali dari awal sampai akhir.</p>
+  </details>
+
+  <h3>Penutupan proyek vs pekerjaan produk berkelanjutan</h3>
+  <div class="grid2">
+    <div class="card acc"><h4>Proyek sementara — closure</h4><ul><li>Deliverable yang disepakati punya bukti penerimaan</li><li>Kewajiban proyek punya disposisi jelas</li><li>Sumber daya &amp; akuntabilitas berpindah secara eksplisit</li></ul></div>
+    <div class="card grn"><h4>Layanan &amp; produk berkelanjutan</h4><ul><li>Operasi memiliki support &amp; maintenance</li><li>Product owner memprioritaskan enhancement</li><li>Business owner melacak benefit</li></ul></div>
+  </div>
+
+  <h3>Penerimaan sponsor &amp; sign-off formal</h3>
+  <p>Syarat terpenting untuk penutupan dalam keadaan normal adalah <b>penerimaan sponsor</b>. Delivery, instalasi, dan rilis <b>tidak otomatis</b> berarti diterima. PM bertanggung jawab menunjukkan semua deliverable selesai sesuai spesifikasi. Dokumentasi, pelatihan, dan dukungan seharusnya sudah ada di scope awal — merenegosiasi scope di akhir menimbulkan ketegangan atau menahan pembayaran.</p>
+  <div class="grid2">
+    <div class="card"><h4>Shortsighted vs knowledgeable sponsor</h4><p><b>Shortsighted</b>: melihat proyek sebagai transaksi jual-beli jangka pendek (“dapat sebanyak mungkin”) → cenderung merenegosiasi scope/harga di akhir, hubungan adversarial. <b>Knowledgeable</b>: sadar punya kepentingan atas hasil; terlibat konstruktif sepanjang proyek, bertanya tajam di review demi keberhasilan.</p></div>
+    <div class="card"><h4>Bukti penerimaan (acceptance record)</h4><ul><li>Scope &amp; kriteria mutu yang disepakati</li><li>Hasil uji &amp; perubahan yang disetujui</li><li>Pelatihan, dokumentasi, dukungan</li><li>Tanda tangan pihak berwenang + tanggal</li></ul><p class="small">Tulis kriteria penerimaan di <b>kontrak sejak awal</b>, bukan di minggu terakhir saat supplier menagih.</p></div>
+  </div>
+  <h4>Residual items — harus punya disposisi eksplisit</h4>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Elemen</th><th>Contoh: cacat laporan portal</th></tr></thead>
+    <tbody>
+      <tr><td>Item &amp; dampak (kewajiban yang belum selesai)</td><td>Cacat pelaporan dan efeknya</td></tr>
+      <tr><td>Otorisasi (siapa menerima disposisinya)</td><td>Sponsor dan pemilik penerima</td></tr>
+      <tr><td>Owner &amp; pendanaan</td><td>Operasi, dengan anggaran yang disepakati</td></tr>
+      <tr><td>Due date &amp; eskalasi</td><td>Tenggat bernama dan jalur eskalasi</td></tr>
+      <tr><td>Verifikasi</td><td>Hasil uji yang diterima owner</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout trap"><b>Jebakan</b>Transfer yang diotorisasi harus eksplisit dan <b>tidak boleh menyembunyikan requirement kritis yang belum terpenuhi</b>. “To follow” yang samar ≠ disposisi.</div>
+
+  <h3>Laporan akhir &amp; rapat akhir</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Bagian laporan akhir</th><th>Isi (Marchewka)</th><th>Pertanyaan yang dijawab</th></tr></thead>
+    <tbody>
+      <tr><td>1. Purpose &amp; scope</td><td>Ringkasan &amp; deskripsi proyek, MOV, objektif scope/jadwal/anggaran/mutu</td><td>Apa yang dijanjikan proyek?</td></tr>
+      <tr><td>2. Baselines &amp; actuals</td><td>Scope awal + riwayat perubahan yang disetujui; deadline awal vs aktual; anggaran awal vs biaya aktual</td><td>Apa yang berubah, apa yang terjadi?</td></tr>
+      <tr><td>3. Quality</td><td>Test plan &amp; hasil uji</td><td>Apa yang mendukung penerimaan?</td></tr>
+      <tr><td>4. Open obligations</td><td>Isu terbuka, daftar item &amp; perkiraan selesai, dukungan berkelanjutan &amp; durasinya</td><td>Apa yang tersisa, siapa pemiliknya?</td></tr>
+      <tr><td>5. Documentation</td><td>Dokumentasi sistem, manual user, materi pelatihan, dokumentasi maintenance</td><td>Bisakah layanan beroperasi setelahnya?</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Simpan <b>baseline asli</b>, riwayat revisi yang disetujui, dan hasil aktual berdampingan — tampilkan deadline asli di samping yang direvisi agar laporan tidak menyembunyikan slip 6 bulan. Laporan dapat diedarkan sebelum presentasi untuk mendapat masukan &amp; menemukan item yang belum selesai. Tujuannya: memberi sponsor <b>keyakinan</b> bahwa proyek selesai sesuai business case, charter, dan project plan.</p>
+  <div class="grid4">
+    <div class="card"><h4>Mengumumkan proyek selesai</h4><p class="small">Rasa closure bagi tim &amp; organisasi.</p></div>
+    <div class="card"><h4>Transfer produk/sistem</h4><p class="small">Pertukaran formal dari tim ke organisasi.</p></div>
+    <div class="card"><h4>Mengakui kontribusi</h4><p class="small">Apresiasi tim &amp; stakeholder.</p></div>
+    <div class="card"><h4>Sign-off formal</h4><p class="small">Seremoni penerimaan oleh sponsor.</p></div>
+  </div>
+  <p class="small">Empat fungsi <b>final meeting &amp; presentation</b>. Slide menyederhanakan: konfirmasi selesai &amp; alihkan kepemilikan → catat keputusan penerimaan yang berwenang → akui kontribusi &amp; langkah berikutnya.</p>
+
+  <h3>Administrative closure</h3>
+  <div class="grid2">
+    <div class="card"><h4>Daftar Marchewka</h4><ul><li>Verifikasi semua deliverable &amp; item terbuka selesai</li><li>Verifikasi penerimaan formal sponsor/customer</li><li>Organisasi &amp; arsipkan semua deliverable &amp; dokumentasi</li><li>Rencanakan pelepasan sumber daya (orang, teknologi, peralatan, fasilitas)</li><li>Rencanakan evaluasi &amp; review anggota tim dan proyek</li><li>Tutup semua akun proyek</li><li>Rencanakan perayaan akhir proyek (yang sukses)</li></ul></div>
+    <div class="card"><h4>Area, bukti, dan siapa akuntabel setelahnya</h4><div class="tblwrap"><table class="tbl compact"><tr><th>Area</th><th>Bukti</th><th>Akuntabel</th></tr><tr><td>Deliverables</td><td>Penerimaan &amp; disposisi isu</td><td>Service owner penerima</td></tr><tr><td>Resources &amp; access</td><td>Orang, aset, akses dialihkan</td><td>Operational owners</td></tr><tr><td>Contracts &amp; accounts</td><td>Invoice &amp; kewajiban diselesaikan</td><td>Procurement &amp; finance</td></tr><tr><td>Records &amp; reviews</td><td>Arsip terindeks &amp; rencana review</td><td>Pemilik record &amp; review bernama</td></tr><tr><td>People &amp; recognition</td><td>Penugasan berikutnya &amp; kontribusi</td><td>Line manager &amp; sponsor</td></tr></table></div><p class="small">Contoh: cabut akun admin kontraktor dan alihkan billing cloud pada hari proyek ditutup.</p></div>
+  </div>
+  <p class="small">Administrative closure sering dianggap membosankan, tapi wajib — begitu tim dilepas, sulit meminta sponsor menyelesaikan detail terakhir.</p>
+
+  <h3>Empat evaluasi dengan tujuan berbeda</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Evaluasi</th><th>Tujuan</th><th>Siapa &amp; kapan</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Individual performance review</b></td><td>Feedback &amp; pengembangan</td><td>PM dengan tiap anggota, <b>sebelum tim bubar</b></td></tr>
+      <tr><td><b>2 · Close-out (postmortem) review</b></td><td>Memperbaiki praktik delivery</td><td>PM &amp; tim, <b>sebelum dilepas dari proyek</b></td></tr>
+      <tr><td><b>3 · Independent project audit</b></td><td>Menilai eksekusi &amp; perilaku (profesional, etis)</td><td>Reviewer imparsial, scope berbasis risiko</td></tr>
+      <tr><td><b>4 · MOV evaluation</b></td><td>Menilai nilai &amp; kepuasan</td><td>Business owner, <b>setelah penggunaan yang cukup</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Penerimaan proyek dan bukti nilai organisasi adalah <b>dua penilaian berbeda</b>. Retrospektif tim terjadi sebelum orang tersebar; evaluasi MOV berbulan-bulan kemudian.</p>
+  <div class="grid2">
+    <div class="card"><h4>Individual review (hlm. 314–315)</h4><ul><li>Mulai dari <b>self-assessment</b> individu</li><li>Hindari “why can't you be more like…?” (perbandingan)</li><li>Fokus pada <b>perilaku spesifik</b>, bukan pribadi: bukan “kamu tidak teratur”, tapi “laporan uji terlambat dua kali sehingga penerimaan tertunda”</li><li>Konsisten &amp; adil (kriteria sama)</li><li>Sepakati perbaikan &amp; dukungan (mis. pelatihan); bahas penugasan berikutnya</li></ul><p class="small">Feedback privat soal pekerjaan &amp; pengembangan — tanpa label kepribadian atau ranking.</p></div>
+    <div class="card"><h4>Close-out (postmortem) review (hlm. 315–316)</h4><ul><li>MOV awal: jelas &amp; disepakati? berubah? peluang tercapai?</li><li>Objektif scope, jadwal, anggaran, mutu: seberapa akurat estimasi?</li><li>Setiap deliverable: business case, charter, plan — bagaimana memperbaikinya?</li><li>Rencana &amp; metodologi: development, scope, time, cost, quality, tim &amp; sumber daya, stakeholder &amp; komunikasi, risiko, change management, implementasi</li><li>Kinerja tim: konflik, moral, tantangan, kohesi</li></ul><p class="small">Dilakukan <b>sebelum tim dilepas</b> (orang sibuk, ingatan memudar). Prinsip postmortem culture (Google SRE): periksa kondisi yang berkontribusi, bukan menyalahkan; temuan → aksi bernama.</p></div>
+  </div>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Temuan (portal fiktif)</th><th>Aksi</th><th>Owner &amp; waktu</th></tr></thead>
+    <tbody>
+      <tr><td>Kepemilikan konten tidak jelas</td><td>Tunjuk owner tiap sumber FAQ</td><td>Service owner, sebelum ekspansi</td></tr>
+      <tr><td>Handover melewatkan pengecualian</td><td>Tambahkan kasus pengecualian ke runbook</td><td>Operations lead, rehearsal berikutnya</td></tr>
+      <tr><td>Bukti kesiapan terlambat</td><td>Kumpulkan bukti di tiap milestone</td><td>PMO lead, review proyek berikutnya</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Project audit (hlm. 316)</h4><p>Pandangan objektif pihak luar. Fokus: rencana, metode, eksekusi, bukti; perilaku profesional &amp; etis; temuan, lessons learned, tindak lanjut. Auditor: <b>tidak terlibat langsung/tidak berkepentingan</b>; dihormati, imparsial &amp; adil; mau mendengar; bebas dari ancaman pembalasan kepentingan tertentu; bertindak demi organisasi; berpengalaman luas. <b>Kedalaman audit</b> tergantung ukuran organisasi, ukuran &amp; pentingnya proyek, risiko, dan masalah yang terjadi (sistem publik besar → audit eksternal; tool internal kecil → peer review).</p></div>
+    <div class="card"><h4>Evaluasi MOV (hlm. 316–317)</h4><p>MOV sering belum bisa ditentukan saat proyek ditutup; manfaat butuh minggu/bulan. Dua pertanyaan: <b>Apakah proyek mencapai MOV? Apakah sponsor/customer puas?</b> Sebelum evaluasi, pastikan produk yang dievaluasi <b>adalah yang diserahkan</b> — user/staf support sering mengubahnya setelah handover, kadang dengan efek buruk.</p></div>
+  </div>
+
+  <h3>Benefits ownership setelah proyek ditutup (DTA Benefits Management)</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Elemen</th><th>Contoh portal</th><th>Pemilik</th></tr></thead>
+    <tbody>
+      <tr><td>Expected value</td><td>Penyelesaian lebih cepat dengan mutu yang dapat diterima</td><td>Business service owner</td></tr>
+      <tr><td>Baseline &amp; target</td><td>Tugas sebanding sebelum &amp; sesudah launch</td><td>Benefit owner &amp; analis</td></tr>
+      <tr><td>Measurement route</td><td>Catatan layanan + review mutu</td><td>Data steward &amp; reviewer</td></tr>
+      <tr><td>Review &amp; response</td><td>Tinjau hasil, jelaskan gap, putuskan aksi</td><td>Benefit owner &amp; sponsor</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Business owner menerima (menandatangani) benefits plan &amp; jalur pengukurannya <b>sebelum tim proyek bubar</b>.</p>
+  <div class="callout exam"><b>Predict: median waktu penyelesaian turun 20 → 16 menit. Apakah MOV tercapai?</b>Jawaban terbaik: <b>terlalu dini untuk menyimpulkan</b>. Waktu −20% untuk kasus sebanding ✔; error di kasus yang direview 2% → 2% (cek sampel audit &amp; tingkat keparahan); <b>pekerjaan di luar portal tidak diukur</b> (mungkin ada kerja tersembunyi lewat kanal informal lama); <b>biaya operasi tidak dicatat</b> → net value belum pasti. Perbedaan sebelum-sesudah saja <b>tidak membuktikan kausalitas</b>.</div>
+  <div class="flow">
+    <div><b>Hari ≤ 0 (sebelum closure)</b>Penerimaan, handover, kewajiban residual — sponsor &amp; service owner penerima</div><div class="arr">→</div>
+    <div><b>± Hari 30</b>Stabilitas, insiden, permintaan dukungan — operations owner menyesuaikan dukungan</div><div class="arr">→</div>
+    <div><b>± Hari 60</b>Adopsi, mutu, beban kerja — business owner menyesuaikan proses</div><div class="arr">→</div>
+    <div><b>± Hari 90</b>MOV, biaya, efek tak terduga — benefit owner merekomendasikan aksi berikutnya</div>
+  </div>
+  <p class="small">Tanggal ilustratif; frekuensi review mengikuti risiko layanan dan timeline manfaat. Masukkan review hari-90 ke kalender business owner sebelum proyek ditutup.</p>
+
+  <h3>Latihan kelas &amp; jawaban model</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Area</th><th>Bukti positif</th><th>Bukti yang memblokir</th></tr></thead>
+    <tbody>
+      <tr><td>Migrasi data</td><td>Sebagian besar cek selesai</td><td>Dua saldo fee tidak rekonsiliasi</td></tr>
+      <tr><td>Recovery</td><td>Backup ada</td><td>Tim penerima belum me-restore</td></tr>
+      <tr><td>Jawaban AI</td><td>Uji FAQ rutin lulus</td><td>Pertanyaan banding (appeal) masih tidak akurat</td></tr>
+      <tr><td>Kepemilikan</td><td>Service lead ditunjuk</td><td>Benefits review tanpa owner</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card red"><h4>Yang memblokir penggunaan lebih luas</h4><ul><li>Selesaikan selisih fee sebelum menerima migrasi</li><li>Demonstrasikan restore bersama tim penerima</li><li>Arahkan kasus AI yang tidak andal ke staf berwenang</li></ul></div>
+    <div class="card grn"><h4>Syarat penyelesaian yang tertib</h4><ul><li>Dokumentasikan penerimaan untuk scope yang jelas batasnya</li><li>Tunjuk owner &amp; dana untuk pekerjaan berlanjut</li><li>Jadwalkan benefits review dengan business owner</li></ul></div>
+  </div>
+  <p><b>Rekomendasi yang dapat dipertahankan</b>: launch terbatas untuk permintaan rutin saja; banding diarahkan ke staf. Launch terbatas masuk akal bila batas &amp; kontrolnya berjalan.</p>
+  <p class="small"><b>Role-play rapat penerimaan akhir</b> — peran: sponsor, supplier, service owner, perwakilan staf, assurance lead. Alur: tiap peran menyatakan kriteria &amp; kebutuhan bukti (3') → sepakati penerimaan, kewajiban residual, keputusan handover (8') → jelaskan siapa memutuskan, siapa membayar, kapan aksi tersisa direview (4'). Output: kerangka keputusan bertanda tangan dengan syarat, owner, tanggal, bukti review.</p>
+  <div class="grid2">
+    <div class="card"><h4>One-page closure recommendation</h4><ul><li><b>Status &amp; scope</b>: apa yang berakhir, apa yang berlanjut, baseline yang disetujui</li><li><b>Acceptance evidence</b>: kriteria, hasil, sign-off berwenang, pengecualian</li><li><b>Continuing obligations</b>: owner bernama, dana, tenggat, eskalasi</li><li><b>Value &amp; learning</b>: benefits review + aksi tindak lanjut &amp; bukti</li></ul><p class="small">Lampiran (bukan di halaman): hasil uji, catatan handover, benefits plan.</p></div>
+    <div class="card"><h4>Rubrik penilaian</h4><table class="tbl compact"><tr><td>Rollout &amp; readiness reasoning</td><td class="num">25%</td></tr><tr><td>Acceptance &amp; closure integrity</td><td class="num">25%</td></tr><tr><td>Continuing ownership</td><td class="num">20%</td></tr><tr><td>Benefits &amp; learning</td><td class="num">20%</td></tr><tr><td>Evidence &amp; limitations</td><td class="num">10%</td></tr></table></div>
+  </div>
+  <details class="more"><summary>Ekstensi: mempensiunkan layanan lama</summary>
+    <div class="tblwrap"><table class="tbl"><thead><tr><th>Concern</th><th>Bukti sebelum dimatikan</th><th>Owner</th></tr></thead><tbody>
+      <tr><td>Business dependencies</td><td>User &amp; integrasi sudah pindah</td><td>Service owner</td></tr>
+      <tr><td>Data &amp; records</td><td>Data direkonsiliasi &amp; rencana retensi disetujui</td><td>Business data owner</td></tr>
+      <tr><td>Recovery &amp; access</td><td>Jalur recovery, transfer akses, pengelolaan kunci</td><td>Operations &amp; security</td></tr>
+      <tr><td>Cost &amp; support</td><td>Kontrak, lisensi, infrastruktur ditinjau</td><td>Commercial &amp; service owners</td></tr>
+    </tbody></table></div>
+    <p class="small">Retirement adalah keputusan siklus hidup yang terkendali. Praktik: biarkan sistem lama <b>read-only</b> selama periode tertentu sebelum dimatikan.</p>
+  </details>
+  <div class="callout ok"><b>Takeaways</b><ul><li><b>Implementation</b>: pilih strategi rollout sesuai risiko layanan &amp; data.</li><li><b>Ownership</b>: tim penerima mampu mengoperasikan &amp; memelihara apa yang diterimanya.</li><li><b>Closure</b>: keputusan &amp; kewajiban berlanjut tetap dapat ditelusuri.</li><li><b>Evaluation</b>: business owner meninjau nilai setelah proyek sementara berakhir.</li><li>Rencanakan penyelesaian <b>sejak awal proyek</b>: kriteria penerimaan, pemilik penerima, dan ukuran manfaat.</li></ul></div>
+  <div class="mod-foot"><span class="small">Hubungkan: MOV (Bab 3) diuji di sini; baseline (Bab 6) dibandingkan dengan aktual di laporan akhir; adopsi (Bab 11) menentukan apakah nilai muncul.</span><button class="btn" data-practice="b12">Latihan Bab 12 →</button></div>
+</section>
 <!-- ===================== RUMUS ===================== -->
 <section class="module" id="rumus" data-mod>
   <div class="mod-head">
@@ -2082,16 +2351,21 @@ Saluran komunikasi = n(n − 1) ÷ 2
   <input class="search" id="glossSearch" type="search" placeholder="Saring glosarium…" style="max-width:360px">
   <dl class="defs" id="gloss">
     <dt>ADKAR</dt><dd>Awareness, Desire, Knowledge, Ability, Reinforcement — model diagnosis perubahan individu (Prosci).</dd>
+    <dt>Administrative closure</dt><dd>Menutup sisi administratif proyek: verifikasi deliverable &amp; penerimaan, arsip, pelepasan sumber daya, tutup akun, rencana evaluasi, perayaan.</dd>
     <dt>Alligator (Tusler)</dt><dd>Risiko probabilitas rendah, dampak tinggi → siapkan contingency plan.</dd>
     <dt>Analogous estimation</dt><dd>Estimasi berdasarkan kemiripan dengan proyek sebelumnya.</dd>
     <dt>AON</dt><dd>Activity on the Node — diagram jaringan: aktivitas = kotak, ketergantungan = panah.</dd>
     <dt>BAC</dt><dd>Budget at Completion — total anggaran terencana proyek.</dd>
     <dt>Baseline plan</dt><dd>Jadwal &amp; anggaran yang diterima sponsor, PM, tim; tolok ukur kinerja.</dd>
+    <dt>Benefits owner / benefits review</dt><dd>Pemilik bisnis yang meninjau apakah nilai (MOV) muncul setelah proyek ditutup (mis. hari 30/60/90).</dd>
+    <dt>Blue/green deployment</dt><dd>Mengalihkan trafik antara dua environment (versi lama &amp; baru).</dd>
     <dt>Breakeven point</dt><dd>Investasi awal ÷ margin laba per unit.</dd>
     <dt>Burn-down chart</dt><dd>Grafik sisa pekerjaan vs waktu dalam iterasi Agile.</dd>
     <dt>Business case</dt><dd>Analisis nilai, kelayakan, biaya, manfaat, risiko beberapa alternatif.</dd>
+    <dt>Canary release</dt><dd>Memaparkan versi baru ke sebagian kecil pengguna, mengevaluasi, lalu memperluas.</dd>
     <dt>CCPM</dt><dd>Critical Chain Project Management (Goldratt) — buffer bersama, memperhitungkan ketergantungan sumber daya.</dd>
     <dt>Change agent</dt><dd>Pihak yang mendiagnosis &amp; mengoordinasi perubahan (biasanya PM &amp; tim).</dd>
+    <dt>Close-out (postmortem) review</dt><dd>Review PM &amp; tim sebelum tim dilepas: MOV, objektif, deliverable, metodologi, kinerja tim → aksi bernama.</dd>
     <dt>Contingency reserve</dt><dd>Cadangan di dalam anggaran proyek, dilepas PM saat risiko teridentifikasi terjadi.</dd>
     <dt>CPFF / CPIF / CPPC</dt><dd>Cost-plus-fixed-fee / incentive-fee / percentage-of-cost — jenis kontrak cost-reimbursable.</dd>
     <dt>CPI / SPI</dt><dd>Cost/Schedule Performance Index = EV÷AC / EV÷PV.</dd>
@@ -2100,13 +2374,15 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>Crux</dt><dd>Milestone berupa proof of concept.</dd>
     <dt>CV / SV</dt><dd>Cost/Schedule Variance = EV−AC / EV−PV.</dd>
     <dt>Decision tree</dt><dd>Diagram keputusan-outcome untuk menghitung expected value tiap opsi.</dd>
-    <dt>Delphi</dt><dd>Estimasi/identifikasi oleh ahli anonim secara iteratif sampai konsensus.</dd>
     <dt>Deliverable</dt><dd>Produk kerja yang tangible &amp; verifiable.</dd>
+    <dt>Delphi</dt><dd>Estimasi/identifikasi oleh ahli anonim secara iteratif sampai konsensus.</dd>
+    <dt>Direct cutover</dt><dd>Sistem lama berhenti dan sistem baru langsung mengambil alih pada satu titik transisi.</dd>
     <dt>DSC</dt><dd>Deliverable Structure Chart — fase &amp; deliverable (project scope).</dd>
     <dt>EAC / ETC / VAC</dt><dd>Estimate at completion / estimate to complete / variance at completion.</dd>
     <dt>EEF / OPA</dt><dd>Enterprise Environmental Factors (di luar kendali) / Organizational Process Assets (template, lessons learned).</dd>
     <dt>Expected value</dt><dd>Σ probabilitas × payoff.</dd>
     <dt>Fast tracking</dt><dd>Menjalankan paralel aktivitas/fase yang semula berurutan.</dd>
+    <dt>Feature flag</dt><dd>Saklar untuk mengaktifkan perilaku tertentu bagi sebagian pengguna tanpa deploy ulang.</dd>
     <dt>Fishbone (Ishikawa)</dt><dd>Diagram sebab-akibat untuk identifikasi risiko.</dd>
     <dt>Fixed-price</dt><dd>Kontrak harga total tetap; risiko biaya di penjual.</dd>
     <dt>FMEA / RPN</dt><dd>Failure Mode &amp; Effects Analysis; RPN = Severity × Occurrence × Detection.</dd>
@@ -2114,6 +2390,7 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>Gantt chart</dt><dd>Batang tugas pada garis waktu; tidak menampilkan ketergantungan dengan jelas.</dd>
     <dt>Grapevine</dt><dd>Jalur komunikasi informal.</dd>
     <dt>Guesstimating</dt><dd>Menebak angka tanpa dasar — dihindari.</dd>
+    <dt>Handover</dt><dd>Perpindahan kapabilitas operasi ke tim penerima yang dibuktikan lewat demonstrasi (diagnosis, restore, eskalasi).</dd>
     <dt>Informal organization</dt><dd>Cara orang sebenarnya berhubungan, di luar bagan resmi.</dd>
     <dt>Kill point / stage gate</dt><dd>Tinjauan akhir fase untuk lanjut, koreksi, atau hentikan.</dd>
     <dt>Kitten / Puppy (Tusler)</dt><dd>Kitten: P rendah I rendah · Puppy: P tinggi I rendah.</dd>
@@ -2128,22 +2405,31 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>NGT</dt><dd>Nominal Group Technique — tulis diam-diam, round-robin, ranking.</dd>
     <dt>NPV</dt><dd>Net Present Value — nilai sekarang arus kas dikurangi investasi.</dd>
     <dt>Over-allocation</dt><dd>Satu sumber daya ditugaskan ke dua tugas bersamaan.</dd>
+    <dt>Parallel implementation</dt><dd>Sistem lama &amp; baru berjalan bersamaan dan output dibandingkan.</dd>
     <dt>Parkinson's law</dt><dd>Pekerjaan mengembang mengisi waktu yang tersedia.</dd>
     <dt>Payback period</dt><dd>Waktu sampai investasi kembali.</dd>
     <dt>PDM</dt><dd>Precedence Diagramming Method — FS, SS, FF, SF.</dd>
+    <dt>Perpetual (runaway) project</dt><dd>Proyek yang tidak pernah selesai karena scope/MOV tak jelas atau keengganan menghentikan.</dd>
     <dt>PERT</dt><dd>Program Evaluation &amp; Review Technique — estimasi 3 titik (a+4b+c)/6.</dd>
+    <dt>Phased implementation</dt><dd>Implementasi bertahap per modul, unit, atau lokasi.</dd>
     <dt>Planning poker</dt><dd>Variasi Delphi berbasis kartu untuk estimasi tim Agile.</dd>
     <dt>PLC / SDLC</dt><dd>Project life cycle (mengelola proyek) / systems development life cycle (membangun produk, di dalam fase Execute).</dd>
     <dt>PMO</dt><dd>Project management office — supportive, controlling, directive.</dd>
     <dt>Portfolio / Program</dt><dd>Kumpulan proyek selaras strategi / proyek terkait yang dikoordinasikan untuk manfaat sinergis.</dd>
+    <dt>Premature termination</dt><dd>Proyek diakhiri lebih awal dengan fungsionalitas terbatas.</dd>
     <dt>PRINCE2</dt><dd>PRojects IN Controlled Environments — 7 prinsip, 7 tema, 7 proses.</dd>
     <dt>Progressive elaboration</dt><dd>Detail proyek berkembang bertahap seiring informasi bertambah.</dd>
+    <dt>Project audit</dt><dd>Review oleh pihak luar yang imparsial atas eksekusi &amp; perilaku proyek.</dd>
     <dt>Projectitis</dt><dd>Loyalitas berlebihan pada proyek di struktur project-based.</dd>
     <dt>Psychological safety</dt><dd>Keyakinan tim bahwa aman mengambil risiko interpersonal (Edmondson).</dd>
     <dt>Push / Pull / Interactive</dt><dd>Dikirim ke penerima / diambil penerima / real-time multi-arah.</dd>
     <dt>PV / EV / AC</dt><dd>Planned value / earned value / actual cost.</dd>
+    <dt>Readiness gate</dt><dd>Titik keputusan go/no-go berbasis bukti (mutu layanan, integritas data, recovery, orang &amp; dukungan, risiko residual).</dd>
+    <dt>Release runbook</dt><dd>Langkah rilis tertulis: owner, bukti, stop condition, aksi berikutnya, rencana rollback.</dd>
+    <dt>Residual item</dt><dd>Kewajiban yang belum selesai saat penutupan; butuh otorisasi, owner &amp; dana, tenggat, verifikasi.</dd>
     <dt>RFP / RFI / RFB</dt><dd>Request for Proposal / Information / Bid.</dd>
     <dt>ROI</dt><dd>(Benefit − Cost) ÷ Cost.</dd>
+    <dt>SBOM</dt><dd>Software bill of materials — daftar komponen software per rilis; bukan sertifikat keamanan.</dd>
     <dt>Scope creep / grope / leap</dt><dd>Penambahan kecil menumpuk / sulit mendefinisikan scope / perubahan fundamental.</dd>
     <dt>Servant leadership</dt><dd>Memimpin dengan melayani tim; menghapus hambatan (Scrum Master).</dd>
     <dt>Slack (float)</dt><dd>Lama aktivitas bisa ditunda tanpa menunda proyek; LS − ES.</dd>
@@ -2156,6 +2442,7 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>T&amp;M</dt><dd>Time &amp; Materials — kontrak hibrida.</dd>
     <dt>TCO / TBO</dt><dd>Total Cost / Total Benefits of Ownership.</dd>
     <dt>TCPI</dt><dd>To-Complete Performance Index = (BAC−EV)÷(BAC−AC).</dd>
+    <dt>Terminated by starvation</dt><dd>Proyek mati karena anggaran dipotong bertahap tanpa penutupan resmi.</dd>
     <dt>Tiger (Tusler)</dt><dd>Risiko probabilitas tinggi &amp; dampak tinggi.</dd>
     <dt>Time boxing</dt><dd>Alokasi waktu tetap untuk aktivitas/deliverable.</dd>
     <dt>Tornado graph</dt><dd>Grafik sensitivitas: batang terpanjang = variabel paling berpengaruh.</dd>
@@ -2423,6 +2710,47 @@ QB.push(
 {id:"ua-es-14",ex:"UAS",lv:"Medium",bab:"b11",t:"es",q:"Bandingkan ADKAR dan Kotter 8 steps. Kapan masing-masing paling berguna? Beri contoh.",e:"<ul><li><b>ADKAR</b> (Prosci): fokus <b>individu</b> — Awareness, Desire, Knowledge, Ability, Reinforcement; dipakai untuk mendiagnosis di mana seseorang/kelompok “macet” (mis. dosen mau tapi belum tahu cara membuat kuis → Knowledge).</li><li><b>Kotter</b>: fokus <b>mobilisasi organisasi</b> — urgency, guiding coalition, vision, broad participation, remove obstacles, early progress, momentum, embed practices (mis. perubahan LMS satu fakultas; e-procurement dengan koalisi finance-IT-procurement).</li><li>Saling melengkapi: Kotter untuk menggerakkan organisasi, ADKAR untuk memastikan tiap kelompok target benar-benar berubah. Keterbatasan: ADKAR bukan diagnosis psikologis; Kotter tidak menjamin sukses.</li></ul>"}
 );
 
+QB.push(
+/* ===== QUIZ · BAB 12 ===== */
+{id:"qz-b12-1",ex:"Quiz",lv:"Easy",bab:"b12",t:"pg",q:"Tiga pendekatan implementasi sistem menurut Marchewka Bab 12 adalah…",o:["Blue/green, canary, feature flag","Direct cutover, parallel, phased","Predictive, adaptive, hybrid","Normal, premature, perpetual"],a:1,e:"Gambar 12.1–12.3: <b>direct cutover, parallel, phased</b>. Blue/green, canary, feature flag adalah mekanisme deployment modern (bukan padanannya); normal/premature/perpetual adalah keadaan berakhirnya proyek."},
+{id:"qz-b12-2",ex:"Quiz",lv:"Easy",bab:"b12",t:"pg",q:"Sistem lama dan baru dijalankan bersamaan dan output keduanya dibandingkan sebelum organisasi bergantung penuh pada sistem baru. Ini adalah pendekatan…",o:["Parallel","Direct cutover","Phased","Canary"],a:0,e:"<b>Parallel</b>: safety net dan meningkatkan kepercayaan, tetapi lebih lama, bisa lebih mahal, dan menambah beban user (kerja ganda)."},
+{id:"qz-b12-3",ex:"Quiz",lv:"Medium",bab:"b12",t:"pg",q:"Menurut Marchewka, syarat terpenting untuk menutup proyek dalam keadaan normal adalah…",o:["Sistem sudah terinstal di server produksi","Invoice final supplier sudah dibayar","Penerimaan (acceptance) oleh sponsor proyek","Tim proyek sudah dilepas"],a:2,e:"<b>Project sponsor acceptance</b>. Delivery, instalasi, dan rilis tidak otomatis berarti diterima; PM harus menunjukkan semua deliverable selesai sesuai spesifikasi."},
+{id:"qz-b12-4",ex:"Quiz",lv:"Medium",bab:"b12",t:"pg",q:"Proyek yang “tidak pernah selesai” karena sponsor terus menambah fitur dan MOV/scope tidak pernah jelas disebut…",o:["Premature","Failed","Changed priorities","Perpetual (runaway)"],a:3,e:"<b>Perpetual</b>: delay atau scope/MOV yang tak pernah disepakati, ditambah keengganan “pull the plug”. Pencegahan: MOV &amp; scope yang disepakati, proses scope, review tepat waktu."},
+{id:"qz-b12-5",ex:"Quiz",lv:"Hard",bab:"b12",t:"pg",q:"Setelah rilis bermasalah, tim mengembalikan aplikasi ke versi lama. Namun record yang sudah ditulis dalam format tanggal baru tidak bisa dibaca versi lama. Pelajaran yang paling tepat adalah…",o:["Rollback selalu aman karena kode kembali ke versi sebelumnya","Rollback harus memperhitungkan persistent state: kompatibilitas data, jalur upgrade/downgrade skema, dan rekonsiliasi","Jangan pernah melakukan rollback","Gunakan direct cutover agar tidak perlu rollback"],a:1,e:"“Code goes back. Effects stay.” Record berformat baru, skema bersama yang berubah, dan pembayaran/notifikasi yang terjadi tidak otomatis kembali."},
+{id:"qz-b12-6",ex:"Quiz",lv:"HOTS",bab:"b12",t:"pg",q:"Tiga bulan setelah launch, median waktu penyelesaian layanan turun dari 20 menjadi 16 menit. Sponsor menyatakan MOV tercapai. Respons yang paling tepat…",o:["Setuju, karena turun 20%","Tolak, karena target seharusnya 50%","Belum bisa disimpulkan: perlu cek mutu, pekerjaan yang masih lewat kanal lama, biaya operasi, dan pembanding yang adil","Ukur ulang dengan login user"],a:2,e:"Slide “Measuring value”: perbedaan sebelum-sesudah saja tidak membuktikan kausalitas. Work outside the portal dan operating cost belum diukur → net value belum pasti."},
+{id:"qz-b12-7",ex:"Quiz",lv:"Medium",bab:"b12",t:"pg",q:"Kapan close-out (postmortem) review sebaiknya dilakukan?",o:["Sebelum tim proyek dilepas dari proyek","Satu tahun setelah go-live","Sebelum project charter disetujui","Hanya jika proyek gagal"],a:0,e:"Marchewka: lakukan sebelum tim dilepas — setelah itu orang sibuk dengan proyek lain dan ingatan memudar. (Evaluasi MOV-lah yang dilakukan setelah penggunaan yang cukup.)"},
+{id:"qz-b12-8",ex:"Quiz",lv:"Hard",bab:"b12",t:"pg",q:"Kriteria yang tepat untuk auditor proyek independen adalah…",o:["Anggota tim inti agar memahami detail proyek","Tidak terlibat langsung/berkepentingan, imparsial, mau mendengar, dan berpengalaman luas","Ditunjuk oleh vendor","Selalu auditor eksternal berbayar untuk semua proyek"],a:1,e:"Auditor: no direct involvement or interest, respected &amp; impartial, willing to listen, no fear of recrimination, act in organization's best interest, broad experience. Kedalaman audit menyesuaikan ukuran, kepentingan, risiko, dan masalah proyek."},
+{id:"qz-es-b12-1",ex:"Quiz",lv:"Medium",bab:"b12",t:"es",q:"Jelaskan empat keputusan “selesai” dalam proyek (release/go-live, acceptance, project closure, benefits review): artinya, siapa yang memutuskan, dan mengapa tanggalnya bisa berbeda. Beri contoh.",e:"<ul><li><b>Release/go-live</b>: operasi aman untuk scope yang dimaksud — release authority/service owner.</li><li><b>Acceptance</b>: deliverable memenuhi kriteria — sponsor/customer berwenang.</li><li><b>Project closure</b>: kewajiban diselesaikan atau dialihkan eksplisit — otoritas governance proyek.</li><li><b>Benefits review</b>: outcome dibandingkan MOV — business benefit owner, setelah penggunaan cukup.</li><li>Tanggal berbeda karena bukti tiap keputusan muncul pada waktu berbeda. Contoh: payroll go-live Maret, diterima April, ditutup Mei, penghematan terlihat tahun depan.</li></ul>"},
+{id:"qz-es-b12-2",ex:"Quiz",lv:"Hard",bab:"b12",t:"es",q:"Pilih pendekatan implementasi (direct cutover, parallel, phased) untuk: (a) situs FAQ publik fakultas; (b) sistem penggajian perusahaan; (c) sistem penjadwalan rumah sakit dengan 12 bangsal. Jelaskan alasannya berdasarkan Tabel 12.1 dan faktor risiko transisi.",e:"<ul><li><b>(a) Direct cutover</b>: risiko rendah, mudah dipulihkan (halaman lama bisa direstore), outage tolerance tinggi; tetap butuh kriteria kesiapan &amp; recovery.</li><li><b>(b) Parallel</b>: data keuangan kritis, butuh rekonsiliasi; jalankan satu siklus paralel, bayar hanya dari sistem lama sampai total cocok. Trade-off: biaya &amp; beban kerja ganda.</li><li><b>(c) Phased</b>: per bangsal; pelajaran dari bangsal pertama (mis. gap pelatihan) memperbaiki bangsal berikutnya; risiko: keterlambatan fase awal merembet.</li><li>Sebut faktor: outage tolerance, recoverability, reconciliation, dependencies, staff capacity.</li></ul>"},
+{id:"qz-es-b12-3",ex:"Quiz",lv:"Easy",bab:"b12",t:"es",q:"Sebutkan isi minimal laporan akhir proyek (final project report) menurut Marchewka dan empat fungsi rapat akhir (final meeting).",e:"<ul><li><b>Laporan akhir</b>: ringkasan &amp; deskripsi proyek, MOV, objektif scope/jadwal/anggaran/mutu, perbandingan rencana vs aktual (scope awal + perubahan yang disetujui, deadline awal vs aktual, anggaran awal vs biaya aktual), test plan &amp; hasil, isu terbuka (daftar &amp; perkiraan selesai, dukungan berkelanjutan &amp; durasinya), daftar dokumentasi (sistem, manual user, materi pelatihan, maintenance).</li><li><b>Rapat akhir</b>: mengumumkan proyek selesai, transfer produk/sistem, mengakui kontribusi, sign-off formal.</li></ul>"},
+
+/* ===== UAS · BAB 12 · PG ===== */
+{id:"ua-b12-1",ex:"UAS",lv:"Easy",bab:"b12",t:"pg",q:"Manakah yang <b>bukan</b> salah satu dari lima keadaan berakhirnya proyek menurut Marchewka?",o:["Normal","Premature","Changed priorities","Delegated"],a:3,e:"Lima keadaan: <b>normal, premature, perpetual, failed, changed priorities</b>."},
+{id:"ua-b12-2",ex:"UAS",lv:"Easy",bab:"b12",t:"pg",q:"Pernyataan yang benar tentang SBOM (software bill of materials) adalah…",o:["SBOM menggambarkan komposisi komponen software per rilis, bukan sertifikat bahwa software aman","SBOM menjamin software bebas kerentanan","SBOM hanya dibutuhkan untuk sistem AI","SBOM menggantikan kebutuhan patch management"],a:0,e:"“Describes composition. Not a certificate of security.” SBOM membantu cepat mengetahui sistem mana yang memakai library rentan; tetap perlu pemilik kerentanan &amp; patch."},
+{id:"ua-b12-3",ex:"UAS",lv:"Medium",bab:"b12",t:"pg",q:"Mekanisme deployment yang memaparkan versi baru ke sebagian kecil pengguna terlebih dahulu, mengevaluasinya, lalu memperluasnya adalah…",o:["Blue/green","Direct cutover","Canary release","Parallel run"],a:2,e:"<b>Canary</b>: limited exposure &amp; evaluation, mendukung rollout bertahap. Blue/green mengendalikan trafik antara dua environment."},
+{id:"ua-b12-4",ex:"UAS",lv:"Medium",bab:"b12",t:"pg",q:"Tim mengirim fitur checkout baru yang hanya aktif untuk 5% pengguna dan bisa dimatikan tanpa deploy ulang. Mekanisme ini adalah…",o:["Feature flag","Phased implementation per lokasi","Blue/green","Direct cutover"],a:0,e:"<b>Feature flag</b> mengendalikan aktivasi perilaku tertentu → adopsi selektif. Mekanisme ini bisa dikombinasikan dengan canary/blue-green."},
+{id:"ua-b12-5",ex:"UAS",lv:"Medium",bab:"b12",t:"pg",q:"Readiness checklist menunjukkan “backup done”, tetapi belum pernah ada yang me-restore backup tersebut. Status gate recovery adalah…",o:["Lulus, karena backup tersedia","Belum lulus, karena bukti recovery berupa restore/fallback yang didemonstrasikan belum ada","Lulus bersyarat tanpa tindak lanjut","Tidak relevan untuk go-live"],a:1,e:"Gate recovery menuntut <b>fallback atau restore yang didemonstrasikan</b> (owner: operations). “The gate looks passed; it is not.”"},
+{id:"ua-b12-6",ex:"UAS",lv:"Medium",bab:"b12",t:"pg",q:"Manakah yang <b>bukan</b> fungsi final meeting &amp; presentation menurut Marchewka?",o:["Mengomunikasikan bahwa proyek telah selesai","Mentransfer produk/sistem secara formal","Mengakui kontribusi tim","Merenegosiasi scope yang belum dikerjakan agar pembayaran cair"],a:3,e:"Empat fungsi: komunikasi proyek selesai, transfer produk, mengakui kontribusi, sign-off formal. Renegosiasi scope di akhir justru menimbulkan ketegangan dan menahan pembayaran."},
+{id:"ua-b12-7",ex:"UAS",lv:"Hard",bab:"b12",t:"pg",q:"Supplier mendesak sponsor menandatangani penerimaan hari Jumat karena invoice finalnya jatuh tempo, padahal dua saldo fee belum rekonsiliasi. Sikap yang paling sesuai materi adalah…",o:["Tanda tangani agar hubungan dengan supplier baik","Tanda tangani, lalu selesaikan selisih nanti tanpa dicatat","Penerimaan mengikuti bukti: terima scope terbatas yang terbukti (bila ada) dengan syarat, selisih fee jadi residual item bernama, atau tunda penerimaan migrasi","Batalkan kontrak"],a:2,e:"“Acceptance should follow the evidence, not the invoice date.” Kriteria penerimaan seharusnya ditulis di kontrak sejak awal."},
+{id:"ua-b12-8",ex:"UAS",lv:"Hard",bab:"b12",t:"pg",q:"Sebuah cacat laporan portal belum selesai saat proyek ditutup. Disposisi residual item yang benar adalah…",o:["Dicatat dengan owner &amp; pendanaan, otorisasi sponsor dan pemilik penerima, tenggat &amp; jalur eskalasi, serta bukti verifikasi","Ditulis “to follow” di laporan akhir","Diabaikan karena tidak kritis","Diserahkan ke vendor tanpa kontrak"],a:0,e:"Residual item: item &amp; dampak, otorisasi, owner &amp; funding, due date &amp; escalation, verification. Transfer harus eksplisit dan tidak boleh menyembunyikan requirement kritis yang belum terpenuhi."},
+{id:"ua-b12-9",ex:"UAS",lv:"Hard",bab:"b12",t:"pg",q:"Pernyataan yang paling tepat tentang pendekatan <b>phased</b> adalah…",o:["Paling cepat dan paling murah","Pengalaman dari implementasi awal memperlancar fase berikutnya, tetapi masalah di fase awal bisa memengaruhi jadwal &amp; anggaran keseluruhan","Menempatkan tekanan terbesar pada tim proyek karena hanya ada satu kesempatan","Mengharuskan dua sistem berjalan untuk seluruh organisasi sekaligus"],a:1,e:"Tabel 12.1: phased = terorganisasi per modul/departemen/lokasi; lessons dari fase awal; tetapi lebih lama/mahal dan masalah awal dapat merembet. Opsi C = direct cutover; D = parallel."},
+{id:"ua-b12-10",ex:"UAS",lv:"Hard",bab:"b12",t:"pg",q:"Pelajaran utama insiden CrowdStrike (19 Juli 2024) untuk penyelesaian proyek adalah…",o:["Hanya perubahan kode yang perlu kontrol rilis","Direct cutover selalu lebih aman","Insiden disebabkan satu bug tunggal sehingga cukup menambah satu unit test","Update konfigurasi &amp; konten juga harus diperlakukan sebagai rilis: bertahap, diuji, dan dapat dipulihkan"],a:3,e:"Channel File 291: kondisi baru mengharapkan 21 input tetapi diberi 20 → out-of-bounds read; akar masalah berupa cacat validasi, testing, dan runtime yang berinteraksi."},
+{id:"ua-b12-11",ex:"UAS",lv:"HOTS",bab:"b12",t:"pg",q:"Perusahaan mengganti sistem penggajian. Rekonsiliasi kritis, kesalahan tidak bisa ditoleransi, dan karyawan harus dibayar tepat waktu. Rancangan transisi paling tepat…",o:["Direct cutover di akhir bulan agar cepat","Phased per departemen tanpa pembanding","Parallel satu siklus: kedua sistem menghitung, gaji dibayar hanya dari sistem lama sampai total cocok, dengan rekonsiliasi pengecualian","Canary ke 5% karyawan yang dibayar dari sistem baru tanpa pembanding"],a:2,e:"Contoh slide parallel implementation: compare payroll calculations; keep one authorized payment route. Biaya &amp; kerja rekonsiliasi tambahan sepadan dengan risikonya."},
+{id:"ua-b12-12",ex:"UAS",lv:"HOTS",bab:"b12",t:"pg",q:"Setelah portal diterima, masih ada backlog enhancement yang terus bertambah. Seorang manajer bilang proyek ini “perpetual” dan tidak boleh ditutup. Respons terbaik…",o:["Tutup proyek sementara; enhancement berlanjut sebagai pekerjaan produk yang diprioritaskan product owner dan didanai anggaran operasi","Setuju; proyek tetap berjalan sampai backlog kosong","Hapus backlog agar proyek bisa ditutup","Ubah proyek menjadi program"],a:0,e:"“An ongoing product backlog does not, by itself, make a project perpetual.” Closure: deliverable diterima, kewajiban punya disposisi, akuntabilitas berpindah ke operasi/product owner."},
+{id:"ua-b12-13",ex:"UAS",lv:"Medium",bab:"b12",t:"pg",q:"Cara memberi feedback yang sesuai individual performance review Marchewka adalah…",o:["“Kamu tidak teratur, coba seperti Budi.”","Mulai dari self-assessment, lalu bahas perilaku spesifik dan dampaknya: “laporan uji terlambat dua kali sehingga penerimaan tertunda”","Membuat ranking anggota tim dan mengumumkannya","Menunda review sampai tim sudah bubar"],a:1,e:"Mulai dari self-evaluation, hindari perbandingan, fokus pada perilaku spesifik, konsisten &amp; adil, sepakati perbaikan &amp; dukungan."},
+{id:"ua-b12-14",ex:"UAS",lv:"Hard",bab:"b12",t:"pg",q:"Sebelum mengevaluasi MOV, Marchewka menyarankan untuk memastikan…",o:["Tim proyek masih lengkap","Semua bug sudah nol","Produk yang dievaluasi adalah produk yang diserahkan — tidak diubah user/staf support setelah handover","Sponsor sudah membayar invoice"],a:2,e:"Setelah handover, user atau staf support sering mengubah sistem, kadang dengan efek buruk tak terduga; evaluasi harus atas sistem yang benar-benar diserahkan."},
+{id:"ua-b12-15",ex:"UAS",lv:"Medium",bab:"b12",t:"pg",q:"Anggaran proyek dipotong sedikit demi sedikit setiap kuartal sampai proyek mati tanpa pernah resmi ditutup. Marchewka menyebut fenomena ini…",o:["Premature termination","Perpetual project","Failed project","Terminated by starvation (bagian dari changed priorities)"],a:3,e:"“Terminated by starvation”: pemotongan anggaran beruntun sehingga terminasi tersamar; manajemen enggan mengakui proyek yang dulu diusungnya gagal."},
+{id:"ua-b12-16",ex:"UAS",lv:"HOTS",bab:"b12",t:"pg",q:"Chatbot layanan mahasiswa dibangun lewat proyek. Proyek akan ditutup bulan ini. Pernyataan yang paling sesuai NIST AI 600-1 dan slide adalah…",o:["Chatbot harus dimatikan saat proyek ditutup","Proyek bisa ditutup, tetapi harus ada pemilik bernama yang memantau kinerja &amp; dampak, menyetujui perubahan/evaluasi ulang, dan berwenang menangguhkan layanan; serahkan versi model/prompt/data dan hasil evaluasi","Proyek tidak bisa ditutup selama AI masih dipakai","Vendor otomatis menjadi pemilik layanan"],a:1,e:"“The project can close while accountable service monitoring continues.” Serahkan sistem AI yang bisa ditinjau: versi, hasil evaluasi &amp; batasan, jalur feedback/insiden/human fallback."},
+
+/* ===== UAS · BAB 12 · ESAI ===== */
+{id:"ua-es-b12-1",ex:"UAS",lv:"Easy",bab:"b12",t:"es",q:"Jelaskan lima keadaan berakhirnya proyek menurut Marchewka, masing-masing dengan satu contoh proyek TI.",e:"<ul><li><b>Normal</b>: objektif tercapai dalam biaya, mutu, jadwal — portal diterima sesuai scope.</li><li><b>Premature</b>: diakhiri lebih awal dengan fungsionalitas terbatas — rilis core features karena pesaing/regulasi; risikonya dipertimbangkan bersama.</li><li><b>Perpetual</b>: tak kunjung selesai — fitur terus ditambah karena MOV/scope tidak jelas.</li><li><b>Failed</b>: tidak bisa memberi nilai — sisa biaya melebihi manfaat.</li><li><b>Changed priorities</b>: sumber daya/strategi berubah — platform bersama menggantikan; termasuk “terminated by starvation”.</li><li>Apa pun penyebabnya, proyek tetap perlu closeout yang tertib.</li></ul>"},
+{id:"ua-es-b12-2",ex:"UAS",lv:"Medium",bab:"b12",t:"es",q:"Jelaskan langkah administrative closure menurut Marchewka dan mengapa sering diabaikan. Tambahkan contoh bukti penutupan untuk area kontrak &amp; akses.",e:"<ul><li>Daftar: verifikasi deliverable &amp; item terbuka selesai; verifikasi penerimaan formal; organisasi &amp; arsip dokumen; rencana pelepasan sumber daya (orang, teknologi, peralatan, fasilitas); rencana evaluasi tim &amp; proyek; tutup akun proyek; rencanakan perayaan.</li><li>Sering diabaikan karena dianggap membosankan dan tim sudah memikirkan penugasan berikutnya; setelah tim dilepas, sulit meminta sponsor menyelesaikan detail.</li><li>Contoh bukti: invoice &amp; kewajiban kontrak diselesaikan (procurement/finance); akun admin kontraktor dicabut, billing cloud dialihkan ke operational owner pada hari penutupan; arsip terindeks dengan pemilik record.</li></ul>"},
+{id:"ua-es-b12-3",ex:"UAS",lv:"Hard",bab:"b12",t:"es",q:"Kasus portal: proses migrasi data sebagian besar lulus tetapi dua saldo fee tidak rekonsiliasi; backup ada tetapi tim penerima belum me-restore; uji FAQ AI rutin lulus tetapi pertanyaan banding masih tidak akurat; service lead sudah ditunjuk tetapi benefits review belum punya owner. Rekomendasikan scope rollout, status penerimaan, dan status penutupan proyek.",e:"<ul><li><b>Rollout</b>: launch terbatas — permintaan rutin saja; pertanyaan banding diarahkan ke staf berwenang (kontrol AI).</li><li><b>Penerimaan</b>: dokumentasikan penerimaan untuk scope yang dibatasi jelas; <b>tunda penerimaan migrasi</b> sampai selisih fee diselesaikan.</li><li><b>Gate yang memblokir perluasan</b>: rekonsiliasi fee (data owner), restore didemonstrasikan bersama tim penerima (operations owner), akurasi kasus banding (service owner).</li><li><b>Closure</b>: belum ditutup penuh; residual item dengan owner, dana, tenggat, eskalasi, verifikasi; tunjuk benefit owner dan jadwalkan benefits review (hari 30/60/90).</li><li>Prinsip: acceptance follows evidence; restricted launch bisa dipertahankan bila batas &amp; kontrolnya berjalan.</li></ul>"},
+{id:"ua-es-b12-4",ex:"UAS",lv:"Hard",bab:"b12",t:"es",q:"Bandingkan empat evaluasi di akhir proyek (individual review, close-out/postmortem review, project audit, MOV evaluation) dari sisi tujuan, pelaksana, waktu, dan fokus.",e:"<ul><li><b>Individual review</b>: feedback &amp; pengembangan; PM dengan tiap anggota; sebelum tim bubar; self-assessment, perilaku spesifik, adil, rencana perbaikan, penugasan berikutnya.</li><li><b>Close-out/postmortem</b>: memperbaiki praktik delivery; PM &amp; tim; sebelum dilepas; MOV, objektif scope/jadwal/anggaran/mutu, deliverable, metodologi per area, kinerja tim → temuan menjadi aksi bernama.</li><li><b>Audit</b>: menilai eksekusi &amp; perilaku profesional/etis; pihak luar imparsial; kedalaman sesuai ukuran, kepentingan, risiko, masalah.</li><li><b>MOV evaluation</b>: nilai &amp; kepuasan; business owner/sponsor; setelah penggunaan cukup; dua pertanyaan: MOV tercapai? sponsor puas? — pastikan sistem tidak diubah sejak diserahkan.</li></ul>"},
+{id:"ua-es-b12-5",ex:"UAS",lv:"HOTS",bab:"b12",t:"es",q:"Rancang benefits plan untuk portal layanan akademik (MOV: mempercepat penyelesaian layanan dengan mutu yang dapat diterima). Sertakan pemilik, baseline &amp; target, jalur pengukuran, kalender review, dan kritik terhadap klaim “waktu turun 20 → 16 menit berarti MOV tercapai”.",e:"<ul><li><b>Expected value</b>: penyelesaian lebih cepat dengan mutu terjaga — business service owner.</li><li><b>Baseline &amp; target</b>: tugas sebanding sebelum &amp; sesudah (mis. median 20 menit → ≤16), error ≤ baseline — benefit owner &amp; analis.</li><li><b>Measurement route</b>: catatan layanan + review mutu sampel — data steward &amp; reviewer.</li><li><b>Review &amp; response</b>: hari ≤0 (handover &amp; kewajiban), 30 (stabilitas, insiden), 60 (adopsi, mutu, beban kerja), 90 (MOV, biaya, efek tak terduga) — sponsor &amp; benefit owner memutuskan aksi.</li><li><b>Kritik klaim</b>: perbaikan 20% bermakna hanya bila kasus sebanding, mutu tidak turun (cek sampel &amp; keparahan), pekerjaan di luar portal diukur (kanal informal lama), dan biaya operasi dicatat; before–after saja tidak membuktikan kausalitas (pertimbangkan pembanding). Benefits plan harus ditandatangani owner sebelum tim bubar.</li></ul>"},
+{id:"ua-es-b12-6",ex:"UAS",lv:"HOTS",bab:"mix",t:"es",q:"Sistem e-procurement sudah go-live dan lulus uji, tetapi tiga bulan kemudian pembeli masih mengirim form lewat email, insiden tidak tertangani karena engineer vendor sudah pergi, dan tidak ada yang tahu apakah penghematan tercapai. Analisis secara terintegrasi (Bab 3, 8, 11, 12) dan susun rencana pemulihan.",e:"<ul><li><b>Diagnosis</b>: delivery berhasil, tetapi <b>handover</b> gagal (tidak ada owner operasi, tim penerima tak bisa restore/eskalasi), <b>adopsi</b> gagal (Bab 11: Leavitt, ADKAR, workflow email masih tersedia), <b>benefits</b> tanpa owner (Bab 12) sehingga MOV (Bab 3) tak terverifikasi.</li><li><b>Handover</b>: tunjuk service owner, runbook, akses, transition support dari vendor dengan bukti untuk mengakhirinya; tim penerima demonstrasikan diagnosis alert, restore, eskalasi.</li><li><b>Adopsi</b>: diagnosis penyebab (form, otoritas approval), strategi kombinasi — rational (bukti manfaat), normative (champion), environmental-adaptive (tutup jalur email setelah kesiapan); metrik = PO diproses di sistem, bukan login.</li><li><b>Komunikasi</b> (Bab 8): rencana komunikasi ke pembeli &amp; finance, laporan status ke sponsor.</li><li><b>Value</b>: benefit owner, baseline penghematan, review hari 30/60/90; closure recommendation satu halaman dengan residual items bernama; lessons learned: rencanakan completion sejak awal proyek.</li></ul>"}
+);
+
 </script>
 <script>
 (function(){
@@ -2436,19 +2764,11 @@ QB.push(
 
   /* ---------- theme ---------- */
   var root = document.documentElement;
-  var savedTheme = null; try { savedTheme = localStorage.getItem("rubel_theme"); } catch(e){}
-  var theme = (savedTheme === "dark" || savedTheme === "light") ? savedTheme : "light";
-  function applyTheme(){
-    root.setAttribute("data-theme", theme);
-    $("#themeBtn").textContent = theme === "dark" ? "🌙 Gelap" : "☀️ Terang";
-    $("#themeBtn").title = "Tema: " + (theme === "dark" ? "Gelap" : "Terang");
-  }
+  var theme = LS.get("mppti_theme", "auto");
+  function applyTheme(){ if(theme==="auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", theme);
+    $("#themeBtn").textContent = theme==="auto" ? "Auto" : (theme==="dark" ? "Gelap" : "Terang"); $("#themeBtn").title = "Tema: " + theme; }
   applyTheme();
-  $("#themeBtn").addEventListener("click", function(){
-    theme = theme === "light" ? "dark" : "light";
-    try { localStorage.setItem("rubel_theme", theme); } catch(e){}
-    applyTheme();
-  });
+  $("#themeBtn").addEventListener("click", function(){ theme = theme==="auto" ? "light" : theme==="light" ? "dark" : "auto"; LS.set("mppti_theme", theme); applyTheme(); });
 
   /* ---------- mobile menu ---------- */
   $("#menuBtn").addEventListener("click", function(){ document.body.classList.toggle("nav-open"); });
@@ -2537,7 +2857,7 @@ QB.push(
   });
 
   /* ---------- question bank ---------- */
-  var BAB = {b1:"Bab 1 · Sifat proyek TI", b2:"Bab 2 · Metodologi", pmbok:"PMBOK", agile:"Agile & Scrum", b3:"Bab 3 · MOV & business case", bc:"Business case development", b4:"Bab 4 · Infrastruktur", b5:"Bab 5 · Scope & WBS", b6:"Bab 6 · Jadwal & anggaran", b7:"Bab 7 · Risiko", b8:"Bab 8 · Stakeholder, komunikasi & EVM", b11:"Bab 11 · Perubahan & konflik", mix:"Integrasi lintas bab"};
+  var BAB = {b1:"Bab 1 · Sifat proyek TI", b2:"Bab 2 · Metodologi", pmbok:"PMBOK", agile:"Agile & Scrum", b3:"Bab 3 · MOV & business case", bc:"Business case development", b4:"Bab 4 · Infrastruktur", b5:"Bab 5 · Scope & WBS", b6:"Bab 6 · Jadwal & anggaran", b7:"Bab 7 · Risiko", b8:"Bab 8 · Stakeholder, komunikasi & EVM", b11:"Bab 11 · Perubahan & konflik", b12:"Bab 12 · Penyelesaian proyek", mix:"Integrasi lintas bab"};
   var QB = (window.QB || []);
   var sel = $("#fBab");
   Object.keys(BAB).forEach(function(k){ var n = QB.filter(function(q){return q.bab===k;}).length; if(!n) return; var o=document.createElement("option"); o.value=k; o.textContent=BAB[k]+" ("+n+")"; sel.appendChild(o); });
