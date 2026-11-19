@@ -154,6 +154,8 @@ details.more > summary{cursor:pointer;font-weight:700;font-size:.92rem;padding:8
 details.more > summary::-webkit-details-marker{display:none}
 details.more > summary::before{content:"＋ ";font-family:var(--mono)}
 details.more[open] > summary::before{content:"－ "}
+details.more.book{border-style:solid;border-color:color-mix(in srgb,var(--amber) 45%,transparent);background:color-mix(in srgb,var(--amber-soft) 55%,var(--surface))}
+details.more.book > summary{color:var(--amber)}
 
 .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:12px 0 16px}
 .flow > div{flex:1 1 120px;border:1px solid var(--line);background:var(--surface-2);border-radius:10px;padding:10px 12px;font-size:.88rem;position:relative}
@@ -281,6 +283,8 @@ details.more[open] > summary::before{content:"－ "}
     <div class="nav-group">Bagian UAS · Eksekusi &amp; Manusia</div>
     <a href="#b7"><span class="no">B7</span>Manajemen risiko</a>
     <a href="#b8"><span class="no">B8</span>Stakeholder, komunikasi &amp; EVM</a>
+    <a href="#b9"><span class="no">B9</span>Manajemen mutu</a>
+    <a href="#b10"><span class="no">B10</span>Memimpin tim proyek</a>
     <a href="#b11"><span class="no">B11</span>Perubahan, resistensi &amp; konflik</a>
     <a href="#b12"><span class="no">B12</span>Penyelesaian proyek</a>
     <div class="nav-group">Alat bantu</div>
@@ -293,7 +297,7 @@ details.more[open] > summary::before{content:"－ "}
 <section class="hero" id="top">
   <div class="eyebrow">MPPTI 2026 · Dosen: Panca Hadi Putra</div>
   <h1>Satu halaman untuk Quiz, UTS, dan UAS.</h1>
-  <p>Ringkasan detail seluruh materi yang diberikan: slide Marchewka Bab 1–6, slide minggu 9 (Risiko), minggu 10 (Stakeholder &amp; Komunikasi), minggu 11 (Perubahan, Resistensi &amp; Konflik), minggu 12 (Project Completion), presentasi Kelompok 1 (PMBOK) dan Kelompok 4 (Business Case), diperdalam dengan buku Marchewka 5e, PMBOK Guide 6th, dan Agile Practice Guide. Di bagian akhir ada bank soal PG &amp; esai (Easy · Medium · Hard · HOTS) lengkap dengan kunci dan pembahasan.</p>
+  <p>Ringkasan detail seluruh materi yang diberikan: slide Marchewka Bab 1–6, slide minggu 9 (Risiko), minggu 10 (Stakeholder &amp; Komunikasi), minggu 11 (Perubahan, Resistensi &amp; Konflik), minggu 12 (Project Completion), Marchewka Bab 9 (Quality) &amp; Bab 10 (Leading the Project Team) langsung dari buku, presentasi Kelompok 1 (PMBOK) dan Kelompok 4 (Business Case), diperdalam dengan buku Marchewka 5e, PMBOK Guide 6th, dan Agile Practice Guide. Di bagian akhir ada bank soal PG &amp; esai (Easy · Medium · Hard · HOTS) lengkap dengan kunci dan pembahasan.</p>
 </section>
 
 <section class="module" id="mulai" data-mod>
@@ -305,7 +309,7 @@ details.more[open] > summary::before{content:"－ "}
 
   <h3>Cara memakai halaman ini</h3>
   <div class="grid3">
-    <div class="card acc"><div class="k">1 · Baca</div><h4>Modul per bab</h4><p>Tiap modul berisi konsep inti, tabel, diagram, contoh hitung, dan kotak <b>Sering keluar</b> serta <b>Jebakan</b>. Bagian bertanda “＋” adalah pendalaman dari buku.</p></div>
+    <div class="card acc"><div class="k">1 · Baca</div><h4>Modul per bab</h4><p>Tiap modul berisi konsep inti, tabel, diagram, contoh hitung, dan kotak <b>Sering keluar</b> serta <b>Jebakan</b>. Kotak oranye “Pendalaman dari buku Marchewka” berisi poin buku yang tidak/kurang dibahas di slide.</p></div>
     <div class="card amb"><div class="k">2 · Hafal</div><h4>Lembar rumus &amp; glosarium</h4><p>Semua rumus (payback, ROI, NPV, PERT, CPM, EVM, risiko, RPN, saluran komunikasi) ada di satu tempat, plus kalkulator untuk mengecek jawaban.</p></div>
     <div class="card grn"><div class="k">3 · Uji</div><h4>Bank soal</h4><p>Filter berdasarkan ujian (Quiz/UTS/UAS), tipe (PG/Esai), level, dan bab. Jawaban PG langsung dinilai; esai punya kunci berupa poin penilaian.</p></div>
   </div>
@@ -318,7 +322,7 @@ details.more[open] > summary::before{content:"－ "}
     <tbody>
       <tr><td><span class="pill quiz">Quiz</span></td><td>Per topik yang baru dibahas</td><td>Definisi, ciri-ciri, urutan langkah, satu perhitungan sederhana (payback/ROI, slack, CV/CPI, P×I).</td></tr>
       <tr><td><span class="pill uts">UTS</span></td><td>Bab 1–6 Marchewka, PMBOK (Kel. 1), Business Case (Kel. 4), Agile/Scrum</td><td>MOV &amp; enam langkahnya, business case &amp; model finansial (NPV!), scoring model, governance &amp; struktur organisasi, jenis kontrak, charter, scope (creep/leap/grope), WBS, deliverable vs milestone, estimasi, CPM (ES/EF/LS/LF/slack), PERT, PDM, CCPM, anggaran &amp; baseline.</td></tr>
-      <tr><td><span class="pill uas">UAS</span></td><td>Bab 7 (Risiko), Bab 8 (Stakeholder, Komunikasi, EVM), Bab 11 (Perubahan, Resistensi, Konflik), Bab 12 (Project Completion) + integrasi dengan materi UTS</td><td>Enam langkah risiko, kerangka identifikasi, P×I &amp; Tusler, expected value &amp; decision tree, strategi respons, risk register; analisis stakeholder, model komunikasi, push/pull/interaktif, <b>EVM (CV, SV, CPI, SPI, EAC, VAC, TCPI)</b>; Leavitt, Lewin, force-field, Kübler-Ross, rencana perubahan, 4 strategi, ADKAR, Kotter, resistensi, 3 pandangan &amp; 5 respons konflik, evaluasi pilot; direct cutover/parallel/phased, readiness gate &amp; rollback, handover, 5 keadaan berakhirnya proyek, acceptance &amp; residual item, laporan akhir, administrative closure, 4 evaluasi, benefits review.</td></tr>
+      <tr><td><span class="pill uas">UAS</span></td><td>Bab 7 (Risiko), Bab 8 (Stakeholder, Komunikasi, EVM), Bab 9 (Mutu), Bab 10 (Memimpin Tim), Bab 11 (Perubahan, Resistensi, Konflik), Bab 12 (Project Completion) + integrasi dengan materi UTS</td><td>Enam langkah risiko, kerangka identifikasi, P×I &amp; Tusler, expected value &amp; decision tree, strategi respons, risk register; analisis stakeholder, model komunikasi, push/pull/interaktif, <b>EVM (CV, SV, CPI, SPI, EAC, VAC, TCPI)</b>; quality vs grade, cost of quality, guru mutu, CMMI, V&amp;V, control chart/Pareto; Kouzes-Posner, 6 gaya Goleman, EI, etika &amp; 8 langkah keputusan, real team vs work group, proyek multikultural; Leavitt, Lewin, force-field, Kübler-Ross, rencana perubahan, 4 strategi, ADKAR, Kotter, resistensi, 3 pandangan &amp; 5 respons konflik, evaluasi pilot; direct cutover/parallel/phased, readiness gate &amp; rollback, handover, 5 keadaan berakhirnya proyek, acceptance &amp; residual item, laporan akhir, administrative closure, 4 evaluasi, benefits review.</td></tr>
     </tbody>
   </table></div>
 
@@ -435,6 +439,19 @@ details.more[open] > summary::before{content:"－ "}
     <div class="card acc"><h4>Project management</h4><p>Proses &amp; infrastruktur (metodologi); mengelola sumber daya, ekspektasi, persaingan, efisiensi &amp; efektivitas.</p></div>
     <div class="card acc"><h4>Knowledge management</h4><p>Lessons learned, best practices, dan pengetahuan bersama.</p></div>
   </div>
+  <details class="more book" data-book="b1" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid3">
+  <div class="card"><div class="k">1960-an</div><h4>EDP era</h4><p>Mainframe/minicomputer terpusat; proyek mengotomasi transaksi (akuntansi, inventori, penjadwalan produksi). <b>DP manager</b> melapor ke kepala akuntansi/keuangan. Requirement stabil → pendekatan terstruktur (mirip Polaris), proyek multitahun. Efek samping: <b>information silos</b>.</p></div>
+  <div class="card"><div class="k">Awal 1980-an</div><h4>Micro era</h4><p>IBM PC menyebar tanpa kendali (manajer fungsional membeli sendiri) → sistem buatan user, data terduplikasi; muncul jabatan <b>CIO</b> yang melapor ke CEO. Zuboff: komputer “<b>infomate</b>” (mendukung knowledge worker). Proyek lebih pendek &amp; lintas fungsi agar solusi tidak usang.</p></div>
+  <div class="card"><div class="k">± 1995</div><h4>Network era</h4><p>Internet (berawal dari ARPANET) → infrastruktur untuk mitra, aliansi, vendor, customer; <b>digital convergence</b> data, suara, grafis, video. Jaringan diperluas ke luar organisasi; tantangan koordinasi &amp; strategi bisnis yang dinamis. Lalu <b>globalisasi</b>: tim &amp; outsourcing lintas negara.</p></div>
+</div>
+<dl class="defs">
+  <dt>Stakeholder</dt><dd>Orang/kelompok yang berkepentingan atas hasil proyek (termasuk yang diuntungkan bila proyek gagal — lihat Bab 8).</dd>
+  <dt>Risk vs assumption</dt><dd><b>Risk</b>: kejadian tidak pasti yang bisa memengaruhi proyek (mis. vendor terlambat). <b>Assumption</b>: hal yang dianggap benar untuk perencanaan tanpa bukti penuh (mis. server baru tersedia bulan Maret) — asumsi yang keliru menjadi risiko.</dd>
+  <dt>Kenapa portofolio?</dt><dd>Agar proyek dipilih &amp; didanai sesuai strategi, sumber daya dialokasikan ke proyek bernilai tertinggi, dan risiko seimbang.</dd>
+  <dt>Planned organizational change</dt><dd>Proyek TI mengubah cara kerja, sehingga PM perlu memahami <b>budaya, lingkungan, politik, dan struktur</b> organisasi (dibahas lagi di Bab 8 &amp; 11).</dd>
+</dl>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: proyek kelompok kalian proyek atau operasi? Siapa sponsor, SME, TE di proyek TI kampus?</span><button class="btn" data-practice="b1">Latihan Bab 1 →</button></div>
 </section>
 
@@ -526,6 +543,15 @@ details.more[open] > summary::before{content:"－ "}
   </ol>
   <div class="callout case"><b>Contoh buku — inventory berlebih</b>Fakta: persediaan terlalu banyak, biaya penyimpanan membengkak, turnover harus naik. Asumsi: “mungkin masalah efisiensi”, “manajemen yakin sistem baru akan menurunkan persediaan” (<b>asumsi harus diuji!</b>). Pertanyaan: kenapa persediaan tinggi, berapa level sekarang, berapa level yang diinginkan?</div>
   <p><b>Tiga dimensi team learning</b>: <b>Depth</b> (seberapa dalam tim memahami masalah), <b>Speed</b> (seberapa cepat tim belajar), <b>Breadth/Impact</b> (seberapa luas pembelajaran diterapkan). Siklus diulang sepanjang PLC untuk menantang asumsi dan menemukan solusi radikal.</p>
+  <details class="more book" data-book="b2" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Keuntungan memakai metodologi</h4><ul><li>Tim fokus pada produk, tidak berdebat soal cara kerja</li><li>Stakeholder paham perannya; peran dapat dipakai lagi</li><li>Pengalaman didokumentasikan sebagai lessons learned → best practices; sukses bisa diulang</li><li>Proyek lalu, kini, mendatang bisa dibandingkan (perencanaan &amp; pelaporan)</li><li>Hemat waktu: pendekatan, alat, teknik, template dipakai ulang</li></ul></div>
+  <div class="card"><h4>PRINCE2 Project Board</h4><p>Bertanggung jawab &amp; akuntabel mengelola, memantau, dan mengendalikan proyek agar mencapai nilai di business case. Maksimal ±<b>8 orang</b>, dengan tiga peran wajib: <b>customer/executive</b> (kepentingan bisnis), <b>senior user</b> (kepentingan pengguna yang akan memakai produk untuk merealisasikan manfaat), <b>senior supplier</b> (pemasok/spesialis yang menyediakan skill &amp; sumber daya). Board memutuskan change request &amp; kelanjutan proyek; PM mengelola harian dan melapor ke board.</p></div>
+  <div class="card"><h4>Waterfall menurut buku</h4><p>Banyak waktu di fase awal agar requirement &amp; desain benar (requirement yang terlewat mahal ditambahkan belakangan). <b>Kelebihan</b>: tiap fase bisa direncanakan detail, jadwal &amp; anggaran = jumlah estimasi tugas; cocok untuk sistem pemerintah besar, software paket komersial, sistem besar &amp; kompleks dengan requirement stabil, serta tim yang kurang berpengalaman. <b>Kelemahan</b>: sulit mengakomodasi requirement yang berubah.</p></div>
+  <div class="card"><h4>Detail XP &amp; Scrum</h4><p><b>XP</b> (Kent Beck, pertengahan 1990-an): release berisi beberapa iterasi; acceptance test untuk tiap user story; tim kecil di ruang bersama; <b>pair programming</b>; dilarang kerja &gt; 40 jam/minggu untuk mencegah burnout. <b>Scrum</b>: metafora dari rugby; dikembangkan <b>Ken Schwaber &amp; Jeff Sutherland</b> awal 1990-an; product owner menetapkan &amp; memprioritaskan fitur, tim mengestimasi.</p></div>
+</div>
+<div class="callout tip"><b>Waterfall vs Agile? (sikap buku)</b>Banyak proyek sukses dan gagal dengan kedua pendekatan. “Choose the right tool for the job”, sesuaikan dengan skill tim. Mengumumkan “berhenti cara lama, mulai Agile” bisa jadi bencana; banyak tim “doing Agile” tetapi tidak sepenuhnya dan kembali ke kebiasaan lama saat tertekan.</div>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: Waterfall atau Agile untuk proyek kelompokmu? Kapan fast tracking layak?</span><button class="btn" data-practice="b2">Latihan Bab 2 →</button></div>
 </section>
 <!-- ===================== PMBOK ===================== -->
@@ -905,6 +931,14 @@ $100.000 ÷ $5 = 20.000 unit</span>
   <h3>Seleksi &amp; persetujuan proyek</h3>
   <div class="flow"><div><b>Ide/usulan</b></div><div class="arr">→</div><div><b>Business case</b></div><div class="arr">→</div><div><b>Review pengambil keputusan</b>(mis. steering committee)</div><div class="arr">→</div><div><b>Select &amp; fund</b></div><div class="arr">→</div><div><b>Project charter</b>(Bab 4)</div></div>
   <p>Keputusan seleksi: proyek harus <b>(1) selaras dengan nilai, visi, misi, dan strategi organisasi</b> dan <b>(2) memberikan MOV yang dapat diverifikasi</b> di akhir proyek.</p>
+  <details class="more book" data-book="b3" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Satu MOV, banyak objektif</h4><p>Proyek sebaiknya punya <b>satu MOV</b> tetapi boleh punya banyak objektif (scope, jadwal, anggaran, mutu). Objektif adalah <b>syarat penting tetapi tidak cukup</b> untuk sukses: proyek bisa tepat waktu, sesuai anggaran, bebas cacat, tetapi tidak bernilai; sebaliknya proyek yang terlambat &amp; over budget masih bisa dianggap sukses bila MOV tercapai.</p></div>
+  <div class="card"><h4>Hal yang sering ditanyakan</h4><ul><li>Waktu tercapainya MOV <b>tidak selalu sama</b> dengan tanggal delivery produk (manfaat bisa muncul berbulan-bulan kemudian — Bab 12).</li><li>Tim penyusun business case <b>tidak selalu</b> sama dengan tim proyek.</li><li><b>Status quo</b> (tidak berubah) harus jadi opsi/base case.</li><li>NPV $1.000 positif belum otomatis berarti direkomendasikan: bandingkan alternatif lain, risiko, keselarasan strategi, dan kriteria non-finansial.</li><li>MOV buruk: “aplikasi tablet berbahasa Java yang menghasilkan banyak uang” (teknologi, tidak terukur, tanpa waktu). MOV baik: “mengumpulkan $300 untuk shelter tunawisma sebelum 1 Desember”.</li></ul></div>
+  <div class="card"><h4>Seleksi portofolio proyek</h4><p>Seperti teori portofolio keuangan: seimbangkan proyek dengan tingkat <b>risiko, kompleksitas teknologi, ukuran, dan maksud strategis</b> berbeda. Terlalu banyak proyek aman → stagnasi &amp; karyawan tidak berkembang; terlalu banyak proyek berisiko/teknologi mutakhir → posisi rawan. Kerzner: “<i>What a company wants to do is not always what it can do.</i>”</p></div>
+  <div class="card"><h4>Proses seleksi proyek TI</h4><ol><li><b>Initial screening</b>: business case dibandingkan dengan standar minimum organisasi</li><li>Lolos → <b>komite manajer senior</b> berwenang menyetujui &amp; memberi sumber daya (di PRINCE2: project board); membandingkan biaya, manfaat, risiko dengan proyek berjalan</li><li>Proyek terpilih → ditugaskan ke PM → tim, charter, rencana detail</li></ol><p class="small">Proyek tidak boleh dijalankan demi teknologi semata.</p></div>
+</div>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: tulis MOV proyek kelompok dengan pola “This project will be successful if…”.</span><button class="btn" data-practice="b3">Latihan Bab 3 →</button></div>
 </section>
 
@@ -1071,6 +1105,12 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
     <div class="card soft"><div class="k">12–15</div><p><b>Acceptance &amp; approval</b> (nama, tanda tangan, tanggal) · References · Terminology/glossary · Appendices</p></div>
   </div>
   <div class="callout trap"><b>Jebakan</b>Marchewka menempatkan charter di <b>fase perencanaan</b> sebagai jembatan menuju project plan detail. PMBOK menempatkan <i>Develop Project Charter</i> di <b>Initiating</b> (otorisasi formal). Keduanya benar dalam kerangkanya masing-masing — sebutkan sumbernya saat menjawab.</div>
+  <details class="more book" data-book="b4" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Asal &amp; dasar governance</h4><p>Dari bahasa Latin <i>gubernare</i> = “mengemudikan” (to steer): kerangka pengambilan keputusan etis dengan batas peran, tanggung jawab, dan akuntabilitas yang transparan. Di AS, <b>Sarbanes-Oxley Act 2002</b> mewajibkan struktur governance perusahaan publik (auditor independen, pengawasan dewan, sanksi kecurangan) setelah skandal keuangan besar.</p><p><b>Organizational governance</b>: (1) menetapkan strategi &amp; objektif, (2) menyediakan sumber daya (orang, proses, alat, teknologi), (3) memantau &amp; mengendalikan penggunaannya.</p></div>
+  <div class="card"><h4>Keputusan yang butuh project governance</h4><ul><li>Menerima &amp; mendanai proyek untuk lanjut ke tahap PLC berikutnya</li><li>Perubahan desain produk</li><li>Kenaikan anggaran</li><li>Memilih project manager</li><li>Menerima produk akhir proyek</li></ul><p class="small">Struktur bisa berupa <b>PMO</b> (mengawasi standar, metode, kebijakan PM berbasis PMBOK/PRINCE2), <b>steering committee</b> (mewakili kepentingan stakeholder), atau <b>project board</b> PRINCE2. Komite bisa mengawasi satu proyek atau seluruh portofolio. Otorisasi bertujuan memberdayakan orang membuat keputusan dengan jalur eskalasi yang jelas — <b>bukan birokrasi yang menekan</b>.</p></div>
+</div>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: kapan memilih fixed-price daripada T&amp;M? Struktur organisasi mana yang cocok untuk proyek TI kampus?</span><button class="btn" data-practice="b4">Latihan Bab 4 →</button></div>
 </section>
 
@@ -1175,6 +1215,15 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
     </tbody>
   </table></div>
   <div class="callout exam"><b>Sering keluar</b>Bedakan <b>Delphi</b> (ahli anonim, tidak harus bertemu) vs <b>planning poker</b> (tim bertemu, kartu dibuka bersamaan) vs <b>NGT</b> (Bab 7: menulis diam-diam lalu round-robin — teknik identifikasi risiko, bukan estimasi).</div>
+  <details class="more book" data-book="b5" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Kenapa estimasi krusial</h4><p>Capers Jones: benih bencana software biasanya ditanam di <b>tiga bulan pertama</b> — penjadwalan terburu-buru, komitmen tidak rasional, teknik estimasi tidak profesional. Estimasi waktu langsung menentukan anggaran.</p><p><b>Guesstimating</b>: bila dipaksa memberi angka cepat, beri <b>confidence interval</b>, mis. perkiraan 3 bulan &amp; $30.000 → sampaikan <b>3–6 bulan, $30.000–$60.000</b>, lalu tawarkan riset lanjutan. Bukan 2–6 bulan, karena orang cenderung optimistis sehingga “most likely” biasanya sudah kasus optimis. Angka “off the record” sering jadi “on the record”.</p></div>
+  <div class="card"><h4>Top-down &amp; death march</h4><p>Target sering dari mandat manajemen (“selesai 6 bulan, maks $500.000”) atau tekanan pesaing; PM lalu mengalokasikan persentase ke fase memakai data historis. Target dari pihak luar tim sering terlalu optimis → <b>death march project</b> (Ed Yourdon): parameter melampaui normal ≥ 50%:</p><ul><li>Jadwal dipadatkan &lt; 50% estimasi awal</li><li>Staf dikurangi &lt; 50% dari kebutuhan</li><li>Anggaran/sumber daya dipotong ≥ 50%</li><li>Fungsionalitas/requirement 2× dari normal</li></ul><p class="small">Sisi positif top-down: memaksa analisis risiko &amp; trade-off bila semua pihak mau berkomunikasi.</p></div>
+  <div class="card"><h4>Bottom-up &amp; analogous</h4><p>Paling banyak dipakai di dunia nyata: proyek dipecah ke modul/aktivitas WBS, effort diestimasi (person-hours/weeks/months), lalu dijumlahkan. Waspadai <b>confusing effort with progress</b>. Contoh WBS 6.2: review test plan 1 hari, carry out test 5, analyze 2, report 3, present 1, address issues 5. <b>Analogous</b>: berdasarkan kemiripan dengan proyek lain.</p></div>
+  <div class="card"><h4>Detail planning poker</h4><ul><li>Orang cenderung underestimate s.d. 50% atau menambah buffer di setiap tugas.</li><li>Variasi Delphi (James Grenning, dipopulerkan Mike Cohn). Kartu: 0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 100 atau Fibonacci; ada kartu “unsure”/“I need a break”.</li><li>Pemain = yang akan mengerjakan (±10 orang ideal); <b>manajer, customer, product owner boleh bertanya/diskusi tetapi tidak ikut mengestimasi</b>; moderator menjelaskan user story.</li><li>Kartu dibuka serentak; pemilik estimasi <b>tertinggi &amp; terendah</b> menjelaskan; ulangi (biasanya konsensus di ronde 2–3).</li><li><b>Reasonableness over precision</b>: 8, 8, 8, 8, 5 → tanya apakah setuju 8; terbelah 3 dan 5 → ambil 5.</li></ul></div>
+</div>
+<p><b>Crux</b> = milestone berupa <b>proof of concept</b> untuk menguji ide/teknologi kritis (mis. pertama kali memakai produk database relasional vendor) — bila lolos, organisasi berani menginvestasikan lebih banyak waktu &amp; sumber daya.</p>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: beri contoh scope creep &amp; scope leap dari proyek yang kamu tahu.</span><button class="btn" data-practice="b5">Latihan Bab 5 →</button></div>
 </section>
 <!-- ===================== BAB 6 ===================== -->
@@ -1449,6 +1498,18 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
   <h3>Finalisasi: baseline plan &amp; kickoff</h3>
   <div class="flow"><div><b>Iterate</b>Sampai diterima sponsor, PM, tim</div><div class="arr">→</div><div><b>Level resources</b>Tidak over-allocated</div><div class="arr">→</div><div><b>Baseline plan</b>Rencana yang diterima = tolok ukur kinerja</div><div class="arr">→</div><div><b>Kickoff meeting</b>Tim berwenang mengeksekusi</div></div>
   <div class="callout tip"><b>Koneksi ke UAS</b>Baseline inilah yang dipakai <b>EVM</b> di Bab 8 (PV = nilai terencana dari baseline). Tanpa baseline, CV/SV/CPI/SPI tidak bisa dihitung.</div>
+  <details class="more book" data-book="b6" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Kenapa orang “menggelembungkan” estimasi (CCPM)</h4><ol><li>Pekerjaannya <b>bergantung</b> pada orang lain yang mungkin terlambat</li><li><b>Pesimisme</b> dari pengalaman buruk sebelumnya</li><li><b>Mengantisipasi pemotongan global</b> (sponsor biasa memotong 20% → estimasi dinaikkan 25%)</li></ol><h4 style="margin-top:8px">Kenapa proyek tetap terlambat</h4><ol><li><b>Student syndrome</b> — baru mulai menjelang tenggat</li><li><b>Parkinson's law</b> — pekerjaan mengisi waktu; selesai lebih cepat tak dilaporkan, sehingga penghematan hilang tetapi keterlambatan diteruskan</li><li><b>Multitasking / resource contention</b> — satu orang di banyak proyek menjadi constraint di jalur kritis</li></ol></div>
+  <div class="card"><h4>Contoh CCPM (Gambar 6.6)</h4><p>Jalur kritis A-B-C-E, masing-masing 10 hari → <b>40 hari</b>. CCPM meminta estimasi dengan peluang selesai <b>50%</b>: 5 hari per tugas → hemat 20 hari. <b>Project buffer</b> = ½ × 20 = <b>10 hari</b> → jadwal 20 + 10 = <b>30 hari</b>. Tugas D yang “menyuapi” C diberi <b>feeding buffer</b> = ½ dari penghematannya (5 hari) = <b>2,5 hari</b>. Ada pula <b>resource buffer</b>. Karena critical chain memperhitungkan resource contention, CCPM mengambil pandangan portofolio: atur mulai proyek lain agar orang di tugas C bisa fokus.</p></div>
+  <div class="card"><h4>Menghitung biaya tugas</h4><div class="formula" style="margin:6px 0">Cost of task = Durasi × True cost resource
+= 8 jam × $25/jam = $200
+<span class="c">($20 gaji + tunjangan = $25 "true cost")</span>
+Prorated salary = $65.000 ÷ (5 × 52 = 260 hari)
+= $250 per hari</div><p class="small">Konsultan menagih $150/jam karena tarif itu sudah memuat gaji, tunjangan, dan margin untuk biaya kantor (indirect cost). Reserves sering dianggap “lemak” oleh manajemen, tetapi PM bijak tetap menyisakan cadangan (bahkan untuk pizza tim lembur).</p></div>
+  <div class="card"><h4>Baseline &amp; kick-off (detail)</h4><ul><li>Dokumentasikan <b>semua asumsi</b> dan <b>sumber</b> estimasi biaya (mis. gaji DBA dari survei gaji, bukan angka yang diinginkan manajemen) agar kredibel.</li><li>Setelah disetujui, rencana jadi baseline; perubahan estimasi harus disetujui lalu dicerminkan dalam rencana.</li><li><b>Kick-off meeting</b>: menutup fase perencanaan &amp; menandai awal eksekusi, mengomunikasikan isi proyek ke semua orang, sering dibuat meriah agar stakeholder bersemangat.</li></ul></div>
+</div>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: crash atau fast track untuk menghemat 2 hari? Apa risikonya?</span><button class="btn" data-practice="b6">Latihan Bab 6 →</button></div>
 </section>
 <!-- ===================== BAB 7 ===================== -->
@@ -1607,6 +1668,12 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
     </tbody>
   </table></div>
   <p><b>Evaluasi &amp; lessons learned</b>: tingkatkan pemahaman risiko proyek TI; pahami informasi apa yang tersedia saat keputusan dibuat, bagaimana &amp; mengapa keputusan dibuat, implikasinya; belajar agar orang lain tidak mengulang kesalahan. Contoh: load test memakai 100 user padahal produksi 5.000 → masuk checklist proyek berikutnya.</p>
+  <details class="more book" data-book="b7" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Tujuan &amp; konteks</h4><p>Tujuan manajemen risiko <b>bukan menghindari risiko dengan segala cara</b>, melainkan membuat keputusan yang tepat tentang <b>risiko mana yang layak diambil</b> dan meresponsnya dengan pantas. Manajemen risiko juga berfungsi sebagai <b>early warning system</b>. Organisasi tanpa pendekatan formal terjebak dalam <b>crisis management / firefighting</b> — reaktif, menangani risiko setelah menjadi masalah, berdampak buruk pada moral &amp; produktivitas.</p></div>
+  <div class="card"><h4>Kesalahan umum (detail buku)</h4><ul><li><b>Tidak memahami manfaatnya</b> — sponsor hanya menuntut hasil; tim mengambil risiko agresif atau optimis mengabaikan risiko. Bangun budaya sadar risiko.</li><li><b>Waktu tidak memadai</b> — risiko paling baik dinilai <b>sedini mungkin</b>, saat ketidakpastian tertinggi; masalah yang terlambat ditangani butuh sumber daya lebih besar.</li><li><b>Tanpa pendekatan standar</b> — ancaman &amp; peluang terlewat, krisis berulang.</li></ul><p class="small">Syarat sukses: komitmen (sponsor, manajemen senior, komite governance, PM, tim), <b>setiap risiko punya owner</b> (memantau, melapor, memastikan sumber daya) — namun PM tetap bertanggung jawab akhir, dan pola risiko berbeda antar jenis proyek.</p></div>
+</div>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: risiko mana yang tiger, dan respons apa yang dipilih? Sebut satu opportunity dan cara meng-exploit-nya.</span><button class="btn" data-practice="b7">Latihan Risiko →</button></div>
 </section>
 
@@ -1757,7 +1824,257 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
     <div class="card"><h4>Berkembang selama proyek — discover as you go</h4><p>Organisasi informal · analisis stakeholder</p></div>
     <div class="card"><h4>Siap sebelum proyek mulai — have it ready</h4><p>Organisasi proyek formal · rencana komunikasi (mulai dari template proyek sebelumnya / PMO)</p></div>
   </div>
+  <details class="more book" data-book="b8" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Stakeholder analysis — catatan buku</h4><ul><li>Stakeholder bukan hanya yang ingin proyek sukses; ada yang <b>diuntungkan bila proyek gagal</b> — keduanya harus diidentifikasi.</li><li>Karena tujuannya memahami organisasi informal (politik), analisis stakeholder sebaiknya diperlakukan sebagai <b>latihan internal, bukan dokumen publik</b>.</li><li>Setiap proyek perlu <b>champion</b> — tokoh terkemuka yang mendukung secara publik.</li><li>Menetapkan role &amp; objective tiap stakeholder membantu merencanakan strategi relasi.</li></ul></div>
+  <div class="card"><h4>Monitoring &amp; controlling</h4><p>Banyak cost overrun &amp; slip jadwal berasal dari proyek yang <b>kurang dipantau</b>. Tanda bahaya: sponsor bertanya “<i>why didn't you tell me about this earlier?</i>”. Kontrol bukan hal negatif: ia mengukur kinerja, memberi peringatan dini, dan membuat orang <b>akuntabel</b>, serta memberi rasa aman bahwa ada yang memegang kendali. Kontrol &amp; cara pengumpulan data harus <b>dikomunikasikan</b> ke semua stakeholder.</p><p class="small">Kebutuhan informasi sponsor (ringkas: nilai, anggaran, risiko besar, milestone) berbeda dengan anggota tim (detail tugas, jadwal, isu). Sistem pengukuran yang baik memandu <b>tim</b>, bukan hanya manajemen; tim sebaiknya merancang metriknya sendiri dan tidak dibebani terlalu banyak metrik.</p></div>
+</div>
+</details>
   <div class="mod-foot"><span class="small">Diskusi slide: siapa stakeholder paling berbahaya, dan apa yang pertama kamu katakan? Metrik apa yang ditunjukkan ke sponsor tiap bulan?</span><button class="btn" data-practice="b8">Latihan Bab 8 →</button></div>
+</section>
+<!-- ===================== BAB 9 ===================== -->
+<section class="module" id="b9" data-mod>
+  <div class="mod-head">
+    <div><div class="eyebrow">Bab 9 Marchewka (dari buku)</div><h2>Managing Project Quality</h2>
+      <div class="tags"><span class="pill uas">UAS</span><span class="pill quiz">Quiz</span><span class="pill src">Marchewka Bab 9 (hlm. 233–258) · tanpa slide kelas</span></div></div>
+    <label class="done-toggle"><input type="checkbox" data-done="b9">Tandai selesai</label>
+  </div>
+  <p class="lead">Slide minggu 10 menyebut “Next week: Quality — Marchewka Ch. 9–10”, tetapi slidenya tidak ada di materi yang diberikan, jadi modul ini disusun langsung dari buku. Inti bab: <b>project quality management (PQM)</b> = perencanaan mutu, quality assurance, quality control, dan perbaikan berkelanjutan — untuk <b>produk</b> maupun <b>proses</b> proyek.</p>
+
+  <h3>Apa itu mutu?</h3>
+  <div class="grid2">
+    <div class="card acc"><h4>Quality vs grade</h4><p><b>Quality</b> = memenuhi requirement. <b>Grade</b> = maksud desain (jumlah fitur/fungsi). Produk <i>high grade</i> (banyak fitur) bisa <i>low quality</i> bila sering rusak; produk <i>low grade</i> (fitur sedikit) bisa <i>high quality</i> bila bebas cacat. Contoh: mobil mewah yang sering masuk bengkel vs mobil ekonomis yang andal.</p></div>
+    <div class="card amb"><h4>Dua definisi bisnis</h4><p><b>Fitness for use</b> — memenuhi kebutuhan customer (Juran). <b>Conformance to requirements</b> — memenuhi standar yang sudah ditetapkan (Crosby). Mutu bergantung pada kebutuhan/ekspektasi customer; PM &amp; tim mendefinisikannya dalam batas sumber daya.</p></div>
+  </div>
+  <p><b>PQM (PMBOK)</b>: “…the processes and activities of the performing organization that determine quality policies, objectives, and responsibilities so that the project will satisfy the needs for which it was undertaken.” PQM juga merupakan <b>strategi manajemen risiko</b>.</p>
+  <div class="flow">
+    <div><b>Quality management planning</b>Tetapkan standar mutu; dokumentasikan proses, metrik, alat untuk membuktikan kepatuhan</div><div class="arr">→</div>
+    <div><b>Quality assurance</b>Audit proses, kebijakan, metrik, alat — apakah diikuti &amp; berdampak benar?</div><div class="arr">→</div>
+    <div><b>Quality control</b>Kumpulkan data, analisis kinerja, lakukan perubahan agar deliverable diterima</div><div class="arr">→</div>
+    <div><b>Continuous improvement</b>Lessons learned, best practices, revisi rencana mutu</div>
+  </div>
+  <p class="small">Gambar 9.1. Contoh grade/toleransi: pindah ke rumah baru meski ada goresan kecil di cat (bisa diperbaiki), tapi tidak tanpa atap atau pipa air.</p>
+
+  <h3>Biaya mutu (cost of quality)</h3>
+  <div class="grid2">
+    <div class="card"><h4>Conformance vs nonconformance</h4><p><b>Cost of conformance</b>: membangun mutu ke produk &amp; proses (pelatihan, testing). <b>Cost of nonconformance</b>: rework, liabilitas, downtime, maintenance. Mutu di bawah standar = waste, error, atau gagal memenuhi kebutuhan sponsor.</p><p><b>Barry Boehm</b>: cacat yang butuh <b>1 jam</b> diperbaiki saat requirement didefinisikan bisa butuh <b>100 jam</b> bila baru ditemukan di produksi (Gambar 9.2: rework makin besar dari define → design → develop → test → implement).</p></div>
+    <div class="card"><h4>Total cost of quality = 4 komponen</h4><ol><li><b>Prevention</b> — tindakan mencegah cacat (paling murah)</li><li><b>Inspection</b> — mengukur, mengevaluasi, mengaudit proses &amp; deliverable</li><li><b>Internal failure</b> — rework sebelum produk sampai ke customer</li><li><b>External failure</b> — memperbaiki cacat setelah rilis (paling merusak: reputasi &amp; repeat business)</li></ol><p class="small">Biaya cacat: waktu investigasi &amp; diagnosis, redesign-develop-retest, cacat baru yang muncul saat retest, rasa malu &amp; hilangnya goodwill bila ditemukan customer.</p></div>
+  </div>
+
+  <h3>Filosofi mutu &amp; para “guru”</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Tokoh / era</th><th>Gagasan kunci</th></tr></thead>
+    <tbody>
+      <tr><td><b>Craftsmanship</b> (Abad Pertengahan)</td><td>Guild mengatur perdagangan &amp; mutu: master → apprentice → journeyman; journeyman harus membuktikan mutu karyanya untuk menjadi master.</td></tr>
+      <tr><td><b>Frederick W. Taylor</b> — scientific management</td><td>Pecah tugas jadi subtugas, cari cara paling efisien (time-motion study, stopwatch), spesialisasi. Fokus pada proses &amp; mesin, mengabaikan faktor manusia → konflik buruh-manajemen, cikal bakal serikat pekerja.</td></tr>
+      <tr><td><b>W. Edwards Deming</b></td><td>Statistik untuk keputusan berbasis fakta; dilatih ke manajer Jepang (JUSE, 1950-an) → <b>Deming Prize</b>; dikenal di Barat lewat dokumenter <i>If Japan Can, Why Can't We?</i> (1980). <b>14 points</b> (<i>Out of the Crisis</i>): constancy of purpose, kepemimpinan, <b>jangan bergantung pada inspeksi massal — bangun mutu ke proses</b>, latih orang &amp; <b>drive out fear</b>, perbaikan terus-menerus, komunikasi antar-departemen, hapus slogan/kuota/management by numbers, mutu tanggung jawab semua orang.</td></tr>
+      <tr><td><b>Joseph Juran</b></td><td><i>Quality Control Handbook</i> (1951): mutu = <b>fitness for use</b>. Mutu tidak terjadi kebetulan — <b>harus direncanakan</b>. Membedakan customer internal &amp; eksternal. <b>Quality trilogy</b>: quality planning · quality improvement · quality control.</td></tr>
+      <tr><td><b>Philip Crosby</b></td><td><i>Quality Is Free</i> (1979). Mutu = <b>conformance to requirements</b>; pendekatan top-down (manajemen memberi contoh); <b>do it right the first time</b>, <b>zero defects</b>; nonconformance yang memakan biaya.</td></tr>
+      <tr><td><b>Walter Shewhart</b></td><td>Western Electric (1918); memperkenalkan <b>control chart</b> untuk memahami variasi dan menggeser fokus dari inspeksi ke pencegahan.</td></tr>
+      <tr><td><b>Kaoru Ishikawa</b></td><td>Mutu melibatkan semua level → <b>quality circles</b>; alat sederhana seperti <b>cause-and-effect (fishbone) diagram</b>.</td></tr>
+      <tr><td><b>Vilfredo Pareto</b></td><td><b>Aturan 80/20</b>: ±80% masalah berasal dari ±20% penyebab → <b>Pareto chart</b>.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout exam"><b>Tema bersama para guru TQM</b>Fokus pada customer · kepemimpinan · perbaikan berkelanjutan/inkremental · <b>pencegahan lebih murah daripada mengandalkan inspeksi</b>. Deming dkk. menekankan peran <b>manusia</b> lebih besar daripada scientific management.</div>
+
+  <h3>Process capability &amp; maturity — CMM/CMMI</h3>
+  <p>1986: <b>Software Engineering Institute (SEI)</b>, Carnegie Mellon (dibantu Mitre &amp; Watts Humphrey) → <b>CMM</b>. Karena banyak CMM untuk disiplin berbeda, dibuat <b>CMMI</b> yang menggabungkan model ke satu kerangka. Riset: naik satu level maturity → peningkatan signifikan produktivitas &amp; kepuasan customer.</p>
+  <dl class="defs">
+    <dt>Process</dt><dd>Aktivitas, metode, praktik yang dipakai orang untuk mengembangkan &amp; memelihara produk dan deliverable-nya.</dd>
+    <dt>Process capability</dt><dd>Hasil yang <b>diharapkan</b> bila mengikuti suatu proses (memprediksi hasil antar proyek).</dd>
+    <dt>Process performance</dt><dd>Hasil <b>aktual</b> yang dicapai dengan mengikuti proses.</dd>
+    <dt>Process maturity</dt><dd>Sejauh mana proses didefinisikan eksplisit &amp; konsisten, dikelola, diukur, dikendalikan, dan efektif dipakai di seluruh organisasi.</dd>
+  </dl>
+  <div class="grid2">
+    <div class="card red"><h4>Organisasi immature</h4><p>Proses improvisasi/ad hoc; tiap anggota mengerjakan requirement dengan caranya sendiri; proses yang ada pun tidak diikuti; reaktif terhadap krisis.</p></div>
+    <div class="card grn"><h4>Organisasi mature</h4><p>Proses &amp; peran didefinisikan eksplisit dan dikomunikasikan; konsisten; diperbaiki terus; mutu dipantau sehingga hasil dapat diprediksi; jadwal &amp; anggaran realistis berbasis proyek lalu.</p></div>
+  </div>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Level (Gambar 9.3)</th><th>Ciri proses</th><th>Key process areas</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Initial</b></td><td>Ad hoc, reaktif; sukses bergantung pada <b>orang</b>, bukan proses → sulit diulang</td><td>Tidak ada key process</td></tr>
+      <tr><td><b>2 · Repeatable</b></td><td><b>Disiplin</b>: kebijakan, proses, kontrol dasar; jadwal &amp; anggaran berbasis pengalaman proyek serupa</td><td>Requirements management, project planning, project tracking, subcontract management, quality assurance, configuration management</td></tr>
+      <tr><td><b>3 · Defined</b></td><td><b>Standar &amp; konsisten</b> di seluruh organisasi; ada grup pengawas proses &amp; program pelatihan; boleh di-tailor per proyek</td><td>Process focus, definisi proses organisasi, training programs, integrated product management, product engineering, intergroup coordination, peer reviews</td></tr>
+      <tr><td><b>4 · Managed</b></td><td><b>Terukur &amp; dapat diprediksi</b>: metrik kuantitatif produk &amp; proses di repositori organisasi; variasi dikendalikan; assignable cause terdeteksi</td><td>Quantitative process management, quality management</td></tr>
+      <tr><td><b>5 · Optimizing</b></td><td><b>Perbaikan berkelanjutan</b> lewat inovasi teknologi/metode; lessons learned &amp; best practices disebarkan</td><td>Defect prevention, technology change management, process change management</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout trap"><b>Jebakan istilah</b>Marchewka memakai nama level <b>CMM lama</b> (Initial, <b>Repeatable</b>, Defined, <b>Managed</b>, Optimizing). Di CMMI v1.3 (staged) namanya: Initial, <b>Managed</b>, Defined, <b>Quantitatively Managed</b>, Optimizing. Jawab sesuai sumber yang ditanyakan. Menurut SEI, <b>melompati level kontraproduktif</b>; makin tinggi maturity, makin sempit selisih hasil yang diharapkan vs aktual.</div>
+
+  <h3>Kerangka project quality management plan (Gambar 9.4)</h3>
+  <div class="flow">
+    <div><b>1 · Quality philosophies &amp; principles</b></div><div class="arr">→</div>
+    <div><b>2 · Standards, processes &amp; metrics</b></div><div class="arr">→</div>
+    <div><b>3 · Quality assurance</b></div><div class="arr">→</div>
+    <div><b>4 · Quality control</b></div><div class="arr">→</div>
+    <div><b>5 · Learn, improve &amp; mature</b></div>
+  </div>
+  <h4>Lima prinsip dasar</h4>
+  <div class="grid3">
+    <div class="card"><h4>Focus on customer satisfaction</h4><p>Customer <b>eksternal</b> (sponsor, klien, user) dan <b>internal</b> (penerima deliverable berikutnya: requirement → analis → developer). Rantai customer hanya sekuat mata rantai terlemah.</p></div>
+    <div class="card"><h4>Prevention, not inspection</h4><p>Mutu tidak bisa “diinspeksi masuk” ke produk (Deming). Prevention paling murah; external failure paling mahal.</p></div>
+    <div class="card"><h4>Improve the process to improve the product</h4><p>Proses harus menambah nilai, repeatable &amp; measurable; perbaikan inkremental &amp; berkelanjutan.</p></div>
+    <div class="card"><h4>Quality is everyone's responsibility</h4><p>Bukan slogan: komitmen manajemen (sumber daya, hapus hambatan) + pekerja diberdayakan &amp; bangga atas karyanya.</p></div>
+    <div class="card"><h4>Fact-based management</h4><p>Keputusan berbasis data &amp; tren kinerja proses yang nyata.</p></div>
+  </div>
+  <h4>Standar &amp; metrik</h4>
+  <p><b>Standar</b> = spesifikasi/kriteria yang disepakati agar deliverable memenuhi tujuannya; menjadi dasar pengukuran. Dimensi mutu software: reliability, usability, performance, response, security, aesthetics, maintainability (juga accuracy, safety, regulatory/legal). Standar juga berlaku untuk deliverable proyek (business case, charter, laporan, dokumentasi user). <b>Defect</b> = perilaku yang tidak diinginkan / gagal mematuhi standar (bug). <b>Metrik punya dua bagian</b>: metriknya sendiri + nilai/rentang yang dapat diterima.</p>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Kategori (Tabel 9.1)</th><th>Fokus</th><th>Contoh metrik</th></tr></thead>
+    <tbody>
+      <tr><td><b>Process</b></td><td>Efektivitas menemukan &amp; menghapus cacat</td><td>Defect arrival rate, defects by phase, defect backlog, fix response time, defective fixes</td></tr>
+      <tr><td><b>Product</b></td><td>Mutu intrinsik deliverable &amp; kepuasan customer</td><td>Mean time to failure, defect density (per LOC/function point), customer-found defects, customer satisfaction index</td></tr>
+      <tr><td><b>Project</b></td><td>Proses PM mencapai scope, jadwal, anggaran</td><td>Scope change requests &amp; approvals, overdue tasks, tasks that should have started, over-budget tasks, EV (SV, CV, SPI, CPI, ETC, EAC), over-allocated resources, turnover, training hours</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Orang teknis sering merasa standar mengekang kreativitas; standar yang terlalu banyak &amp; kaku memang bisa begitu, tetapi standar yang jelas diperlukan — cacat yang ditemukan lebih awal lebih murah.</p>
+
+  <h3>Quality assurance: verification &amp; validation (V&amp;V)</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th></th><th>Verification</th><th>Validation</th></tr></thead>
+    <tbody>
+      <tr><td>Orientasi</td><td><b>Proses</b> — “apakah kita mengikuti prosedur &amp; proses yang benar?”</td><td><b>Produk</b> — “apakah produk memenuhi ekspektasi customer &amp; bekerja sesuai spesifikasi?”</td></tr>
+      <tr><td>Waktu</td><td>Sepanjang proyek, <b>sebelum</b> final testing</td><td>Menjelang akhir / setelah produk dikembangkan</td></tr>
+      <tr><td>Bentuk</td><td><b>Technical reviews</b> (structured walk-through: developer memandu rekan menelusuri program/desain; <b>inspection</b>: peer review dengan <b>checklist</b>) · <b>Business reviews</b> (fungsi sesuai scope; deliverable lengkap &amp; sesuai metodologi) · <b>Management reviews</b> (progres aktual vs baseline)</td><td>Terutama <b>testing</b></td></tr>
+      <tr><td>Asal-usul</td><td>Industri dirgantara (±30 tahun lalu), di mana error software bisa berakibat misi gagal</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout tip"><b>Lima saran agar testing efektif</b><ul><li>Dilakukan orang yang <b>tidak punya kepentingan pribadi</b> — programmer jangan menguji programnya sendiri.</li><li>Testing <b>berkelanjutan</b> di semua fase.</li><li>Test plan memuat: <b>apa, bagaimana, kapan, siapa</b> yang menguji, dan <b>hasil yang diharapkan</b>.</li><li>Test plan berfungsi seperti <b>service-level agreement</b> antar-stakeholder.</li><li><b>Sikap yang benar</b>: bukan untuk “break the code” atau mempermalukan, tetapi membantu developer memenuhi requirement.</li></ul></div>
+
+  <h3>Quality control — alat &amp; teknik</h3>
+  <div class="grid2">
+    <div class="card"><h4>Control chart (Shewhart)</h4><p>Gambaran perilaku proses dari waktu ke waktu: <b>center line</b> (rata-rata) dan <b>control limits ±3σ</b>. Variasi <b>common/chance cause</b> = normal, acak, dalam batas (people, machines, material, environment, methods). Peluang titik di luar UCL hanya ±1/1.000 (sama untuk LCL) → titik di luar batas dianggap akibat <b>assignable cause</b> (bahan baku berubah, orang kurang terlatih, mesin rusak, metode tidak memadai). Proses tanpa assignable cause = <b>in statistical control</b>. Hati-hati melihat pola yang sebenarnya tidak ada.</p></div>
+    <div class="card"><h4>Ishikawa (fishbone)</h4><p>Effect (masalah) di kepala ikan; penyebab utama (people, methods, management, technology, measurements, environment, materials…) dipecah ke subpenyebab, lalu diinvestigasi untuk solusi. Contoh effect di buku: requirement tidak terdefinisi dengan benar.</p></div>
+    <div class="card"><h4>Pareto chart</h4><p>Data mutu dikelompokkan dan diurutkan dari frekuensi terbesar ke terkecil (kiri ke kanan). Contoh: panggilan call center seminggu — kategori terbanyak <b>documentation questions</b> (lalu hardware problems, software errors, other) → dokumentasi user perlu diperbarui.</p></div>
+    <div class="card"><h4>Alat lain (Gambar 9.9)</h4><p><b>Checklists</b> (agar tidak ada yang terlupa), <b>flowcharts/process maps</b> (urutan langkah &amp; titik keputusan), <b>statistical analysis</b> (regresi/korelasi untuk tren &amp; hubungan tersembunyi).</p></div>
+  </div>
+  <p><b>Continuous improvement — learn, mature, improve</b>: monitoring menunjukkan area masalah, tetapi tim yang harus menyelesaikannya; dokumentasikan lessons learned agar best practices disebarkan. Rencana mutu bukan hanya untuk membangun produk, tetapi juga mencari cara <b>membangun produk yang lebih baik</b>.</p>
+  <div class="callout exam"><b>Sering keluar</b><ul><li>QA = <b>mengaudit</b> apakah standar, proses, metrik di rencana mutu diikuti (proses). QC = <b>memantau hasil</b> &amp; mengambil tindakan korektif (produk/deliverable).</li><li>Verification = <i>built it right</i> (proses); validation = <i>built the right thing</i> (produk, terutama testing).</li><li>Walk-through dipimpin developer; inspection memakai <b>checklist</b>.</li><li>Quality ≠ grade. Juran = fitness for use; Crosby = conformance, zero defects; Deming = statistik, 14 points, cease mass inspection.</li></ul></div>
+  <div class="mod-foot"><span class="small">Hubungkan: Bab 3 (objektif mutu sebagai pilar MOV), Bab 7 (Ishikawa juga alat identifikasi risiko), Bab 8 (EV sebagai metrik project), Bab 12 (test results sebagai bukti penerimaan).</span><button class="btn" data-practice="b9">Latihan Bab 9 →</button></div>
+</section>
+
+<!-- ===================== BAB 10 ===================== -->
+<section class="module" id="b10" data-mod>
+  <div class="mod-head">
+    <div><div class="eyebrow">Bab 10 Marchewka (dari buku)</div><h2>Leading the Project Team</h2>
+      <div class="tags"><span class="pill uas">UAS</span><span class="pill quiz">Quiz</span><span class="pill src">Marchewka Bab 10 (hlm. 259–281) · tanpa slide kelas</span></div></div>
+    <label class="done-toggle"><input type="checkbox" data-done="b10">Tandai selesai</label>
+  </div>
+  <p class="lead">Proyek sukses butuh <b>kepemimpinan</b>, bukan hanya alat &amp; proses. Pemimpin proyek terutama PM, tetapi anggota tim pun bisa memimpin di momen tertentu karena keahliannya. Bab ini membahas empat hal: <b>kepemimpinan</b>, <b>etika</b>, <b>tim</b>, dan <b>proyek multikultural</b>.</p>
+
+  <h3>Leadership vs management (Kotter)</h3>
+  <div class="grid2">
+    <div class="card acc"><h4>Management</h4><p>Kebijakan &amp; prosedur yang membawa <b>ketertiban &amp; prediktabilitas</b>: planning, organizing, controlling, staffing, evaluating, monitoring.</p></div>
+    <div class="card amb"><h4>Leadership</h4><p>Berpusat pada <b>visi, perubahan, dan hasil</b>: menetapkan arah, menyelaraskan, dan memotivasi orang. Komitmen pada visi hanya bisa <b>diinspirasi</b>, tidak bisa diperintahkan.</p></div>
+  </div>
+  <p class="small">Keduanya berbeda tetapi saling melengkapi. Kepemimpinan bukan soal karisma atau sifat bawaan; bisa dikembangkan — banyak tentang keberanian melakukan hal yang benar dan berpikiran terbuka.</p>
+
+  <h3>Kouzes &amp; Posner — 5 praktik exemplary leadership (Gambar 10.1)</h3>
+  <div class="grid3">
+    <div class="card"><div class="k">1</div><h4>Model the way</h4><p>Memimpin dengan teladan; perilaku, bukan jabatan, yang memenangkan respek; kata &amp; tindakan konsisten. “People follow the person first, not the plan.”</p></div>
+    <div class="card"><div class="k">2</div><h4>Inspire a shared vision</h4><p>Visi yang menggairahkan; kenali konstituen; <b>dialog, bukan monolog</b>.</p></div>
+    <div class="card"><div class="k">3</div><h4>Challenge the process</h4><p>Menantang status quo, mengenali &amp; mendukung ide baik; eksperimen dengan langkah kecil (<b>small wins</b>); orang harus merasa aman mengambil risiko.</p></div>
+    <div class="card"><div class="k">4</div><h4>Enable others to act</h4><p>Kolaborasi &amp; kepercayaan; memberdayakan dengan <b>memberikan kekuasaan</b>, bukan menahannya; menjadikan konstituen pemimpin.</p></div>
+    <div class="card"><div class="k">5</div><h4>Encourage the heart</h4><p>Apresiasi kontribusi, budaya perayaan yang tulus; kaitkan penghargaan dengan kinerja secara terlihat.</p></div>
+  </div>
+
+  <h3>Goleman — 6 gaya kepemimpinan</h3>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Gaya</th><th>Semboyan</th><th>Efektif saat</th><th>Risiko</th></tr></thead>
+    <tbody>
+      <tr><td><b>Coercive</b></td><td>“Do as I say”</td><td>Krisis, memulai turnaround, karyawan bermasalah, butuh kepatuhan segera</td><td>Iklim negatif; ide baru terhambat; kabar buruk disembunyikan; orang kehilangan inisiatif &amp; ownership</td></tr>
+      <tr><td><b>Authoritative</b></td><td>“Come with me”</td><td>Tim/proyek <b>kehilangan arah</b>; tujuan jelas, cara diserahkan ke tim</td><td>Pemimpin kurang pengalaman yang memimpin para ahli terlihat sombong/tidak paham</td></tr>
+      <tr><td><b>Affiliative</b></td><td>“People come first”</td><td>Membangun harmoni, moral, kepercayaan, komunikasi</td><td>Kurang arahan untuk tugas kompleks (rudderless); pujian berlebihan → mediokritas ditoleransi</td></tr>
+      <tr><td><b>Democratic</b></td><td>“What do you think?”</td><td>Butuh <b>buy-in/konsensus</b> atau masukan berharga</td><td>Rapat tak berujung, kesan tanpa pemimpin; tidak cocok saat krisis atau tim kurang kompeten</td></tr>
+      <tr><td><b>Pacesetting</b></td><td>“Do as I do, now”</td><td>Butuh hasil cepat dari tim yang <b>sangat termotivasi, mandiri, kompeten</b></td><td>Tim kewalahan, ekspektasi tak dikomunikasikan, micromanagement, tim terombang-ambing bila pemimpin pergi</td></tr>
+      <tr><td><b>Coaching</b></td><td>“Try this”</td><td>Orang <b>mau</b> dikembangkan; tujuan karier jangka panjang; delegasi tugas menantang</td><td>Tidak efektif bila orang resisten atau pemimpin tak mampu/mau coaching. <b>Paling jarang dipakai</b>.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">Riset Goleman (±4.000 manajer): pemimpin terbaik memakai <b>beberapa gaya</b> sesuai situasi. Penguasa gaya <b>authoritative, democratic, affiliative, coaching</b> menciptakan iklim terbaik &amp; kinerja tertinggi.</p>
+  <h4>Emotional intelligence (EI)</h4>
+  <div class="grid4">
+    <div class="card"><h4>Self-awareness</h4><p class="small">Sadar emosi diri &amp; dampaknya; tahu kekuatan/kelemahan.</p></div>
+    <div class="card"><h4>Self-management</h4><p class="small">Mengendalikan impuls &amp; emosi negatif; integritas; adaptif.</p></div>
+    <div class="card"><h4>Social awareness</h4><p class="small">Empati; peka pada emosi orang, kebutuhan customer, politik organisasi.</p></div>
+    <div class="card"><h4>Social skills</h4><p class="small">Menginspirasi, memengaruhi, berkomunikasi, menyelesaikan konflik, membangun relasi.</p></div>
+  </div>
+  <p class="small">EI bisa dipelajari pada usia berapa pun (IQ sebagian besar genetik), tetapi seperti mengubah kebiasaan buruk. Langkah: tanya “<b>Who am I now?</b>” dan “<b>Who do I want to be?</b>”, kumpulkan <b>360-degree feedback</b>, buat rencana, dan cari coach tepercaya.</p>
+
+  <h3>Etika dan kepemimpinan</h3>
+  <p><b>Etika</b> (Trevino &amp; Nelson) = prinsip, norma, dan standar perilaku yang memandu individu dan kelompok. Kenapa penting: perilaku tidak etis merugikan uang &amp; pekerjaan (Enron: saham &gt;$80 → &lt;$1 dalam setahun, &gt;20.000 orang kehilangan pekerjaan; ikut menjatuhkan Arthur Andersen), bisa melanggar hukum, dan memang hal yang benar.</p>
+  <div class="quad">
+    <div class="ylab">Etis ↑</div>
+    <div class="cell" style="background:var(--amber-soft)"><b>Ilegal tapi etis</b>Area abu-abu — sulit</div>
+    <div class="cell" style="background:var(--ok-soft)"><b>Legal &amp; etis</b>Biasanya jelas</div>
+    <div class="cell" style="background:var(--crit-soft)"><b>Ilegal &amp; tidak etis</b>Biasanya jelas</div>
+    <div class="cell" style="background:var(--amber-soft)"><b>Legal tapi tidak etis</b>Area abu-abu — sulit</div>
+    <div class="xlab">Legal → (Gambar 10.2: Ethics and legality)</div>
+  </div>
+  <p><b>Budaya</b> = keyakinan, asumsi, dan nilai bersama yang memandu perilaku. Dibentuk oleh <b>sistem formal</b> (struktur otoritas; kebijakan rekrut, pecat, reward, pelatihan) dan <b>informal</b> (norma sehari-hari, pahlawan, mitos/cerita, ritual, bahasa). Orang baru mempelajarinya lewat <b>socialization</b> (“learning the ropes”) — bisa mendorong atau menghambat perilaku etis. PM harus menjadi <b>moral individual</b> (integritas, jujur, tepercaya) sekaligus <b>moral leader/manager</b> (menetapkan nilai yang benar &amp; membentuk budaya etis).</p>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Tipe kepemimpinan etis</th><th>Ciri</th><th>Contoh buku</th></tr></thead>
+    <tbody>
+      <tr><td><b>Unethical</b></td><td>Lemah sebagai individu &amp; manajer moral; angka harus tercapai dengan cara apa pun</td><td>Al “Chainsaw” Dunlap (Sunbeam)</td></tr>
+      <tr><td><b>Hypocritical</b> (paling buruk)</td><td>Mengagungkan integritas tetapi berperilaku tidak etis / membiarkan pelanggaran</td><td>Jim Bakker (PTL)</td></tr>
+      <tr><td><b>Ethically neutral</b></td><td>Tidak memberi pedoman etis jelas; <b>diam dibaca sebagai “yang penting target tercapai”</b></td><td>Sandy Weill (Citigroup)</td></tr>
+      <tr><td><b>Ethical</b></td><td>Hasil penting, tetapi <b>hanya bila dicapai secara etis</b>; budaya etis → lebih sedikit perilaku tidak etis, komitmen lebih tinggi, lebih mau melaporkan masalah</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <h4>Dilema etis umum di proyek</h4>
+  <div class="grid2">
+    <div class="card"><h4>Human resource situations</h4><p>Diskriminasi, privasi, pelecehan, penilaian, disiplin, rekrut/pecat/PHK. Kunci keadilan: <b>equity</b> (hanya kinerja yang dihitung), <b>reciprocity</b> (ekspektasi dipahami &amp; dipenuhi), <b>impartiality</b> (tanpa prasangka/bias).</p></div>
+    <div class="card"><h4>Conflicts of interest</h4><p>Hadiah/favor vendor atau customer, suap halus/terang, kickback, relasi yang mengganggu imparsialitas, akses informasi rahasia. Bila ragu: <b>full disclosure</b>.</p></div>
+    <div class="card"><h4>Confidence</h4><p>Kerahasiaan, keselamatan &amp; keandalan produk, kebenaran iklan, tanggung jawab fidusia kepada klien.</p></div>
+    <div class="card"><h4>Corporate resources</h4><p>Anggota tim adalah <b>agen organisasi</b> (email, kop surat, peralatan hanya untuk bisnis). Diminta “<b>fudge the numbers</b>”? Konsultasikan pihak di luar rantai komando (legal/HR). <b>Whistleblowing</b> = pilihan terakhir, hati-hati konsekuensinya.</p></div>
+  </div>
+  <h4>Delapan langkah keputusan etis (Trevino &amp; Nelson)</h4>
+  <p class="small">Kasus buku: hasil uji komponen tidak memenuhi standar klien; atasan meminta Anda mengubah hasilnya karena “tidak terlalu buruk dan bisa diperbaiki sebelum go-live”.</p>
+  <ol class="steps">
+    <li><b>Gather the facts</b>Fakta historis &amp; sesudahnya; sadari keterbatasan informasi.</li>
+    <li><b>Define the ethical issue</b>Jangan berhenti di isu pertama; isu utama kasus ini = <b>kepercayaan</b> klien.</li>
+    <li><b>Identify the affected stakeholders</b>Langsung (klien) dan tidak langsung (customer klien, pemegang saham, tim, keluarga).</li>
+    <li><b>Identify the consequences</b>Seperti riak batu di air: dampak segera &amp; jangka panjang (reputasi, keuangan, karier).</li>
+    <li><b>Identify the obligations</b>Loyalitas pada atasan vs kewajiban jujur pada klien — dalam nilai, prinsip, karakter, outcome.</li>
+    <li><b>Consider your character &amp; integrity</b><b>Sleep test</b>; apakah nyaman bila muncul di berita? Apa kata orang terdekat?</li>
+    <li><b>Think creatively about potential actions</b>Jangan terjebak dua pilihan (ubah data vs lapor ke atasan atasan). Bicara dulu dengan atasan soal dampaknya; pastikan hasil asli tercatat.</li>
+    <li><b>Check your intuition</b>Empati sebagai alarm terakhir — tapi jangan memutuskan hanya dengan emosi.</li>
+  </ol>
+
+  <h3>Tim dan kepemimpinan (Katzenbach &amp; Smith, <i>The Wisdom of Teams</i>)</h3>
+  <div class="grid2">
+    <div class="card"><h4>Work group</h4><p>Satu pemimpin mengendalikan, memutuskan, mendelegasi, memantau; kinerja bergantung pada pemimpin; anggota berbagi info tetapi <b>tidak harus</b> punya tujuan kinerja bersama, produk kerja bersama, atau akuntabilitas bersama. Contoh: <b>kelompok belajar</b> — belajar bersama, tetapi nilai ujian individual.</p></div>
+    <div class="card"><h4>Real team</h4><p>“A <b>small number</b> of people with <b>complementary skills</b> who are committed to a <b>common purpose, performance goals, and approach</b> for which they hold themselves <b>mutually accountable</b>.” Menyebut sekelompok orang “tim” tidak menjadikannya tim; teamwork fokus pada <b>kinerja</b>.</p></div>
+  </div>
+  <div class="tblwrap"><table class="tbl">
+    <thead><tr><th>Team basics</th><th>Penjelasan</th></tr></thead>
+    <tbody>
+      <tr><td>Small number of people</td><td>Idealnya <b>2–12 orang</b>; tim besar sebaiknya dipecah menjadi subtim</td></tr>
+      <tr><td>Complementary skills</td><td>Technical/functional expertise · problem-solving/decision-making · interpersonal</td></tr>
+      <tr><td>Common purpose &amp; performance goals</td><td><b>Activity goal</b> (pasang LAN) ≠ <b>performance goal</b> (kirim semua order ≤ 24 jam). Performance goal mirip konsep <b>MOV</b></td></tr>
+      <tr><td>Common approach</td><td>Cara bekerja bersama: isu ekonomi, administratif, dan sosial</td></tr>
+      <tr><td>Mutual accountability</td><td>“<b>We</b> hold ourselves accountable” lebih kuat daripada “the boss holds me accountable”</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Common-sense findings</h4><ul><li>Tim berkembang karena <b>tantangan kinerja yang menuntut</b> — lebih penting dari team-building, inisiatif khusus, atau profil anggota ideal</li><li>Team basics sering diabaikan; <b>pseudo team</b> (tanpa tujuan kinerja bersama) adalah kelompok terlemah</li><li>Organisasi lebih menyukai akuntabilitas individu (job description, kompensasi, jalur karier)</li></ul></div>
+    <div class="card"><h4>Uncommon-sense findings</h4><ul><li>Tujuan kinerja yang kuat melahirkan lebih banyak real team</li><li><b>High-performance team</b> langka; butuh komitmen sangat tinggi antar-anggota dan tidak bisa “dikelola”</li><li>Real team adalah dasar kinerja (sinergi &gt; jumlah kinerja individu)</li><li>Tim secara alami mengintegrasikan kinerja &amp; pembelajaran</li></ul></div>
+  </div>
+
+  <h3>Proyek multikultural</h3>
+  <p>Proyek internasional lebih kompleks karena perbedaan geografis, budaya, dan sosial — proyek domestik pun makin multikultural.</p>
+  <div class="grid4">
+    <div class="card"><h4>Number of locations</h4><p class="small">Waktu &amp; biaya perjalanan, zona waktu.</p></div>
+    <div class="card"><h4>Currency exchange</h4><p class="small">Fluktuasi kurs &amp; inflasi.</p></div>
+    <div class="card"><h4>Regulations &amp; laws</h4><p class="small">Berbeda &amp; ditafsirkan lokal.</p></div>
+    <div class="card"><h4>Political instability</h4><p class="small">Keselamatan tim.</p></div>
+    <div class="card"><h4>Attitude toward work &amp; time</h4><p class="small">Tekanan waktu bisa memicu resistensi.</p></div>
+    <div class="card"><h4>Religion</h4><p class="small">Akhir pekan Kamis–Jumat vs Sabtu–Minggu → kantor hanya bisa berkomunikasi Senin–Rabu.</p></div>
+    <div class="card"><h4>Language</h4><p class="small">Pilih kata hati-hati agar tidak salah tafsir.</p></div>
+    <div class="card"><h4>Food</h4><p class="small">Yang biasa bagi kita bisa aneh bagi orang lain.</p></div>
+  </div>
+  <p><b>Culture</b> = pelajaran sosial tentang perilaku yang dipelajari dari waktu ke waktu (cara makan, tidur, berbisnis); kita sering terikat emosional pada budaya sendiri. <b>Diversity</b> = perbedaan budaya, kebangsaan, etnis, agama, gender, atau generasi. <b>Empat dimensi diversity</b>: (1) <b>kepribadian</b> (introvert/ekstrovert, Tipe A/B); (2) <b>karakteristik individu</b> yang sering terlihat; (3) <b>karakteristik sosial</b> (pendidikan, status pernikahan, ekonomi, agama); (4) <b>aspek organisasi</b> (senioritas, posisi formal, lokasi kerja). Orang yang terlihat mirip bisa saja berbeda budaya — dimensi ini membantu melihat perbedaan sekaligus kesamaan.</p>
+  <div class="callout exam"><b>Sering keluar</b><ul><li>Kouzes &amp; Posner = 5 <b>praktik</b>; Goleman = 6 <b>gaya</b> + emotional intelligence (4 kapabilitas).</li><li>Gaya paling jarang dipakai = <b>coaching</b>; gaya untuk krisis = <b>coercive</b>; untuk tim kehilangan arah = <b>authoritative</b>; untuk buy-in = <b>democratic</b>.</li><li>Pemimpin etis paling buruk = <b>hypocritical</b>; pemimpin “diam” = <b>ethically neutral</b>.</li><li>Work group vs real team: pembedanya <b>mutual accountability</b> &amp; <b>common performance goal</b> dengan joint work product.</li></ul></div>
+  <div class="mod-foot"><span class="small">Hubungkan: Bab 4 (memilih PM &amp; tim), Bab 11 (konflik &amp; psychological safety), Bab 12 (individual review &amp; penghargaan tim).</span><button class="btn" data-practice="b10">Latihan Bab 10 →</button></div>
 </section>
 <!-- ===================== BAB 11 ===================== -->
 <section class="module" id="b11" data-mod>
@@ -1989,6 +2306,14 @@ nilai ulang RPN di tengah &amp; pasca implementasi → apakah risiko sudah bisa 
     </tbody>
   </table></div>
   <p class="small">ADKAR untuk satu dosen yang cemas; Kotter untuk perubahan LMS satu fakultas. <b>Takeaway</b>: (1) teknologi mengubah tugas, peran, otoritas; (2) keberatan user bisa memperbaiki desain perubahan; (3) pilot menguji manfaat, mutu, beban dalam konteks; (4) keputusan ekspansi mengikuti bukti &amp; evaluasi berkelanjutan. Mulai project plan berikutnya dengan bertanya <b>siapa yang akan bekerja secara berbeda</b>, bukan hanya apa yang akan dibangun.</p>
+  <details class="more book" data-book="b11" open><summary>Pendalaman dari buku Marchewka (tidak/kurang dibahas di slide)</summary>
+<div class="grid2">
+  <div class="card"><h4>Change has an impact — asimilasi</h4><p>Hampir semua perubahan membawa kecemasan: <b>anxiety + hope = anticipation</b> (dianggap positif); <b>anxiety + apprehension = dread</b> (dianggap negatif). Keduanya menimbulkan <b>stres</b>. <b>Assimilation</b> = proses beradaptasi dengan perubahan; perubahan besar butuh waktu asimilasi lebih lama, dan setelah terasimilasi kecemasannya turun. Perubahan bersifat <b>kumulatif</b>; melewati <b>stress/change threshold</b> → perilaku disfungsional (individu: mudah marah hingga depresi; organisasi: tak mampu memanfaatkan peluang/menyelesaikan masalah, akhirnya profit turun).</p></div>
+  <div class="card"><h4>Neutral zone (Lewin, detail buku)</h4><p>Masa transisi = <b>neutral zone</b>, “emotional wilderness”. Pendukung perubahan cenderung <b>terburu-buru</b> membawa orang melewatinya → bingung → kekuatan penghambat menarik mereka kembali ke status quo atau “<b>escape</b>” (keluar organisasi/menolak total). Terlalu lama di neutral zone → <b>kompromi</b> (hanya sebagian perubahan diterapkan) → peluang hilang &amp; preseden buruk untuk perubahan berikutnya. “People do not necessarily resist change; they resist <b>losses and endings</b>.” Unfreezing berarti melepaskan sesuatu — perubahan dimulai dengan sebuah akhir.</p></div>
+  <div class="card"><h4>Yang harus diperjelas dalam change plan</h4><ul><li><b>Real impacts</b> dari perubahan &amp; <b>breadth of change</b> (seberapa luas)</li><li>Definisikan <b>what's over and what's not</b> sebelum sistem diterapkan</li><li>Apakah <b>rules for success</b> berubah? Orang bingung &amp; resisten bila aturan sukses berubah atau tidak jelas lagi</li><li><b>Targets</b> adalah faktor paling kritis — willingness, ability, readiness berada pada mereka; change agent menjadi saluran komunikasi sponsor ↔ target</li></ul></div>
+  <div class="card"><h4>Pertanyaan review favorit buku</h4><ul><li>Kenapa sistem bisa <b>sukses teknis tetapi gagal organisasi</b>?</li><li>Kenapa <b>acceptance lebih kuat dari compliance</b>?</li><li>Kenapa orang teknis sering menghindari isu manusia?</li><li>Gunakan Leavitt untuk aplikasi POS restoran: people (peran kasir), technology (POS), task (alur pesanan), structure (siapa menyetujui diskon).</li></ul></div>
+</div>
+</details>
   <div class="mod-foot"><span class="small">Worksheet: change issue log — isu &amp; bukti · kelompok/kepentingan · aksi &amp; owner · evaluasi. Tutup isu dengan bukti, bukan dengan “sudah dibahas”.</span><button class="btn" data-practice="b11">Latihan Bab 11 →</button></div>
 </section>
 <!-- ===================== BAB 12 ===================== -->
@@ -2355,6 +2680,7 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>Alligator (Tusler)</dt><dd>Risiko probabilitas rendah, dampak tinggi → siapkan contingency plan.</dd>
     <dt>Analogous estimation</dt><dd>Estimasi berdasarkan kemiripan dengan proyek sebelumnya.</dd>
     <dt>AON</dt><dd>Activity on the Node — diagram jaringan: aktivitas = kotak, ketergantungan = panah.</dd>
+    <dt>Assimilation / change threshold</dt><dd>Proses beradaptasi dengan perubahan / batas stres sebelum muncul perilaku disfungsional.</dd>
     <dt>BAC</dt><dd>Budget at Completion — total anggaran terencana proyek.</dd>
     <dt>Baseline plan</dt><dd>Jadwal &amp; anggaran yang diterima sponsor, PM, tim; tolok ukur kinerja.</dd>
     <dt>Benefits owner / benefits review</dt><dd>Pemilik bisnis yang meninjau apakah nilai (MOV) muncul setelah proyek ditutup (mis. hari 30/60/90).</dd>
@@ -2366,13 +2692,17 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>CCPM</dt><dd>Critical Chain Project Management (Goldratt) — buffer bersama, memperhitungkan ketergantungan sumber daya.</dd>
     <dt>Change agent</dt><dd>Pihak yang mendiagnosis &amp; mengoordinasi perubahan (biasanya PM &amp; tim).</dd>
     <dt>Close-out (postmortem) review</dt><dd>Review PM &amp; tim sebelum tim dilepas: MOV, objektif, deliverable, metodologi, kinerja tim → aksi bernama.</dd>
+    <dt>CMM / CMMI</dt><dd>Model maturity proses SEI: 5 level (Marchewka: Initial, Repeatable, Defined, Managed, Optimizing).</dd>
     <dt>Contingency reserve</dt><dd>Cadangan di dalam anggaran proyek, dilepas PM saat risiko teridentifikasi terjadi.</dd>
+    <dt>Control chart</dt><dd>Center line &amp; control limits ±3σ; membedakan common cause vs assignable cause (Shewhart).</dd>
+    <dt>Cost of quality</dt><dd>Prevention + inspection + internal failure + external failure; prevention termurah.</dd>
     <dt>CPFF / CPIF / CPPC</dt><dd>Cost-plus-fixed-fee / incentive-fee / percentage-of-cost — jenis kontrak cost-reimbursable.</dd>
     <dt>CPI / SPI</dt><dd>Cost/Schedule Performance Index = EV÷AC / EV÷PV.</dd>
     <dt>Crashing</dt><dd>Mempercepat aktivitas kritis dengan menambah sumber daya.</dd>
     <dt>Critical path</dt><dd>Jalur terpanjang dalam jaringan; slack nol; durasi tersingkat proyek.</dd>
     <dt>Crux</dt><dd>Milestone berupa proof of concept.</dd>
     <dt>CV / SV</dt><dd>Cost/Schedule Variance = EV−AC / EV−PV.</dd>
+    <dt>Death march project</dt><dd>Yourdon: parameter proyek melampaui normal ≥ 50% (jadwal, staf, anggaran dipotong separuh atau requirement 2×).</dd>
     <dt>Decision tree</dt><dd>Diagram keputusan-outcome untuk menghitung expected value tiap opsi.</dd>
     <dt>Deliverable</dt><dd>Produk kerja yang tangible &amp; verifiable.</dd>
     <dt>Delphi</dt><dd>Estimasi/identifikasi oleh ahli anonim secara iteratif sampai konsensus.</dd>
@@ -2380,10 +2710,14 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>DSC</dt><dd>Deliverable Structure Chart — fase &amp; deliverable (project scope).</dd>
     <dt>EAC / ETC / VAC</dt><dd>Estimate at completion / estimate to complete / variance at completion.</dd>
     <dt>EEF / OPA</dt><dd>Enterprise Environmental Factors (di luar kendali) / Organizational Process Assets (template, lessons learned).</dd>
+    <dt>Emotional intelligence</dt><dd>Self-awareness, self-management, social awareness, social skills (Goleman).</dd>
+    <dt>Ethically neutral / hypocritical leader</dt><dd>Pemimpin yang diam soal etika / yang mengagungkan etika tetapi berbuat tidak etis.</dd>
+    <dt>Exemplary leadership</dt><dd>Kouzes &amp; Posner: model the way, inspire a shared vision, challenge the process, enable others to act, encourage the heart.</dd>
     <dt>Expected value</dt><dd>Σ probabilitas × payoff.</dd>
     <dt>Fast tracking</dt><dd>Menjalankan paralel aktivitas/fase yang semula berurutan.</dd>
     <dt>Feature flag</dt><dd>Saklar untuk mengaktifkan perilaku tertentu bagi sebagian pengguna tanpa deploy ulang.</dd>
     <dt>Fishbone (Ishikawa)</dt><dd>Diagram sebab-akibat untuk identifikasi risiko.</dd>
+    <dt>Fitness for use / conformance to requirements</dt><dd>Definisi mutu Juran (kebutuhan customer) / Crosby (memenuhi standar).</dd>
     <dt>Fixed-price</dt><dd>Kontrak harga total tetap; risiko biaya di penjual.</dd>
     <dt>FMEA / RPN</dt><dd>Failure Mode &amp; Effects Analysis; RPN = Severity × Occurrence × Detection.</dd>
     <dt>Force-field analysis</dt><dd>Lewin: memetakan driving vs resisting forces perubahan.</dd>
@@ -2402,10 +2736,12 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>Milestone</dt><dd>Peristiwa penting berdurasi nol.</dd>
     <dt>Monte Carlo</dt><dd>Simulasi banyak iterasi dengan nilai acak dari distribusi probabilitas.</dd>
     <dt>MOV</dt><dd>Measurable Organizational Value — ukuran sukses proyek: terukur, bernilai, disepakati, terverifikasi.</dd>
+    <dt>Neutral zone</dt><dd>Masa transisi Lewin antara kondisi lama dan baru.</dd>
     <dt>NGT</dt><dd>Nominal Group Technique — tulis diam-diam, round-robin, ranking.</dd>
     <dt>NPV</dt><dd>Net Present Value — nilai sekarang arus kas dikurangi investasi.</dd>
     <dt>Over-allocation</dt><dd>Satu sumber daya ditugaskan ke dua tugas bersamaan.</dd>
     <dt>Parallel implementation</dt><dd>Sistem lama &amp; baru berjalan bersamaan dan output dibandingkan.</dd>
+    <dt>Pareto chart</dt><dd>Diagram batang terurut; aturan 80/20.</dd>
     <dt>Parkinson's law</dt><dd>Pekerjaan mengembang mengisi waktu yang tersedia.</dd>
     <dt>Payback period</dt><dd>Waktu sampai investasi kembali.</dd>
     <dt>PDM</dt><dd>Precedence Diagramming Method — FS, SS, FF, SF.</dd>
@@ -2418,13 +2754,18 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>Portfolio / Program</dt><dd>Kumpulan proyek selaras strategi / proyek terkait yang dikoordinasikan untuk manfaat sinergis.</dd>
     <dt>Premature termination</dt><dd>Proyek diakhiri lebih awal dengan fungsionalitas terbatas.</dd>
     <dt>PRINCE2</dt><dd>PRojects IN Controlled Environments — 7 prinsip, 7 tema, 7 proses.</dd>
+    <dt>Process capability / performance</dt><dd>Hasil yang diharapkan / hasil aktual dari mengikuti proses.</dd>
     <dt>Progressive elaboration</dt><dd>Detail proyek berkembang bertahap seiring informasi bertambah.</dd>
     <dt>Project audit</dt><dd>Review oleh pihak luar yang imparsial atas eksekusi &amp; perilaku proyek.</dd>
+    <dt>Project buffer / feeding buffer</dt><dd>CCPM: cadangan di akhir critical chain / di titik jalur non-kritis bergabung.</dd>
     <dt>Projectitis</dt><dd>Loyalitas berlebihan pada proyek di struktur project-based.</dd>
     <dt>Psychological safety</dt><dd>Keyakinan tim bahwa aman mengambil risiko interpersonal (Edmondson).</dd>
     <dt>Push / Pull / Interactive</dt><dd>Dikirim ke penerima / diambil penerima / real-time multi-arah.</dd>
     <dt>PV / EV / AC</dt><dd>Planned value / earned value / actual cost.</dd>
+    <dt>Quality trilogy</dt><dd>Juran: quality planning, quality improvement, quality control.</dd>
+    <dt>Quality vs grade</dt><dd>Quality = memenuhi requirement; grade = maksud desain/jumlah fitur.</dd>
     <dt>Readiness gate</dt><dd>Titik keputusan go/no-go berbasis bukti (mutu layanan, integritas data, recovery, orang &amp; dukungan, risiko residual).</dd>
+    <dt>Real team / work group / pseudo team</dt><dd>Katzenbach &amp; Smith: tim dengan tujuan kinerja bersama &amp; mutual accountability / kelompok berpemimpin tunggal / kelompok tanpa tujuan kinerja bersama.</dd>
     <dt>Release runbook</dt><dd>Langkah rilis tertulis: owner, bukti, stop condition, aksi berikutnya, rencana rollback.</dd>
     <dt>Residual item</dt><dd>Kewajiban yang belum selesai saat penutupan; butuh otorisasi, owner &amp; dana, tenggat, verifikasi.</dd>
     <dt>RFP / RFI / RFB</dt><dd>Request for Proposal / Information / Bid.</dd>
@@ -2448,6 +2789,8 @@ Saluran komunikasi = n(n − 1) ÷ 2
     <dt>Tornado graph</dt><dd>Grafik sensitivitas: batang terpanjang = variabel paling berpengaruh.</dd>
     <dt>Trigger</dt><dd>Penanda bahwa risiko terjadi/akan terjadi.</dd>
     <dt>Use case diagram</dt><dd>Aktor, use case, system boundary — product scope.</dd>
+    <dt>Verification / validation</dt><dd>Verification: proses diikuti dengan benar (review); validation: produk memenuhi kebutuhan (testing).</dd>
+    <dt>Walk-through / inspection</dt><dd>Review teknis dipimpin developer / peer review memakai checklist.</dd>
     <dt>WBS</dt><dd>Dekomposisi logis pekerjaan yang deliverable-oriented.</dd>
     <dt>Work package</dt><dd>Unit WBS terendah untuk satu deliverable beserta aktivitas &amp; milestone-nya.</dd>
   </dl>
@@ -2751,6 +3094,71 @@ QB.push(
 {id:"ua-es-b12-6",ex:"UAS",lv:"HOTS",bab:"mix",t:"es",q:"Sistem e-procurement sudah go-live dan lulus uji, tetapi tiga bulan kemudian pembeli masih mengirim form lewat email, insiden tidak tertangani karena engineer vendor sudah pergi, dan tidak ada yang tahu apakah penghematan tercapai. Analisis secara terintegrasi (Bab 3, 8, 11, 12) dan susun rencana pemulihan.",e:"<ul><li><b>Diagnosis</b>: delivery berhasil, tetapi <b>handover</b> gagal (tidak ada owner operasi, tim penerima tak bisa restore/eskalasi), <b>adopsi</b> gagal (Bab 11: Leavitt, ADKAR, workflow email masih tersedia), <b>benefits</b> tanpa owner (Bab 12) sehingga MOV (Bab 3) tak terverifikasi.</li><li><b>Handover</b>: tunjuk service owner, runbook, akses, transition support dari vendor dengan bukti untuk mengakhirinya; tim penerima demonstrasikan diagnosis alert, restore, eskalasi.</li><li><b>Adopsi</b>: diagnosis penyebab (form, otoritas approval), strategi kombinasi — rational (bukti manfaat), normative (champion), environmental-adaptive (tutup jalur email setelah kesiapan); metrik = PO diproses di sistem, bukan login.</li><li><b>Komunikasi</b> (Bab 8): rencana komunikasi ke pembeli &amp; finance, laporan status ke sponsor.</li><li><b>Value</b>: benefit owner, baseline penghematan, review hari 30/60/90; closure recommendation satu halaman dengan residual items bernama; lessons learned: rencanakan completion sejak awal proyek.</li></ul>"}
 );
 
+QB.push(
+/* ===== BAB 9 · QUALITY ===== */
+{id:"qz-b9-1",ex:"Quiz",lv:"Easy",bab:"b9",t:"pg",q:"Menurut Marchewka, perbedaan <i>quality</i> dan <i>grade</i> adalah…",o:["Quality = jumlah fitur; grade = bebas cacat","Quality = memenuhi requirement; grade = maksud desain (tingkat fitur/fungsi)","Keduanya sinonim","Grade hanya dipakai untuk produk fisik"],a:1,e:"Quality focuses on fulfilling requirements, grade centers on the intent of the design. Produk high-grade bisa low-quality bila sering bermasalah, dan sebaliknya."},
+{id:"qz-b9-2",ex:"Quiz",lv:"Easy",bab:"b9",t:"pg",q:"Tokoh mutu yang mendefinisikan mutu sebagai <i>fitness for use</i> dan memperkenalkan quality trilogy adalah…",o:["Philip Crosby","Frederick Taylor","Joseph Juran","Walter Shewhart"],a:2,e:"<b>Juran</b>: fitness for use; mutu harus direncanakan; trilogy = planning, improvement, control. Crosby = conformance to requirements &amp; zero defects."},
+{id:"qz-b9-3",ex:"Quiz",lv:"Medium",bab:"b9",t:"pg",q:"Dari empat komponen total cost of quality, mana yang paling murah dan mana yang paling merusak organisasi?",o:["Inspection paling murah; internal failure paling merusak","Prevention paling murah; external failure paling merusak","External failure paling murah; prevention paling merusak","Internal failure paling murah; inspection paling merusak"],a:1,e:"Prevention mencegah cacat sejak awal; external failure (cacat ditemukan setelah rilis) merusak reputasi &amp; repeat business."},
+{id:"qz-b9-4",ex:"Quiz",lv:"Medium",bab:"b9",t:"pg",q:"Peer review yang ciri utamanya memakai <b>checklist</b> untuk menemukan error disebut…",o:["Structured walk-through","Management review","Business review","Inspection"],a:3,e:"Walk-through dipimpin developer yang memandu rekan menelusuri program/desain; <b>inspection</b> memakai checklist yang diperbarui berdasarkan data error."},
+{id:"qz-b9-5",ex:"Quiz",lv:"Hard",bab:"b9",t:"pg",q:"Menurut Barry Boehm (dikutip Marchewka), cacat yang butuh 1 jam diperbaiki saat requirement didefinisikan dapat membutuhkan sekitar berapa jam bila baru ditemukan di produksi?",o:["10 jam","100 jam","2 jam","1.000 jam"],a:1,e:"Boehm: 1 jam → <b>100 jam</b>. Itulah alasan prevention dan verifikasi dini lebih murah (Gambar 9.2)."},
+{id:"qz-b9-6",ex:"Quiz",lv:"HOTS",bab:"b9",t:"pg",q:"Tim developer menguji modul yang mereka tulis sendiri, test plan tidak menyebut hasil yang diharapkan, dan testing hanya dilakukan seminggu sebelum go-live. Perbaikan yang paling sesuai saran Marchewka adalah…",o:["Menambah jumlah tester tanpa mengubah proses","Menghapus testing agar tepat waktu","Penguji independen, testing berkelanjutan di semua fase, dan test plan yang memuat apa/bagaimana/kapan/siapa/hasil yang diharapkan","Meminta customer melakukan semua pengujian"],a:2,e:"Saran buku: tester tanpa kepentingan pribadi, testing kontinu, test plan lengkap (what/how/when/who/expected results), test plan sebagai SLA, sikap membantu bukan “break the code”."},
+{id:"ua-b9-1",ex:"UAS",lv:"Easy",bab:"b9",t:"pg",q:"Urutan kerangka project quality management plan (Gambar 9.4) yang benar adalah…",o:["Quality philosophies &amp; principles → standards, processes &amp; metrics → QA → QC → learn, improve &amp; mature","QC → QA → standards → philosophies → improve","Standards → QC → philosophies → QA → improve","QA → philosophies → QC → metrics → improve"],a:0,e:"Lima komponen: philosophies &amp; principles, standards/processes/metrics, quality assurance, quality control, learn-improve-mature."},
+{id:"ua-b9-2",ex:"UAS",lv:"Medium",bab:"b9",t:"pg",q:"Perbedaan quality assurance (QA) dan quality control (QC) menurut Marchewka adalah…",o:["QA memantau hasil dan memperbaiki cacat; QC mengaudit proses","Keduanya identik","QA hanya dilakukan customer","QA mengaudit apakah standar, proses, dan metrik dalam rencana mutu diikuti; QC memantau aktivitas &amp; hasil proyek agar sesuai standar dan mengambil tindakan korektif"],a:3,e:"QA = auditing/checks and balances terhadap proses; QC = monitoring hasil dengan alat seperti control chart, fishbone, Pareto."},
+{id:"ua-b9-3",ex:"UAS",lv:"Medium",bab:"b9",t:"pg",q:"Verification berbeda dari validation karena verification…",o:["Berorientasi produk dan terutama berupa testing di akhir proyek","Berorientasi proses — apakah kita mengikuti prosedur yang benar — dan dilakukan sebelum final testing melalui technical, business, dan management reviews","Hanya dilakukan oleh customer","Hanya dipakai di proyek Agile"],a:1,e:"Verification = process-oriented (reviews); validation = product-oriented, apakah produk memenuhi ekspektasi customer, sebagian besar berupa testing."},
+{id:"ua-b9-4",ex:"UAS",lv:"Medium",bab:"b9",t:"pg",q:"Pada CMM/CMMI versi Marchewka, organisasi yang proses PM dasarnya sudah ada dan jadwal/anggaran disusun berdasarkan pengalaman proyek serupa berada di level…",o:["1 · Initial","3 · Defined","2 · Repeatable","4 · Managed"],a:2,e:"Level 2 Repeatable: disiplin, kebijakan &amp; kontrol dasar, KPA requirements mgmt, project planning, tracking, subcontract mgmt, QA, configuration mgmt. Level 3 = proses standar seluruh organisasi."},
+{id:"ua-b9-5",ex:"UAS",lv:"Hard",bab:"b9",t:"pg",q:"Organisasi menyimpan metrik kuantitatif produk &amp; proses di repositori organisasi dan mengendalikan variasi kinerja proyek dalam batas yang dapat diterima. Menurut Marchewka, ini level…",o:["4 · Managed","5 · Optimizing","3 · Defined","2 · Repeatable"],a:0,e:"Level 4 Managed: quantifiable &amp; predictable (KPA quantitative process mgmt, quality mgmt). Di CMMI v1.3 namanya “Quantitatively Managed”. Level 5 fokus perbaikan berkelanjutan (defect prevention, technology &amp; process change mgmt)."},
+{id:"ua-b9-6",ex:"UAS",lv:"Hard",bab:"b9",t:"pg",q:"Pada control chart, satu titik data jatuh di luar upper control limit (±3σ). Interpretasi yang paling tepat…",o:["Itu variasi normal (common cause) dan tidak perlu ditindaklanjuti","Proses pasti tidak pernah stabil","Kemungkinan ada assignable cause (mis. bahan berubah, orang kurang terlatih, mesin rusak) yang perlu diselidiki","Control limit harus segera dilebarkan"],a:2,e:"Dengan hanya chance cause, peluang titik di luar UCL ±1/1.000 → titik di luar batas dianggap akibat <b>assignable cause</b>. Tetap waspada melihat pola yang sebenarnya tidak ada."},
+{id:"ua-b9-7",ex:"UAS",lv:"HOTS",bab:"b9",t:"pg",q:"Data panggilan helpdesk seminggu: documentation questions paling banyak, lalu hardware problems, software errors, dan lainnya. Alat dan tindakan perbaikan yang paling tepat adalah…",o:["Control chart; menambah server","Pareto chart; prioritaskan perbaikan dokumentasi user karena penyumbang terbesar","Fishbone; ganti semua hardware","Monte Carlo; tambah staf helpdesk"],a:1,e:"Pareto mengurutkan kategori dari terbesar ke terkecil (80/20). Contoh buku: kategori terbanyak documentation questions → dokumentasi user perlu diperbarui."},
+{id:"ua-b9-8",ex:"UAS",lv:"HOTS",bab:"b9",t:"pg",q:"Manajer ingin “menjamin mutu” dengan menambah tim QA yang memeriksa semua deliverable di akhir proyek. Kritik terbaik berdasarkan filosofi mutu adalah…",o:["Tepat, karena inspeksi massal menjamin mutu","Kurang tepat: mutu tidak bisa diinspeksi masuk ke produk; bangun mutu ke proses sejak awal (prevention), libatkan semua orang, dan pakai data (fact-based management)","Tepat, karena Crosby menganjurkan inspeksi akhir","Tidak relevan karena mutu hanya urusan customer"],a:1,e:"Deming: cease dependence on mass inspection; prevention lebih murah; quality is everyone's responsibility; fact-based management."},
+{id:"qz-es-b9",ex:"Quiz",lv:"Medium",bab:"b9",t:"es",q:"Jelaskan perbedaan pandangan Deming, Juran, dan Crosby tentang mutu, lalu sebutkan tema bersama yang dapat diterapkan pada manajemen proyek.",e:"<ul><li><b>Deming</b>: statistik &amp; keputusan berbasis fakta; Jepang/JUSE, Deming Prize; 14 points — constancy of purpose, kepemimpinan, jangan bergantung inspeksi massal, latih orang &amp; drive out fear, perbaikan terus-menerus, mutu tanggung jawab semua.</li><li><b>Juran</b>: fitness for use; mutu harus direncanakan; customer internal &amp; eksternal; trilogy planning-improvement-control.</li><li><b>Crosby</b>: conformance to requirements; Quality Is Free; zero defects; do it right the first time; top-down.</li><li>Tema bersama: fokus customer, kepemimpinan, perbaikan berkelanjutan, prevention lebih murah dari inspeksi → diterapkan lewat rencana mutu proyek.</li></ul>"},
+{id:"ua-es-b9-1",ex:"UAS",lv:"Easy",bab:"b9",t:"es",q:"Sebutkan empat komponen total cost of quality dan beri contoh masing-masing pada proyek aplikasi mobile.",e:"<ul><li><b>Prevention</b>: pelatihan developer, coding standard, review requirement.</li><li><b>Inspection</b>: code inspection, pengujian, audit proses.</li><li><b>Internal failure</b>: memperbaiki bug yang ditemukan saat UAT sebelum rilis.</li><li><b>External failure</b>: hotfix setelah rilis, ulasan buruk di app store, kehilangan pelanggan.</li><li>Prevention termurah; external failure paling merusak.</li></ul>"},
+{id:"ua-es-b9-2",ex:"UAS",lv:"Hard",bab:"b9",t:"es",q:"Susun ringkasan project quality management plan untuk sistem informasi akademik mengikuti kerangka Gambar 9.4: prinsip, standar &amp; metrik (minimal satu per kategori process/product/project), QA (verification &amp; validation), QC (alat), dan continuous improvement.",e:"<ul><li><b>Prinsip</b>: fokus kepuasan customer internal &amp; eksternal, prevention, improve process, mutu tanggung jawab semua, fact-based.</li><li><b>Standar</b>: reliability, usability, performance (response &lt; 3 detik), security, maintainability.</li><li><b>Metrik</b>: process — defect arrival rate / defects by phase; product — defect density, MTTF, customer satisfaction; project — scope change requests, overdue tasks, CPI/SPI. Setiap metrik + nilai yang dapat diterima.</li><li><b>QA</b>: verification (walk-through &amp; inspection desain/kode, business review deliverable, management review vs baseline); validation (test plan, UAT dengan penguji independen).</li><li><b>QC</b>: control chart waktu respons, fishbone untuk masalah berulang, Pareto kategori keluhan, checklist.</li><li><b>Improvement</b>: lessons learned, best practices, revisi rencana mutu.</li></ul>"},
+{id:"ua-es-b9-3",ex:"UAS",lv:"HOTS",bab:"b9",t:"es",q:"Sebuah software house berada di level 1 (Initial): keberhasilan proyek sangat bergantung pada beberapa programmer senior. Direktur ingin langsung “naik ke level 4” dalam satu tahun. Berikan analisis dan roadmap realistis berdasarkan CMM/CMMI versi Marchewka.",e:"<ul><li>Level 1: proses ad hoc, sukses bergantung pada orang → sulit diulang.</li><li>SEI: <b>melompati level kontraproduktif</b> karena budaya dibangun dari pengalaman bertahap.</li><li>Roadmap: Level 2 (requirements mgmt, project planning &amp; tracking, subcontract mgmt, QA, configuration mgmt) → Level 3 (proses standar organisasi, process focus, training program, peer reviews, intergroup coordination) → baru Level 4 (metrik kuantitatif, repositori, kendali variasi).</li><li>Manfaat: selisih hasil yang diharapkan vs aktual menyempit, biaya &amp; waktu turun, mutu &amp; produktivitas naik.</li><li>Catatan istilah: Marchewka (Repeatable/Managed) vs CMMI v1.3 (Managed/Quantitatively Managed).</li></ul>"},
+
+/* ===== BAB 10 · LEADING THE TEAM ===== */
+{id:"qz-b10-1",ex:"Quiz",lv:"Easy",bab:"b10",t:"pg",q:"Manakah yang <b>bukan</b> salah satu dari lima praktik exemplary leadership Kouzes &amp; Posner?",o:["Model the way","Challenge the process","Command and control","Encourage the heart"],a:2,e:"Lima praktik: model the way, inspire a shared vision, challenge the process, enable others to act, encourage the heart."},
+{id:"qz-b10-2",ex:"Quiz",lv:"Easy",bab:"b10",t:"pg",q:"Gaya kepemimpinan Goleman dengan semboyan “What do you think?” adalah…",o:["Democratic","Affiliative","Coaching","Authoritative"],a:0,e:"Democratic membangun konsensus/buy-in lewat partisipasi; risikonya rapat tak berujung dan kurang cocok saat krisis."},
+{id:"qz-b10-3",ex:"Quiz",lv:"Medium",bab:"b10",t:"pg",q:"Menurut Kotter (dikutip Marchewka), perbedaan management dan leadership adalah…",o:["Management = visi &amp; perubahan; leadership = prosedur","Leadership adalah sifat bawaan, management bisa dipelajari","Keduanya sama","Management membawa ketertiban &amp; prediktabilitas; leadership berpusat pada visi, perubahan, dan hasil"],a:3,e:"Keduanya berbeda tetapi saling melengkapi; kepemimpinan bukan soal karisma dan bisa dikembangkan."},
+{id:"qz-b10-4",ex:"Quiz",lv:"Medium",bab:"b10",t:"pg",q:"Kelompok belajar yang belajar bersama tetapi setiap orang mengerjakan ujian sendiri dan dinilai individual adalah contoh…",o:["Real team","High-performance team","Work group","Pseudo team"],a:2,e:"Work group: tidak harus punya tujuan kinerja bersama, produk kerja bersama, atau akuntabilitas bersama. Contoh buku = study group."},
+{id:"qz-b10-5",ex:"Quiz",lv:"Hard",bab:"b10",t:"pg",q:"Pemimpin yang tidak pernah menyatakan sikap etisnya sehingga tim menafsirkan diamnya sebagai “yang penting target tercapai” termasuk kategori…",o:["Ethically neutral leadership","Unethical leadership","Hypocritical leadership","Ethical leadership"],a:0,e:"“No message often sends a message.” Contoh buku: Sandy Weill (Citigroup). Hypocritical = mengagungkan etika tetapi berbuat tidak etis (paling buruk)."},
+{id:"qz-b10-6",ex:"Quiz",lv:"HOTS",bab:"b10",t:"pg",q:"Tim proyek berpengalaman tetapi kehilangan arah setelah sponsor berganti dan prioritas kabur. Gaya Goleman yang paling tepat untuk PM saat ini adalah…",o:["Coercive","Pacesetting","Authoritative (“come with me”): tegaskan tujuan &amp; bagaimana kerja tim terhubung ke gambaran besar, beri keleluasaan soal cara","Affiliative saja"],a:2,e:"Authoritative paling cocok saat tim/proyek <b>adrift</b>. Catatan: hindari terlihat sok tahu bila PM kurang pengalaman dibanding para ahli."},
+{id:"ua-b10-1",ex:"UAS",lv:"Easy",bab:"b10",t:"pg",q:"Empat kapabilitas emotional intelligence menurut Goleman adalah…",o:["Planning, organizing, controlling, staffing","Self-awareness, self-management, social awareness, social skills","Awareness, desire, knowledge, ability","Model, inspire, challenge, enable"],a:1,e:"EI = self-awareness, self-management, social awareness, social skills; bisa dipelajari pada usia berapa pun."},
+{id:"ua-b10-2",ex:"UAS",lv:"Medium",bab:"b10",t:"pg",q:"Menurut riset Goleman, gaya kepemimpinan yang <b>paling jarang</b> dipakai tetapi kuat untuk kinerja dan iklim adalah…",o:["Coercive","Democratic","Pacesetting","Coaching"],a:3,e:"Coaching (“try this”) paling jarang dipakai; paling efektif bila orang mau dikembangkan."},
+{id:"ua-b10-3",ex:"UAS",lv:"Medium",bab:"b10",t:"pg",q:"Dalam situasi HR, Marchewka menekankan keadilan dalam bentuk…",o:["Equity, reciprocity, impartiality","Speed, cost, quality","Honesty, loyalty, obedience","Awareness, desire, reinforcement"],a:0,e:"<b>Equity</b> (hanya kinerja yang dihitung), <b>reciprocity</b> (ekspektasi dipahami &amp; dipenuhi), <b>impartiality</b> (tanpa prasangka/bias)."},
+{id:"ua-b10-4",ex:"UAS",lv:"Medium",bab:"b10",t:"pg",q:"Vendor menawarkan tiket konser gratis kepada PM yang sedang mengevaluasi proposal vendor tersebut. Kategori dilema etis dan sikap yang dianjurkan adalah…",o:["Corporate resources; terima saja","Conflict of interest; tolak atau lakukan full disclosure sesuai kebijakan organisasi","Confidence; rahasiakan","Human resource situation; laporkan ke HR"],a:1,e:"Hadiah/favor yang bisa memengaruhi penilaian = conflict of interest. Bila ragu, full disclosure untuk mengurangi risiko impropriety."},
+{id:"ua-b10-5",ex:"UAS",lv:"Hard",bab:"b10",t:"pg",q:"Dalam definisi real team Katzenbach &amp; Smith, elemen yang paling membedakan tim dari work group adalah…",o:["Ada satu pemimpin yang kuat","Anggota saling berbagi informasi","Ukuran tim lebih dari 12 orang","Tujuan kinerja &amp; pendekatan bersama dengan mutual accountability atas produk kerja bersama"],a:3,e:"“We hold ourselves accountable” &gt; “the boss holds me accountable”. Tim ideal 2–12 orang; tim besar dipecah ke subtim."},
+{id:"ua-b10-6",ex:"UAS",lv:"Hard",bab:"b10",t:"pg",q:"Menurut temuan Katzenbach &amp; Smith, faktor yang paling penting bagi keberhasilan tim adalah…",o:["Tantangan kinerja yang menuntut dengan tujuan kinerja yang jelas","Kegiatan team-building rutin","Merekrut anggota dengan profil ideal","Kompensasi individu yang tinggi"],a:0,e:"Teams flourish on a demanding performance challenge — lebih penting dari team-building, inisiatif khusus, atau profil ideal."},
+{id:"ua-b10-7",ex:"UAS",lv:"Hard",bab:"b10",t:"pg",q:"Kantor proyek di negara dengan akhir pekan Kamis–Jumat bekerja sama dengan kantor yang berakhir pekan Sabtu–Minggu. Implikasi yang disebut Marchewka adalah…",o:["Tidak ada dampak","Kedua kantor tidak bisa berkomunikasi sama sekali","Hari kerja bersama hanya Senin–Rabu sehingga perencanaan komunikasi &amp; jadwal harus menyesuaikan","Proyek harus memakai satu zona waktu"],a:2,e:"Contoh faktor <b>religion</b> pada proyek internasional; faktor lain: lokasi, kurs, regulasi, politik, sikap terhadap kerja &amp; waktu, bahasa, makanan."},
+{id:"ua-b10-8",ex:"UAS",lv:"HOTS",bab:"b10",t:"pg",q:"Atasan meminta Anda mengubah hasil uji yang gagal agar “memenuhi spesifikasi klien” karena bisa diperbaiki sebelum go-live. Langkah yang paling sesuai pendekatan Trevino &amp; Nelson adalah…",o:["Langsung lapor ke media","Ikuti atasan karena loyalitas","Ubah sebagian angka saja sebagai kompromi","Kumpulkan fakta, definisikan isu (kepercayaan klien), identifikasi stakeholder, konsekuensi &amp; kewajiban, uji karakter (sleep/news test), cari opsi kreatif (bicara dengan atasan soal dampaknya, pastikan hasil asli tercatat), lalu cek intuisi"],a:3,e:"Delapan langkah: facts, ethical issue, affected stakeholders, consequences, obligations, character &amp; integrity, creative actions (hindari dilema dua pilihan), intuition. Whistleblowing = pilihan terakhir."},
+{id:"ua-b10-9",ex:"UAS",lv:"HOTS",bab:"b10",t:"pg",q:"PM selalu memakai gaya pacesetting: menetapkan standar sangat tinggi, mengambil alih pekerjaan anggota yang lambat, dan tidak menjelaskan ekspektasi. Tim baru berisi lulusan junior. Dampak yang paling mungkin dan saran perbaikannya…",o:["Moral naik; lanjutkan","Moral turun, micromanagement, tim kehilangan arah; beralih ke coaching/authoritative dan sesuaikan gaya dengan situasi (EI: self-awareness &amp; self-management)","Tidak ada dampak karena hasil cepat","Ganti semua anggota tim"],a:1,e:"Pacesetting cocok hanya untuk tim yang sangat kompeten &amp; termotivasi. Pemimpin terbaik fleksibel berganti gaya; EI membantu memperluas repertoar."},
+{id:"qz-es-b10",ex:"Quiz",lv:"Medium",bab:"b10",t:"es",q:"Jelaskan enam gaya kepemimpinan Goleman beserta situasi yang paling cocok untuk masing-masing.",e:"<ul><li><b>Coercive</b> (do as I say): krisis, turnaround, karyawan bermasalah.</li><li><b>Authoritative</b> (come with me): tim kehilangan arah.</li><li><b>Affiliative</b> (people come first): membangun harmoni, moral, kepercayaan.</li><li><b>Democratic</b> (what do you think?): butuh buy-in/konsensus atau masukan.</li><li><b>Pacesetting</b> (do as I do, now): hasil cepat dari tim sangat kompeten &amp; termotivasi.</li><li><b>Coaching</b> (try this): mengembangkan orang yang mau dikembangkan; paling jarang dipakai.</li><li>Pemimpin terbaik memakai kombinasi; authoritative, democratic, affiliative, coaching memberi iklim terbaik.</li></ul>"},
+{id:"ua-es-b10-1",ex:"UAS",lv:"Easy",bab:"b10",t:"es",q:"Sebutkan lima team basics menurut Katzenbach &amp; Smith dan bedakan activity goal dengan performance goal.",e:"<ul><li>Small number (2–12), complementary skills (teknis/fungsional, problem-solving/decision-making, interpersonal), common purpose &amp; performance goals, common approach, mutual accountability.</li><li><b>Activity goal</b>: aktivitas (mis. memasang LAN). <b>Performance goal</b>: hasil kinerja (mis. mengirim semua order dalam 24 jam) — mirip konsep MOV dan menjadi sumber arah &amp; komitmen tim.</li></ul>"},
+{id:"ua-es-b10-2",ex:"UAS",lv:"Hard",bab:"b10",t:"es",q:"Anda PM proyek ERP dengan tim di Jakarta, Bangalore, dan Dubai. Identifikasi tantangan proyek multikultural menurut Marchewka dan usulkan cara mengelolanya (kaitkan dengan rencana komunikasi Bab 8).",e:"<ul><li>Tantangan: banyak lokasi &amp; zona waktu, kurs &amp; inflasi, regulasi &amp; hukum, stabilitas politik, sikap terhadap kerja &amp; waktu, agama (akhir pekan berbeda → hari kerja bersama terbatas), bahasa, makanan.</li><li>Diversity 4 dimensi: kepribadian, karakteristik individu, sosial, organisasi.</li><li>Pengelolaan: jadwal rapat di jam overlap, kalender libur gabungan, glosarium &amp; bahasa sederhana, konfirmasi tertulis setelah rapat (acknowledge ≠ paham), kombinasi push/pull/interactive, kontrak dengan klausul kurs, sensitivitas budaya, tim lokal sebagai penghubung.</li></ul>"},
+{id:"ua-es-b10-3",ex:"UAS",lv:"HOTS",bab:"b10",t:"es",q:"Analisis kasus: menjelang deadline, PM meminta tim “merapikan” laporan status agar SPI terlihat 1,0 padahal 0,8. Tim diam karena PM sering berkata “integritas adalah nilai utama kita”. Klasifikasikan tipe kepemimpinan etisnya, analisis dampaknya pada budaya &amp; proyek, dan rancang respons anggota tim dengan 8 langkah Trevino &amp; Nelson.",e:"<ul><li>Tipe: <b>hypocritical leadership</b> (mengagungkan integritas, berbuat sebaliknya) — paling buruk; memicu sinisme atau normalisasi “ends justify the means”.</li><li>Dampak: kepercayaan sponsor rusak, keputusan berbasis data palsu, EVM (Bab 8) kehilangan fungsi early warning, budaya lewat socialization mengajarkan perilaku tidak etis.</li><li>8 langkah: kumpulkan fakta (data EV asli), definisikan isu (kejujuran pelaporan, kepercayaan sponsor), stakeholder (sponsor, tim, organisasi), konsekuensi, kewajiban (jujur ke sponsor vs loyalitas), sleep/news test, opsi kreatif (bicara dengan PM, tawarkan laporan jujur + rencana pemulihan, simpan data asli, konsultasi PMO/legal), cek intuisi; whistleblowing terakhir.</li></ul>"},
+
+/* ===== PENDALAMAN BUKU · BAB LAIN ===== */
+{id:"qz-bk-b1",ex:"Quiz",lv:"Medium",bab:"b1",t:"pg",q:"Era TI (Nolan) di mana PC menyebar tanpa kendali, muncul sistem buatan user, dan organisasi menciptakan jabatan CIO yang melapor ke CEO adalah…",o:["EDP era","Micro era","Network era","Globalization era"],a:1,e:"Micro era (awal 1980-an, IBM PC). EDP era = mainframe terpusat, DP manager melapor ke keuangan; network era (±1995) = Internet &amp; jaringan eksternal."},
+{id:"ut-bk-b1",ex:"UTS",lv:"Medium",bab:"b1",t:"pg",q:"Perbedaan risk dan assumption yang paling tepat adalah…",o:["Assumption adalah kejadian yang pasti terjadi","Risk selalu negatif, assumption selalu positif","Risk adalah kejadian tidak pasti yang bisa memengaruhi proyek; assumption adalah hal yang dianggap benar untuk perencanaan — bila keliru, ia menjadi risiko","Keduanya sinonim"],a:2,e:"Contoh: asumsi “server baru tersedia Maret”; bila meleset, menjadi risiko keterlambatan."},
+{id:"ut-bk-b2",ex:"UTS",lv:"Medium",bab:"b2",t:"pg",q:"Tiga peran yang wajib ada dalam PRINCE2 Project Board adalah…",o:["Scrum master, product owner, development team","Sponsor, PM, SME","PMO, steering committee, auditor","Customer/executive, senior user, senior supplier"],a:3,e:"Project Board (±8 orang) akuntabel atas sukses/gagal proyek; memutuskan change request &amp; kelanjutan; PM melapor ke board."},
+{id:"ut-bk-b2b",ex:"UTS",lv:"Hard",bab:"b2",t:"pg",q:"Menurut Marchewka, Waterfall masih cocok terutama untuk…",o:["Startup dengan requirement yang sering berubah","Sistem besar &amp; kompleks dengan requirement stabil (mis. sistem pemerintah, software paket komersial), dan tim yang kurang berpengalaman","Prototipe eksperimental","Proyek kecil satu minggu"],a:1,e:"Waterfall memungkinkan perencanaan detail per fase dan struktur yang meminimalkan usaha sia-sia; kelemahannya mengakomodasi perubahan requirement."},
+{id:"ut-bk-b3",ex:"UTS",lv:"Hard",bab:"b3",t:"pg",q:"Proyek selesai tepat waktu, sesuai anggaran, dan bebas cacat, tetapi tidak dipakai dan tidak memberi nilai. Menurut Marchewka, ini menunjukkan bahwa…",o:["Project objectives adalah syarat penting tetapi tidak cukup; ukuran sukses adalah MOV","Proyek tetap sukses penuh","MOV tidak relevan","Scope seharusnya lebih besar"],a:0,e:"Satu MOV, banyak objektif. Sebaliknya, proyek yang terlambat &amp; over budget masih bisa sukses bila MOV tercapai."},
+{id:"ut-bk-b3b",ex:"UTS",lv:"Medium",bab:"b3",t:"pg",q:"Dalam proses seleksi proyek TI menurut Marchewka, langkah pertama untuk menyaring business case yang kecil peluangnya disetujui adalah…",o:["Langsung ke rapat direksi","Membandingkan business case dengan standar minimum organisasi (initial screening)","Menugaskan PM","Membuat project charter"],a:1,e:"Initial screening → komite manajer senior (di PRINCE2: project board) → proyek terpilih ditugaskan ke PM → tim, charter, rencana."},
+{id:"ut-bk-b4",ex:"UTS",lv:"Easy",bab:"b4",t:"pg",q:"Kata “governance” berasal dari bahasa Latin <i>gubernare</i> yang berarti…",o:["Mengendalikan anggaran","Mengatur pajak","Mengemudikan (to steer)","Memerintah dengan paksa"],a:2,e:"Governance memberi kerangka pengambilan keputusan etis dengan batas peran, tanggung jawab, dan akuntabilitas yang transparan."},
+{id:"ut-bk-b5",ex:"UTS",lv:"Hard",bab:"b5",t:"pg",q:"Manajemen memangkas jadwal proyek menjadi 40% dari estimasi awal dan menggandakan requirement. Menurut Ed Yourdon (dikutip Marchewka), ini adalah…",o:["Time boxing","Fast tracking","Scope creep","Death march project"],a:3,e:"Death march: parameter melampaui normal ≥ 50% — jadwal &lt; 50%, staf &lt; 50%, anggaran dipotong ≥ 50%, atau fungsionalitas 2×."},
+{id:"ut-bk-b5b",ex:"UTS",lv:"Medium",bab:"b5",t:"pg",q:"Sponsor meminta estimasi spontan; dugaan Anda “sekitar 3 bulan, $30.000”. Saran Marchewka adalah menyampaikan…",o:["Tepat 3 bulan dan $30.000","2–6 bulan dan $20.000–$60.000","3–6 bulan dan $30.000–$60.000, lalu menawarkan riset untuk estimasi yang lebih yakin","Menolak memberi angka apa pun"],a:2,e:"Beri confidence interval; bukan 2–6 bulan karena “most likely” biasanya sudah optimistis. Angka off-the-record sering jadi on-the-record."},
+{id:"ut-bk-b5c",ex:"UTS",lv:"Medium",bab:"b5",t:"pg",q:"Dalam planning poker menurut Marchewka, siapa yang <b>tidak</b> boleh ikut mengestimasi?",o:["Programmer","Quality assurance tester","Database administrator","Manajer, customer, dan product owner (boleh bertanya/diskusi saja)"],a:3,e:"Yang mengestimasi adalah orang yang akan mengerjakan. Pemilik kartu tertinggi &amp; terendah menjelaskan alasannya; konsensus biasanya ronde 2–3."},
+{id:"ut-bk-b6",ex:"UTS",lv:"Hard",bab:"b6",t:"pg",q:"Contoh CCPM: empat tugas kritis masing-masing diestimasi 10 hari. Dengan estimasi 50% (5 hari per tugas) dan project buffer setengah dari waktu yang dihemat, durasi jadwal CCPM adalah…",o:["40 hari","20 hari","25 hari","30 hari"],a:3,e:"Hemat 4 × 5 = 20 hari; buffer = ½ × 20 = 10 → 20 + 10 = <b>30 hari</b>. Tugas feeder D mendapat feeding buffer ½ × 5 = 2,5 hari."},
+{id:"ut-bk-b6b",ex:"UTS",lv:"Medium",bab:"b6",t:"pg",q:"Karyawan bergaji tahunan (fully loaded) $65.000 bekerja 5 hari/minggu. Biaya prorata per hari yang dibebankan ke tugas adalah…",o:["$250","$178","$1.250","$325"],a:0,e:"5 × 52 = 260 hari kerja → $65.000 ÷ 260 = <b>$250/hari</b>."},
+{id:"ut-bk-b6c",ex:"UTS",lv:"HOTS",bab:"b6",t:"pg",q:"Setiap anggota tim menambah cadangan 25% di setiap tugas, tetapi proyek tetap terlambat. Penjelasan Goldratt yang paling tepat adalah…",o:["Cadangan masih kurang besar","Student syndrome, Parkinson's law (penghematan tidak dilaporkan, keterlambatan diteruskan), dan multitasking/resource contention membuat safety per tugas hilang — lebih baik kumpulkan sebagai buffer bersama","Estimasi PERT salah rumus","Sponsor selalu memotong jadwal"],a:1,e:"CCPM: buang safety per tugas, tempatkan sebagai project buffer, feeding buffer, dan resource buffer."},
+{id:"ua-bk-b7",ex:"UAS",lv:"Medium",bab:"b7",t:"pg",q:"Menurut Marchewka, tujuan manajemen risiko proyek adalah…",o:["Menghindari semua risiko dengan segala cara","Membuat keputusan yang tepat tentang risiko mana yang layak diambil dan meresponsnya dengan pantas, sekaligus menjadi early warning system","Mentransfer semua risiko ke vendor","Menunggu risiko menjadi masalah lalu menanganinya"],a:1,e:"Tanpa pendekatan formal, organisasi terjebak crisis management/firefighting. Waktu terbaik menilai risiko: sedini mungkin, saat ketidakpastian tertinggi."},
+{id:"ua-bk-b8",ex:"UAS",lv:"Hard",bab:"b8",t:"pg",q:"Mengapa Marchewka menyarankan analisis stakeholder diperlakukan sebagai latihan internal, bukan dokumen publik?",o:["Karena tidak penting","Karena hanya PM yang boleh tahu nama stakeholder","Karena analisis itu memetakan organisasi informal &amp; politik (termasuk pihak yang bisa diuntungkan bila proyek gagal), sehingga mempublikasikannya bisa merusak relasi","Karena dilarang PMBOK"],a:2,e:"Stakeholder mencakup yang diuntungkan bila proyek gagal; tiap proyek juga butuh champion yang mendukung secara publik."},
+{id:"ua-bk-b11",ex:"UAS",lv:"Medium",bab:"b11",t:"pg",q:"Menurut Marchewka, kecemasan yang disertai harapan disebut <i>anticipation</i>, sedangkan kecemasan yang disertai kekhawatiran disebut…",o:["Assimilation","Acceptance","Resistance","Dread"],a:3,e:"Anxiety + hope = anticipation; anxiety + apprehension = dread. Keduanya menimbulkan stres; perubahan harus diasimilasi di bawah change threshold."},
+{id:"ua-bk-b11b",ex:"UAS",lv:"Hard",bab:"b11",t:"pg",q:"Sponsor terburu-buru memaksa staf melewati masa transisi sistem baru. Menurut Marchewka, risiko yang paling mungkin adalah…",o:["Staf bingung lalu kembali ke status quo, “escape”, atau hanya sebagian perubahan diterapkan sebagai kompromi — preseden buruk bagi perubahan berikutnya","Adopsi justru lebih cepat dan permanen","Tidak ada dampak karena teknologi sudah siap","Neutral zone otomatis hilang"],a:0,e:"Neutral zone = emotional wilderness; orang menolak kehilangan &amp; akhir, bukan perubahan itu sendiri."},
+{id:"ut-es-bk-1",ex:"UTS",lv:"Hard",bab:"b6",t:"es",q:"Jelaskan mengapa menambahkan safety di setiap tugas tidak menjamin proyek selesai tepat waktu, lalu tunjukkan dengan contoh angka bagaimana CCPM menyusun project buffer dan feeding buffer.",e:"<ul><li>Alasan menggelembungkan estimasi: ketergantungan pada orang lain, pesimisme masa lalu, antisipasi pemotongan global (−20% → +25%).</li><li>Mengapa tetap terlambat: student syndrome, Parkinson's law (penghematan hilang, keterlambatan diteruskan), multitasking/resource contention.</li><li>CCPM: estimasi 50%; contoh 4 tugas kritis × 10 hari = 40 → 4 × 5 = 20, hemat 20 → project buffer 10 → total 30 hari; tugas feeder D hemat 5 → feeding buffer 2,5 hari; resource buffer untuk sumber daya kritis.</li><li>Critical chain memperhitungkan resource contention → pandangan portofolio (atur jadwal proyek lain).</li></ul>"},
+{id:"ut-es-bk-2",ex:"UTS",lv:"Medium",bab:"b5",t:"es",q:"Bandingkan estimasi top-down dan bottom-up menurut Marchewka, jelaskan konsep death march project, dan kapan top-down tetap berguna.",e:"<ul><li><b>Top-down</b>: total dari mandat manajemen/strategi/pesaing; PM mengalokasikan % ke fase dengan data historis. Risiko: target terlalu optimis bila dibuat pihak luar tim → death march.</li><li><b>Death march</b> (Yourdon): jadwal &lt; 50%, staf &lt; 50%, anggaran dipotong ≥ 50%, atau requirement 2× normal.</li><li><b>Bottom-up</b>: paling banyak dipakai; dari WBS, effort per aktivitas dijumlahkan; waspadai confusing effort with progress; bisa dipadukan analogous.</li><li>Top-down berguna bila target realistis dan memaksa analisis risiko &amp; trade-off yang dikomunikasikan semua stakeholder.</li></ul>"},
+{id:"ua-es-bk-1",ex:"UAS",lv:"HOTS",bab:"b11",t:"es",q:"Menggunakan konsep asimilasi, change threshold, dan neutral zone dari Marchewka, jelaskan mengapa meluncurkan tiga sistem baru (ERP, HRIS, e-office) dalam satu kuartal berisiko, dan rancang strategi peluncuran yang lebih aman.",e:"<ul><li>Setiap perubahan menimbulkan kecemasan (anticipation/dread) dan stres; perubahan bersifat <b>kumulatif</b>; melampaui <b>change threshold</b> → perilaku disfungsional (individu &amp; organisasi).</li><li>Asimilasi butuh waktu; perubahan besar lebih lama. Tiga sistem sekaligus memperpanjang <b>neutral zone</b> → kembali ke status quo, escape, atau kompromi parsial.</li><li>Strategi: urutkan/fase peluncuran (Bab 12 phased), clarify real impacts &amp; breadth, definisikan what's over and what's not, jelaskan rules for success yang baru, dukungan selama transisi, sustaining sponsor, ukur adopsi sebelum perubahan berikutnya.</li></ul>"}
+);
+
 </script>
 <script>
 (function(){
@@ -2857,7 +3265,7 @@ QB.push(
   });
 
   /* ---------- question bank ---------- */
-  var BAB = {b1:"Bab 1 · Sifat proyek TI", b2:"Bab 2 · Metodologi", pmbok:"PMBOK", agile:"Agile & Scrum", b3:"Bab 3 · MOV & business case", bc:"Business case development", b4:"Bab 4 · Infrastruktur", b5:"Bab 5 · Scope & WBS", b6:"Bab 6 · Jadwal & anggaran", b7:"Bab 7 · Risiko", b8:"Bab 8 · Stakeholder, komunikasi & EVM", b11:"Bab 11 · Perubahan & konflik", b12:"Bab 12 · Penyelesaian proyek", mix:"Integrasi lintas bab"};
+  var BAB = {b1:"Bab 1 · Sifat proyek TI", b2:"Bab 2 · Metodologi", pmbok:"PMBOK", agile:"Agile & Scrum", b3:"Bab 3 · MOV & business case", bc:"Business case development", b4:"Bab 4 · Infrastruktur", b5:"Bab 5 · Scope & WBS", b6:"Bab 6 · Jadwal & anggaran", b7:"Bab 7 · Risiko", b8:"Bab 8 · Stakeholder, komunikasi & EVM", b9:"Bab 9 · Manajemen mutu", b10:"Bab 10 · Memimpin tim", b11:"Bab 11 · Perubahan & konflik", b12:"Bab 12 · Penyelesaian proyek", mix:"Integrasi lintas bab"};
   var QB = (window.QB || []);
   var sel = $("#fBab");
   Object.keys(BAB).forEach(function(k){ var n = QB.filter(function(q){return q.bab===k;}).length; if(!n) return; var o=document.createElement("option"); o.value=k; o.textContent=BAB[k]+" ("+n+")"; sel.appendChild(o); });
